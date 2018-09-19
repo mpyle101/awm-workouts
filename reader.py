@@ -1,6 +1,11 @@
-import csv, json, sys, traceback
+import csv, hashlib, json, sys, traceback
 from datetime import date, timedelta
 from collections import OrderedDict
+
+
+def hash(s):
+    return hashlib.md5(s.encode('utf-8')).hexdigest()
+
 
 def process_reps(reps):
     set_style = 'STD'
@@ -195,16 +200,16 @@ def process_GC(dt, mvmts):
     block = mvmts
 
     try:
-        key = mvmts[0]
-        meta = None
-        comment = None
+        key   = mvmts[0]
+        meta  = None
+        notes = None
 
         if key == 'BIKE':
             meta = mvmts[1]
             work = 'PT' + mvmts[2].upper()
             style = 'TIMED'
             if len(mvmts) > 3:
-                comment = mvmts[3]
+                notes = mvmts[3]
 
         elif key == 'ROW':
             k, v = mvmts[1].split(':')
@@ -225,11 +230,11 @@ def process_GC(dt, mvmts):
             work = 'PT' + mvmts[2]
             style = 'TIMED'
             if len(mvmts) > 3:
-                comment = mvmts[3]
+                notes = mvmts[3]
         else:
             print(dt, 'GC', mvmts)
 
-        block = {'type': 'GC', 'key': key, 'style': style, 'work': work, 'comment': comment}
+        block = {'type': 'GC', 'key': key, 'style': style, 'work': work, 'notes': notes}
         if meta: block['meta'] = meta
 
     except:
@@ -332,29 +337,30 @@ def process_HIC(dt, mvmts):
             if len(mvmts) > 3:
                 meta = mvmts[3].upper()
 
-            block = {'type': 'HIC', 'key': key, 'style': 'INT', 'work': work, 'rest': rest}
+            block = {'type': 'HIC', 'key': 'INT', 'activity': 'Row', 'work': work, 'rest': rest}
             if meta: block['meta'] = meta
 
         elif key == 'AMRAP':
             block = process_SE(dt, mvmts[1:])
+            block['key']  = 'AMRAP'
             block['type'] = 'HIC'
-            block['style'] = 'AMRAP'
-            if meta: block['time'] = 'PT' + meta.upper()
+            if meta: block['meta'] = 'PT' + meta.upper()
 
         elif key == 'TABATA':
-            work, meta = 'PT' + meta.upper(), None
+            work = 'PT' + meta.upper()
             details = mvmts[1].split('x')
             key = details[0].upper()
             wt = float(details[1]) if len(details) > 1 else 0.0
             unit = legend[key]['unit']
+            name = legend[key]['name']
 
-            block = {'type': 'HIC', 'key': key, 'style': 'TAB', 'work': work, 'wt': wt, 'unit': unit}
+            block = {'type': 'HIC', 'key': 'TAB', 'activity': name, 'work': work, 'wt': wt, 'unit': unit}
 
-        elif key == 'RNDS':
+        elif key == 'CIRCUIT':
             block = process_SE(dt, mvmts[1:])
+            block['key']  = 'CIR'
             block['type'] = 'HIC'
-            block['style'] = 'CIRCUIT'
-            if meta: block['time'] = 'PT' + meta.upper()
+            if meta: block['meta'] = 'PT' + meta.upper()
 
         elif key == 'RUN':
             details = mvmts[1].split('x')
@@ -364,16 +370,7 @@ def process_HIC(dt, mvmts):
             details = mvmts[2].split(':')
             rest = 'PT' + details[1].strip().upper()
 
-            block = {'type': 'HIC', 'key': key, 'style': 'INT', 'work': work, 'meta': meta, 'rest': rest}
-
-        elif key == 'TRNR':
-            time = meta = 'PT' + meta.upper()
-            details = mvmts[1].split('x')
-            work = []
-            for i in range(int(details[0])):
-                work.append({'reps': 'PT' + details[1].upper(), 'style': 'TIMED'})
-
-            block = {'type': 'HIC', 'key': key, 'style': 'INT', 'work': work, 'time': time}
+            block = {'type': 'HIC', 'key': 'INT', 'activity': 'Run', 'work': work, 'rest': rest}
 
         elif key == 'DESC':
             details = meta.split('@')
@@ -392,7 +389,7 @@ def process_HIC(dt, mvmts):
                     sets.append({'key': key, 'reps': i, 'wt': wt, 'unit': unit, 'style': 'STD'})
                 work.append(sets)
 
-            block = {'type': 'HIC', 'style': 'CIR', 'work': work, 'time': time}
+            block = {'type': 'HIC', 'key': 'CIR', 'work': work, 'meta': time}
 
         else:
              print(dt, 'HIC', mvmts)
@@ -479,41 +476,44 @@ def process_E(dt, mvmts):
 
 def process_OFF(dt, mvmts):
     if len(mvmts):
-        return {'type': 'OFF', 'comment': mvmts[0]}
+        return {'type': 'OFF', 'notes': mvmts[0]}
     else:
         return {'type': 'OFF'}
 
 
 def process_record(dt, rec, unprocessed):
     workout = []
-    
+    block_num = 0
+
     while True:
+        block_num += 1
         mt, rec = rec[0][1:], rec[1:]
         for idx, item in enumerate(rec):
             if item == '' or item.startswith('#'):
                 break
 
-        blocks, rec = rec[:idx], rec[idx:]
+        block, rec = rec[:idx], rec[idx:]
         if mt == 'MS':
-            blocks = process_MS(dt, blocks)
+            block = process_MS(dt, block)
         elif mt == 'SE':
-            blocks = process_SE(dt, blocks)
+            block = process_SE(dt, block)
         elif mt == 'SS':
-            blocks = process_SS(dt, blocks)
+            block = process_SS(dt, block)
         elif mt == 'GC':
-            blocks = process_GC(dt, blocks)
+            block = process_GC(dt, block)
         elif mt == 'E':
-            blocks = process_E(dt, blocks)
+            block = process_E(dt, block)
         elif mt == 'OFF':
-            blocks = process_OFF(dt, blocks)
+            block = process_OFF(dt, block)
         elif mt == 'HIC GC':
-            blocks = process_HIC_GC(dt, blocks)
+            block = process_HIC_GC(dt, block)
         elif mt == 'HIC':
-            blocks = process_HIC(dt, blocks)
+            block = process_HIC(dt, block)
         else:
             unprocessed.add(mt)
 
-        workout.append(blocks)
+        block['id'] = hash(dt + '/' + mt + '/' + str(block_num))
+        workout.append(block)
         if len(rec) == 0 or rec[0] == '':
             break
 
@@ -524,34 +524,41 @@ def process_file(fname, workouts, cycles, unprocessed):
     with open(fname, newline='') as fp:
         reader = csv.reader(fp)
         for rec in reader:
-            cycle = rec[0]
+            try:
+                cycle = rec[0]
 
-            datestr = rec[1]
-            dateobj = {'$date': datestr + 'T12:00:00-0600'}
+                datestr = rec[1]
+                dateobj = {'$date': datestr + 'T12:00:00-0600'}
 
-            if cycle != '':
-                if len(cycles):
-                    cycle_end = date.fromisoformat(datestr) - timedelta(days=1)
-                    cycle_end = {'$date': cycle_end.isoformat() + 'T12:00:00-0600'}
-                    last_cycle = cycles[-1]
-                    last_cycle['end'] = cycle_end
+                if cycle != '':
+                    if len(cycles):
+                        cycle_end = date.fromisoformat(datestr) - timedelta(days=1)
+                        cycle_end = {'$date': cycle_end.isoformat() + 'T12:00:00-0600'}
+                        last_cycle = cycles[-1]
+                        last_cycle['end'] = cycle_end
 
-                cycles.append({
-                    'name' : cycle,
-                    'start': dateobj,
-                })
+                    cycles.append({
+                        'name' : cycle,
+                        'start': dateobj,
+                    })
 
 
-            blocks  = process_record(datestr, rec[2:], unprocessed)
-            if datestr in workouts:
-                workouts[datestr]['blocks'].append({'type': 'BR'})
-                workouts[datestr]['blocks'] += blocks
-            else:
-                workouts[datestr] = {
-                    'date'  : dateobj,
-                    'type'  : blocks[0]['type'],
-                    'blocks': blocks
-                }
+                blocks  = process_record(datestr, rec[2:], unprocessed)
+                if datestr in workouts:
+                    workouts[datestr]['blocks'].append({'type': 'BR'})
+                    workouts[datestr]['blocks'] += blocks
+                else:
+                    workouts[datestr] = {
+                        'date'  : dateobj,
+                        'type'  : blocks[0]['type'],
+                        'blocks': blocks
+                    }
+            except:
+                ex = sys.exc_info()[0]
+                print('Processing', fname)
+                print(rec)
+                traceback.print_exc()
+
 
 
 legend = {}
