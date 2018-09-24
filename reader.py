@@ -97,7 +97,7 @@ def process_timed(parts):
 
 
 def process_MS(dt, mvmts):
-    sets = []
+    work = []
     for mvmt in mvmts:
         try:
             mvmt = mvmt.split(':')
@@ -112,6 +112,8 @@ def process_MS(dt, mvmts):
             func = legend[key]['func']
             unit = legend[key]['unit']
                
+            sets = []
+            last = None
             for s in details.split(','):
                 s = s.strip()
                 parts = s.split('x')
@@ -121,15 +123,24 @@ def process_MS(dt, mvmts):
                 else:
                     count, reps, wt, style = func(parts)
 
-                for i in range(count):
-                    sets.append({'key': key, 'reps': reps, 'wt': wt, 'unit': unit, 'style': style, 'meta': meta})
+                if last:
+                    if wt == last['wt'] and reps == last['reps']:
+                        last['count'] += count
+                    else:
+                        sets.append(last)
+                        last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
+                else:
+                    last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
+
+            sets.append(last)
+            work.append({'key': key, 'style': style, 'sets': sets})
 
         except:
             ex = sys.exc_info()[0]
             print(dt, mvmt)
             traceback.print_exc()
 
-    return {'type': 'MS', 'sets': sets}
+    return {'type': 'MS', 'work': work}
 
 
 def process_SE(dt, mvmts):
