@@ -96,6 +96,31 @@ def process_timed(parts):
     return count, reps, wt, 'TIMED'
 
 
+def process_sets(details, func, unit, meta):
+    sets = []
+    last = None
+    for s in details.split(','):
+        s = s.strip()
+        parts = s.split('x')
+        if meta == 'EMOM':
+            count, reps, wt, style = process_emom(parts)
+            style = 'EMOM'
+        else:
+            count, reps, wt, style = func(parts)
+
+        if last:
+            if wt == last['wt'] and reps == last['reps']:
+                last['count'] += count
+            else:
+                sets.append(last)
+                last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
+        else:
+            last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
+
+    sets.append(last)
+    return sets, style
+
+
 def process_MS(dt, mvmts):
     work = []
     for mvmt in mvmts:
@@ -112,27 +137,7 @@ def process_MS(dt, mvmts):
             func = legend[key]['func']
             unit = legend[key]['unit']
                
-            sets = []
-            last = None
-            for s in details.split(','):
-                s = s.strip()
-                parts = s.split('x')
-                if meta == 'EMOM':
-                    count, reps, wt, style = process_emom(parts)
-                    style = 'EMOM'
-                else:
-                    count, reps, wt, style = func(parts)
-
-                if last:
-                    if wt == last['wt'] and reps == last['reps']:
-                        last['count'] += count
-                    else:
-                        sets.append(last)
-                        last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-                else:
-                    last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-
-            sets.append(last)
+            sets, style = process_sets(details, func, unit, meta)
             work.append({'key': key, 'style': style, 'sets': sets})
 
         except:
@@ -419,7 +424,7 @@ def process_E(dt, mvmts):
 
     try:
         key = mvmts[0]
-        sets = []
+        actions = []
 
         if key == 'LSD':
             sets = None
@@ -438,16 +443,12 @@ def process_E(dt, mvmts):
                 mvmt = mvmt.split(':')
                 name = mvmt[0].strip().split(' ')
                 skey = name[0]
+                func = legend[skey]['func']
                 unit = legend[skey]['unit']
 
                 details = mvmt[1]
-                for s in details.split(','):
-                    s = s.strip()
-                    parts = s.split('x')
-                    count, reps, wt, style = process_std(parts)
-
-                    for i in range(count):
-                        sets.append({'key': skey, 'reps': reps, 'wt': wt, 'unit': unit, 'style': style})
+                sets, style = process_sets(details, func, unit, 'STD')
+                actions.append({'key': skey, 'style': style, 'sets': sets})
 
         elif key == 'RUCK':
             wt = int(mvmts[1][:-1])
@@ -475,7 +476,7 @@ def process_E(dt, mvmts):
 
         block = {'type': 'EN', 'key': key, 'style': style, 'work': work}
         if meta: block['meta'] = meta
-        if sets: block['sets'] = sets
+        if actions: block['actions'] = actions
 
     except:
         ex = sys.exc_info()[0]
