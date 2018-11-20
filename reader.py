@@ -116,6 +116,8 @@ def process_sets(details, func, unit, meta):
                 last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
         else:
             last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
+        if meta and meta != 'EMOM':
+            last['meta'] = meta
 
     sets.append(last)
     return sets, style
