@@ -222,7 +222,7 @@ def process_GC(dt, mvmts):
         meta  = None
         notes = None
 
-        if key == 'BIKE':
+        if key == 'BIKE' or key == 'SKI':
             meta = mvmts[1]
             work = 'PT' + mvmts[2].upper()
             style = 'TIMED'
