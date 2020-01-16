@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    container_name: awm
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=awm
+      - POSTGRES_USER=jester
+      - POSTGRES_PASSWORD=tester
+    ports:
+      - "5432:5432"
+    volumes:
+      - /space/docker/volumes/postgres/awm:/var/lib/postgresql/data
+volumes:
+  awm:

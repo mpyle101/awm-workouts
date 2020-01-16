@@ -17,7 +17,7 @@ def process_reps(reps):
     else:
         reps = reps.split('/')
         if len(reps) > 1:
-            set_style = 'SUPER'
+            set_style = 'SS'
             value = [int(x) for x in reps]
         else:
             reps = reps[0]
@@ -85,7 +85,8 @@ def process_emom(parts):
 
 def process_bodyweight(parts):
     count, reps, wt, style = process_emom(parts)
-    return count, reps, wt, 'STD'
+    if style == 'EMOM': style = 'STD'
+    return count, reps, wt, style
 
 
 def process_timed(parts):
@@ -245,7 +246,7 @@ def process_GC(dt, mvmts):
         elif key == 'RUN':
             k, v = mvmts[1].split(':')
             meta = v.strip().upper()
-            work = 'PT' + mvmts[2]
+            work = 'PT' + mvmts[2].upper()
             style = 'TIMED'
             if len(mvmts) > 3:
                 notes = mvmts[3]
@@ -425,20 +426,29 @@ def process_E(dt, mvmts):
     block = mvmts
 
     try:
-        key = mvmts[0]
+        parts = mvmts[0].split(' ')
+        key = parts[0].upper()
+        if len(parts) > 1:
+            style = parts[1][1:-1]
+        else:
+            style = None
         actions = []
+        meta = None
+        weight = 0.0
+        wt_unit = 'BW'
 
         if key == 'LSD':
             sets = None
             meta = mvmts[1].upper()
             work = 'PT' + mvmts[2].upper()
             style = 'TIMED'
+            if len(mvmts) > 3:
+                notes = mvmts[3]
 
         elif key == 'FOBBIT':
             key  = 'FBT'
-            meta = mvmts[1]
+            meta = mvmts[1].upper()
             work = 'PT' + mvmts[-1].upper()
-            style = 'TIMED'
 
             sets = []
             for mvmt in mvmts[2:-1]:
@@ -449,20 +459,25 @@ def process_E(dt, mvmts):
                 unit = legend[skey]['unit']
 
                 details = mvmt[1]
-                sets, style = process_sets(details, func, unit, 'STD')
-                actions.append({'key': skey, 'style': style, 'sets': sets})
+                sets, set_style = process_sets(details, func, unit, 'STD')
+                actions.append({'key': skey, 'style': set_style, 'sets': sets})
 
         elif key == 'RUCK':
             wt = int(mvmts[1][:-1])
-            k, v = mvmts[2].split(':')
-            work = 'D' + v.strip().upper()
-            style = 'DIST'
-            meta = {'wt': wt, 'unit': 'LB'}
+            work = 'PT' + mvmts[2].strip().upper()
+            style = 'TIMED'
+            weight = wt
+            wt_unit = 'LB'
             if len(mvmts) > 3:
-                meta['time'] = 'PT' + mvmts[3].upper()
+                meta = mvmts[3].upper()
+
+        elif key == 'HIKE':
+            work = 'PT' + mvmts[1].strip().upper()
+            style = 'TIMED'
+            if len(mvmts) > 2:
+                meta = mvmts[2].upper()
 
         elif key == 'ROW':
-            meta = None
             k, v = mvmts[1].split(':')
             v = v.strip().upper()
 
@@ -473,11 +488,26 @@ def process_E(dt, mvmts):
                 style = 'DIST'
                 work = 'D' + v
 
+        elif key == 'MISC':
+            sets = None
+            meta = mvmts[1].upper()
+            work = 'PT' + mvmts[2].upper()
+            style = 'TIMED'
+            if len(mvmts) > 3:
+                notes = mvmts[3]
+
         else:
             print(dt, 'E', mvmts)
 
-        block = {'type': 'EN', 'key': key, 'style': style, 'work': work}
+        block = {
+            'type': 'EN',
+            'key': key,
+            'work': work,
+            'wt': weight,
+            'unit': wt_unit
+        }
         if meta: block['meta'] = meta
+        if style: block['style'] = style
         if actions: block['actions'] = actions
 
     except:
@@ -519,7 +549,7 @@ def process_record(dt, rec, unprocessed):
             block = process_E(dt, block)
         elif mt == 'OFF':
             block = process_OFF(dt, block)
-        elif mt == 'HIC GC':
+        elif mt == 'HGC':
             block = process_HIC_GC(dt, block)
         elif mt == 'HIC':
             block = process_HIC(dt, block)
@@ -542,12 +572,12 @@ def process_file(fname, workouts, cycles, unprocessed):
                 cycle = rec[0]
 
                 datestr = rec[1]
-                dateobj = {'$date': datestr + 'T12:00:00-0600'}
+                dateobj = {'$date': datestr + 'T18:00:00.000Z'}
 
                 if cycle != '':
                     if len(cycles):
                         cycle_end = date.fromisoformat(datestr) - timedelta(days=1)
-                        cycle_end = {'$date': cycle_end.isoformat() + 'T12:00:00-0600'}
+                        cycle_end = {'$date': cycle_end.isoformat() + 'T18:00:00.000Z'}
                         last_cycle = cycles[-1]
                         last_cycle['end'] = cycle_end
 
@@ -557,7 +587,7 @@ def process_file(fname, workouts, cycles, unprocessed):
                     })
 
 
-                blocks  = process_record(datestr, rec[2:], unprocessed)
+                blocks = process_record(datestr, rec[2:], unprocessed)
                 if datestr in workouts:
                     workouts[datestr]['blocks'].append({'type': 'BR'})
                     workouts[datestr]['blocks'] += blocks
@@ -594,11 +624,10 @@ legend['SU']['func']    = process_bodyweight
 cycles = []
 workouts = OrderedDict()
 unprocessed = set()
-process_file('Workouts-old.csv', workouts, cycles, unprocessed)
 process_file('Workouts.csv', workouts, cycles, unprocessed)
 
 last_cycle = cycles[-1]
-cycle_end  = {'$date': date.today().isoformat() + 'T12:00:00-0600'}
+cycle_end  = {'$date': date.today().isoformat() + 'T18:00:00.000Z'}
 last_cycle['end'] = cycle_end
 
 with open('workouts.json', 'w') as fp:
