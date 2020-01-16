@@ -34,11 +34,18 @@ export const insert_user = async (db: Database, user) => {
   return user_id as string
 }
 
+export const insert_exercise = (db: Database, rec) => 
+  db.query(sql`
+    INSERT INTO awm.exercise (key, name, exercise_unit)
+    VALUES (${rec.key}, ${rec.name}, ${rec.unit})
+  `)
+
+
 export const insert_workout = async (
   db: Database,
   user_id: string,
   seqno: number,
-  workout: any
+  workout
 ) => {
   const date = workout.date.$date.split('T')[0]
   const block_type = workout.type

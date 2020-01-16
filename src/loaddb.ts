@@ -3,13 +3,14 @@ import { parse } from 'JSONStream'
 import { createPool, sql, DatabasePoolType } from 'slonik'
 
 import {
+  insert_exercise,
   insert_ms_block,
   insert_user,
   insert_workout,
   truncate_all
 } from './db-utils'
 
-const load_workouts = (path, cb) => {
+const load_json = (path: string, cb) => {
   const parser = parse('*')
   const pipeline = createReadStream(path).pipe(parser)
   pipeline.on('data', data => cb(data))
@@ -27,23 +28,26 @@ const main = async () => {
     last_name: 'Pyle'
   })
 
+  load_json('./exercises.json', async rec => {
+    await insert_exercise(db, rec)
+  })
+
   let seqno = 1
   let last_workout = null
-  load_workouts('./workouts.json', async workout => {
-    const date = workout.date.$date
+  load_json('./workouts.json', async rec => {
+    const date = rec.date.$date
     date === last_workout ? seqno++ : seqno = 1
     last_workout = date
 
     db.transaction(async trx => {
-      const workout_id = await insert_workout(trx, user_id, seqno, workout)
+      const workout_id = await insert_workout(trx, user_id, seqno, rec)
       let block_no = 1
-      for (const block of workout.blocks) {
+      for (const block of rec.blocks) {
         if (block.type === 'MS') {
           await insert_ms_block(trx, user_id, workout_id, seqno, block)
         }
       }
     })
-
   })
 
   await db.end()
