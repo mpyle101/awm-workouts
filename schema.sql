@@ -61,7 +61,6 @@ CREATE TABLE awm.workout (
 -- 1 block (HGC), 1 set (ROW), 1 distance_set (3374m, 15m)
 CREATE TABLE awm.block (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    user_id UUID REFERENCES awm.user (id),
     workout_id INT REFERENCES awm.workout (id),
     block_type awm.block_type_t,
     seqno SMALLINT,

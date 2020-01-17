@@ -25,7 +25,7 @@ export const insert_user = async (db: Database, user) => {
       ${user.username},
       ${user.password},
       ${user.email},
-      ${user.first_name}
+      ${user.first_name},
       ${user.last_name}
     )
     RETURNING id
@@ -48,46 +48,32 @@ export const insert_workout = async (
   workout
 ) => {
   const date = workout.date.$date.split('T')[0]
-  const block_type = workout.type
-
   const workout_id = await db.oneFirst(sql`
     INSERT INTO awm.workout (date, user_id, seqno)
     VALUES (${date}, ${user_id}, ${seqno})
-    RETURNING id
-  `)
+    RETURNING id`)
 
   return workout_id as number
 }
 
 const insert_block = async (
   db: Database,
-  user_id: string,
   workout_id: number,
   seqno: number,
   block_type: string,
   notes: string | null
-) => {
-  const block_id = await db.oneFirst(sql`
-    INSERT INTO awm.block (user_id, workout_id, block_type, seqno, notes)
-    VALUES
-      ${user_id},
-      ${workout_id},
-      ${block_type},
-      ${seqno},
-      ${notes}
-    RETURNING id
-  `)
-
-  return block_id as number
-}
+) => (await db.oneFirst(sql`
+  INSERT INTO awm.block (workout_id, block_type, seqno, notes)
+  VALUES (${workout_id}, ${block_type}, ${seqno}, ${notes})
+  RETURNING id
+`)) as number
 
 export const insert_ms_block = async (
   db: Database,
-  user_id: string,
   workout_id: number,
   seqno: number,
   block: any
 ) => {
   const notes = block.notes || null
-  const block_id = await insert_block(db, user_id, workout_id, seqno, 'MS', notes)
+  const block_id = await insert_block(db, workout_id, seqno, 'MS', notes)
 }
