@@ -1,24 +1,22 @@
-import { createPool, sql, DatabasePoolType } from 'slonik'
+import { connect } from './dbutils'
 
 const main = async () => {
-  const db = createPool('postgres://jester@localhost/awm')
+  const db = connect('postgres://jester@localhost/awm')
 
-  const users = await db.query(sql`SELECT * FROM awm.user`)
-  console.log('Users: ', users.rowCount)
+  const user = await db.one('SELECT * FROM awm.user')
+  console.log('User: ', user)
 
-  const cycles = await db.query(sql`SELECT * FROM awm.cycle`)
-  console.log('Cycles: ', cycles.rowCount)
+  const cycles = await db.many('SELECT * FROM awm.cycle')
+  console.log('Cycles: ', cycles.length)
 
-  const exercises = await db.query(sql`SELECT * FROM awm.exercise`)
-  console.log('Exercises: ', exercises.rowCount)
+  const exercises = await db.many('SELECT * FROM awm.exercise')
+  console.log('Exercises: ', exercises.length)
 
-  const workouts = await db.query(sql`SELECT * FROM awm.workout`)
-  console.log('Workouts: ', workouts.rowCount)
+  const workouts = await db.many('SELECT * FROM awm.workout')
+  console.log('Workouts: ', workouts.length)
 
-  const blocks = await db.query(sql`SELECT * FROM awm.block`)
-  console.log('Blocks: ', blocks.rowCount)
-
-  await db.end()
+  const blocks = await db.many('SELECT * FROM awm.block')
+  console.log('Blocks: ', blocks.length)
 }
 
 main()
