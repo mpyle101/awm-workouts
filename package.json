@@ -9,8 +9,10 @@
     "loaddb": "node build/loaddb.js",
     "build": "tsc",
     "lint": "tslint",
-    "reload": "./src/setup-db.sh && npm start",
+    "reload": "./setupdb.sh && npm start",
+    "setupdb": "./setupdb.sh",
     "start": "tsc && npm run loaddb",
+    "test": "tsc && node build/testdb.js",
     "up": "docker-compose up"
   },
   "dependencies": {

@@ -38,6 +38,13 @@ CREATE TABLE awm.exercise (
     exercise_unit awm.exercise_unit_t
 );
 
+CREATE TABLE awm.cycle (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR,
+    start_date DATE,
+    end_date DATE
+);
+
 CREATE TABLE awm.workout (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id UUID REFERENCES awm.user (id),

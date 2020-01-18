@@ -3,59 +3,64 @@ import { parse } from 'JSONStream'
 import { createPool, sql, DatabasePoolType } from 'slonik'
 
 import {
+  insert_block,
+  insert_cycle,
   insert_exercise,
-  insert_ms_block,
   insert_user,
   insert_workout,
   truncate_all
-} from './db-utils'
+} from './dbutils'
 
-const load_json = (path: string, cb) =>
-  new Promise(resolve => {
-    const parser = parse('*')
-    const pipeline = createReadStream(path).pipe(parser)
-    pipeline.on('data', data => cb(data))
-    pipeline.on('end', () => resolve())
-  })
+import {
+  get_block_type,
+  insert_mpyle,
+  load_cycles,
+  load_exercises,
+  read_json
+} from './utils'
 
 const main = async () => {
   const db = createPool('postgres://jester@localhost/awm')
-  await truncate_all(db)
-  console.log('Tables cleared')
 
-  const user_id = await insert_user(db, {
-    username: 'mpyle',
-    password: 'jester',
-    email: 'mpyle101@gmail.com',
-    first_name: 'Michael',
-    last_name: 'Pyle'
-  })
-  console.log('User loaded')
-
-  await load_json('./exercises.json', async rec => {
-    await insert_exercise(db, rec)
-  })
-  console.log('Exercises loaded')
+  try {
+    await truncate_all(db)
+    console.log('Tables cleared')
+    await load_exercises(db)
+    console.log('Exercises loaded')
+    await load_cycles(db)
+    console.log('Cycles loaded')
+  } catch (e) {
+    console.log('Failed to initialize:', e)
+    process.exit()
+  }
+  
+  const user_id = await insert_mpyle(db)
+  console.log('User created')
 
   let seqno = 1
+  let failed = 0
   let last_workout = null
-  await load_json('./workouts.json', async rec => {
-    const date = rec.date.$date
+  await read_json('./workouts.json', async rec => {
+    const date = rec.date.$date.split('T')[0]
     seqno = date === last_workout ? seqno + 1 : 1
     last_workout = date
 
-    db.transaction(async trx => {
-      const workout_id = await insert_workout(trx, user_id, seqno, rec)
-      let block_no = 0
-      for (const block of rec.blocks) {
-        block_no++
-        if (block.type === 'MS') {
-          await insert_ms_block(trx, workout_id, seqno, block)
+    try {
+      await db.transaction(async trx => {
+        let block_no = 0
+        const workout_id = await insert_workout(trx, user_id, seqno, date)
+        for (const block of rec.blocks) {
+          block_no++
+          const notes = block.notes || null;
+          const block_type = get_block_type(block)
+          const block_id = await insert_block(trx, workout_id, block_no, block_type, notes)
         }
-      }
-    })
+      })
+    } catch (e) {
+      failed += 1
+      console.log('Failed to insert workout:', failed, e)
+    }
   })
-  console.log('Workouts loaded')
 
   await db.end()
 }

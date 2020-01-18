@@ -74306,24 +74306,24 @@
                     },
                     {
                         "key": "SSU",
-                        "style": "STD",
+                        "style": "TIMED",
                         "sets": [
                             {
                                 "wt": 120.0,
                                 "unit": "KG",
-                                "reps": 1,
+                                "reps": "PT5S",
                                 "count": 1
                             },
                             {
                                 "wt": 130.0,
                                 "unit": "KG",
-                                "reps": 1,
+                                "reps": "PT5S",
                                 "count": 1
                             },
                             {
                                 "wt": 140.0,
                                 "unit": "KG",
-                                "reps": 1,
+                                "reps": "PT5S",
                                 "count": 1
                             }
                         ]
@@ -74635,6 +74635,184 @@
                 "meta": "TRAINER",
                 "style": "TIMED",
                 "id": "01549c9b1ee1f9649a08f41b595f5adb"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-16T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "09bd5afd924c0f024d65cf82c3bc728e"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-17T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "KBS/2",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 24.0,
+                                "unit": "KG",
+                                "reps": 40,
+                                "count": 1
+                            },
+                            {
+                                "wt": 40.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SSU",
+                        "style": "TIMED",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": "PT8S",
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 58.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "MP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 2
+                            },
+                            {
+                                "wt": 41.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 155.0,
+                                "unit": "LB",
+                                "reps": 3,
+                                "count": 3
+                            },
+                            {
+                                "wt": 135.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SH",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 165.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            },
+                            {
+                                "wt": 145.0,
+                                "unit": "KG",
+                                "reps": 15,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "KR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 110.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "ded22f7f9e2eba7d06a66c04be305914"
             }
         ]
     }
