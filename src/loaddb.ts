@@ -1,6 +1,5 @@
+import { writeFileSync } from 'fs'
 import pg_promise = require('pg-promise')
-import { createReadStream } from 'fs'
-import { parse } from 'JSONStream'
 
 const pgp = pg_promise()
 
@@ -9,6 +8,8 @@ import {
   insert_block,
   insert_cycle,
   insert_exercise,
+  insert_set,
+  insert_set_group,
   insert_user,
   insert_workout,
   truncate_all
@@ -16,6 +17,7 @@ import {
 
 import {
   get_block_type,
+  get_set_groups,
   insert_mpyle,
   load_cycles,
   load_exercises,
@@ -37,34 +39,46 @@ const main = async () => {
   const user_id = await insert_mpyle(db)
 
   let seqno = 1
-  let workouts = 0
+  let count = 0
   let last_workout = null
-  const promises: any[] = []
-  await read_json('./workouts.json', async rec => {
+  const workouts: any[] = []
+  for (const rec of await read_json('./workouts.json')) {
     const date = rec.date.$date.split('T')[0]
     seqno = date === last_workout ? seqno + 1 : 1
     last_workout = date
 
     try {
-      const p = db.tx(async trx => {
-        let block_no = 0
+      await db.tx(async trx => {
+        let blkno = 0
         const workout_id = await insert_workout(trx, user_id, seqno, date)
-        workouts += 1
+        count += 1
         for (const block of rec.blocks) {
-          block_no++
+          blkno += 1
           const notes = block.notes || null;
           const block_type = get_block_type(block)
-          const block_id = await insert_block(trx, workout_id, block_no, block_type, notes)
+          if (block_type !== 'BR') {
+            const block_id = await insert_block(trx, workout_id, blkno, block_type, notes)
+            for (const tpl of get_set_groups(block_id, block)) {
+              workouts.push(tpl)
+              const { group, sets } = tpl
+              const group_id = await insert_set_group(trx, group)
+              for (const set of sets) {
+                await insert_set(trx, {...set, group_id})
+              }
+            }
+          }
         }
       })
-      promises.push(p)
     } catch (e) {
       console.log('Failed to insert workout:', e)
+      break
     }
-  })
+  }
 
-  await Promise.all(promises)
-  console.log(`${workouts} workouts inserted`)
+  writeFileSync('./data.json', JSON.stringify(workouts, null, 4))
+
+  // Await'ing the transaction doesn't appear to actually pause until it's done.
+  console.log(`${count} workouts inserted`)
 }
 
 main()

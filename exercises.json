@@ -145,8 +145,18 @@
         "unit": "LB"
     },
     {
-        "key": "DBR",
-        "name": "Dumbbell Raise",
+        "key": "DBR/F",
+        "name": "Dumbbell Raise - Front",
+        "unit": "LB"
+    },
+    {
+        "key": "DBR/S",
+        "name": "Dumbbell Raise - Side",
+        "unit": "LB"
+    },
+    {
+        "key": "DBR/B",
+        "name": "Dumbbell Raise - Bent Over",
         "unit": "LB"
     },
     {

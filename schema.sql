@@ -146,30 +146,14 @@ CREATE TABLE awm.set (
     block_id BIGINT REFERENCES awm.block (id),
     group_id BIGINT REFERENCES awm.set_group (id),
     exercise VARCHAR REFERENCES awm.exercise (key),
-    exercise_unit awm.exercise_unit_t,
+    unit awm.exercise_unit_t,
     set_type awm.set_type_t,
     weight REAL,
     notes VARCHAR,
-    seqno SMALLINT,
-    UNIQUE (id, set_type)
-);
-
--- An exercise done for some number of reps
--- BS 100x5t
-CREATE TABLE awm.standard_set (
-    id BIGINT PRIMARY KEY REFERENCES awm.set (id),
+    setno SMALLINT,
     reps SMALLINT,
-    set_type awm.set_type_t DEFAULT 'STD' CHECK (set_type = 'STD'),
-    FOREIGN KEY (id, set_type) REFERENCES awm.set (id, set_type)
-);
-
--- An exercise done for a period of time instead of reps
--- PS for 30s
-CREATE TABLE awm.timed_set (
-    id BIGINT PRIMARY KEY REFERENCES awm.set (id),
     period INTERVAL,
-    set_type awm.set_type_t DEFAULT 'TMD' CHECK (set_type = 'TMD'),
-    FOREIGN KEY (id, set_type) REFERENCES awm.set (id, set_type)
+    UNIQUE (id, set_type)
 );
 
 -- An exercise done over a distance

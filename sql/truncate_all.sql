@@ -1,6 +1,4 @@
 TRUNCATE
-    awm.standard_set,
-    awm.timed_set,
     awm.distance_set,
     awm.set,
     awm.set_group,

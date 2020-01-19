@@ -11118,20 +11118,67 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 12.0,
-                                "unit": "LB",
-                                "reps": 5,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "b715997a1f4aa8c8ab0fd5b0eab01c2d"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 12.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "9d1125f2483ee52bd41179872eb0a515"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "SH",
                         "style": "STD",
@@ -11193,7 +11240,7 @@
                         ]
                     }
                 ],
-                "id": "b715997a1f4aa8c8ab0fd5b0eab01c2d"
+                "id": "be0bd208d4de9bcf66e2f421e996a5c8"
             }
         ]
     },
@@ -11217,20 +11264,67 @@
                                 "count": 3
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 15.0,
-                                "unit": "LB",
-                                "reps": 5,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "7b9dde9aee1b4e75347c436c057cb481"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "09bb2ca575338e40ccc5885ac3dd31fa"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "SH",
                         "style": "STD",
@@ -11280,7 +11374,7 @@
                         ]
                     }
                 ],
-                "id": "7b9dde9aee1b4e75347c436c057cb481"
+                "id": "f147d53c7ebf967cdcbea023703e8809"
             }
         ]
     },
@@ -11472,20 +11566,67 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 20.0,
-                                "unit": "LB",
-                                "reps": 5,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "2931b299558de77ab6538ce225dd91da"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "31426d0f9d5d587b466433e2cf489009"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "SH",
                         "style": "STD",
@@ -11565,7 +11706,7 @@
                         ]
                     }
                 ],
-                "id": "2931b299558de77ab6538ce225dd91da"
+                "id": "54078c6cf6f98bda67d243ec43f384e5"
             }
         ]
     },
@@ -11787,20 +11928,67 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": 5,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "db9e62c5ab4e00c159a49730b067042d"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "801ed3d8da98e5868791b4859fd75776"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "SH",
                         "style": "STD",
@@ -11814,7 +12002,7 @@
                         ]
                     }
                 ],
-                "id": "db9e62c5ab4e00c159a49730b067042d"
+                "id": "cb52a81a62bc5e68da3abb4e3cccb56b"
             },
             {
                 "type": "SS",
@@ -11852,7 +12040,7 @@
                         }
                     ]
                 ],
-                "id": "801ed3d8da98e5868791b4859fd75776"
+                "id": "452fea649449abaceeb230fc28972bdc"
             },
             {
                 "type": "MS",
@@ -11882,7 +12070,7 @@
                         ]
                     }
                 ],
-                "id": "cb52a81a62bc5e68da3abb4e3cccb56b"
+                "id": "aea85c89029cc67f89ac28402efae3aa"
             }
         ]
     },
@@ -12236,20 +12424,67 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 30.0,
-                                "unit": "LB",
-                                "reps": 5,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "7d81e28fc530c5fa0649f702bc3d6647"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 5,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "9af1e07b10df9721fb5f760272c7e0b0"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "SH",
                         "style": "STD",
@@ -12263,7 +12498,7 @@
                         ]
                     }
                 ],
-                "id": "7d81e28fc530c5fa0649f702bc3d6647"
+                "id": "debab6e45c0dcfde4f5e74c01235603f"
             },
             {
                 "type": "SS",
@@ -12301,7 +12536,7 @@
                         }
                     ]
                 ],
-                "id": "9af1e07b10df9721fb5f760272c7e0b0"
+                "id": "4c6315abe3d6939ec38fe74b1038ae86"
             }
         ]
     },
@@ -12449,22 +12684,63 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 15.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "552ba98eae48c8e8c0303e7fd22feca2"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 15.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "b9a76705954b683c417126d2c94bb5e1"
             },
             {
                 "type": "SS",
@@ -12518,7 +12794,7 @@
                         }
                     ]
                 ],
-                "id": "b9a76705954b683c417126d2c94bb5e1"
+                "id": "f8ac02dc271e11d192be46552a3b1d9d"
             },
             {
                 "type": "MS",
@@ -12536,7 +12812,7 @@
                         ]
                     }
                 ],
-                "id": "0d1841988a027951e33e253775e17022"
+                "id": "b21ece40f6babe0e9902a581e21e8a38"
             }
         ]
     },
@@ -12759,22 +13035,63 @@
                                 "count": 2
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 20.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "27adfedf03379577c67eb8f325107bd5"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "d25c67f1a1078d8c2f72922b006e5e72"
             },
             {
                 "type": "SS",
@@ -12828,7 +13145,7 @@
                         }
                     ]
                 ],
-                "id": "d25c67f1a1078d8c2f72922b006e5e72"
+                "id": "0669539cb3e32604f071179fc20efdce"
             }
         ]
     },
@@ -13072,22 +13389,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 20.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "c25798ae9e332f326c291ccc058e9cf3"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "55add131d4f2b8435330be1a36ffbe74"
             },
             {
                 "type": "SS",
@@ -13141,7 +13499,7 @@
                         }
                     ]
                 ],
-                "id": "55add131d4f2b8435330be1a36ffbe74"
+                "id": "75c4d66764a88690572dad1fcc9a014c"
             }
         ]
     },
@@ -13460,25 +13818,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "SS",
-                        "sets": [
-                            {
-                                "wt": 22.5,
-                                "unit": "LB",
-                                "reps": [
-                                    8,
-                                    8
-                                ],
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "4a82e72e19a23174741d90ae587495dd"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "97395bae60124db681159e6aa223ae18"
             },
             {
                 "type": "SS",
@@ -13532,7 +13928,7 @@
                         }
                     ]
                 ],
-                "id": "97395bae60124db681159e6aa223ae18"
+                "id": "c3ed9b9a5952e7acbddc0030724c5d5c"
             }
         ]
     },
@@ -13887,25 +14283,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "SS",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": [
-                                    6,
-                                    6
-                                ],
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "df61929d2ea31da363e599468cdbbd9b"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "55c5f696726454033ac85b819da817a3"
             },
             {
                 "type": "SS",
@@ -13959,7 +14393,7 @@
                         }
                     ]
                 ],
-                "id": "55c5f696726454033ac85b819da817a3"
+                "id": "3e8f482bcae2a24f25e6177286e33e41"
             }
         ]
     },
@@ -14555,22 +14989,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": 6,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "3a99a8d3e6049cb010872014e587b246"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "dc5bf7494f3431bf733f7aecf842a5d5"
             },
             {
                 "type": "SS",
@@ -14624,7 +15099,7 @@
                         }
                     ]
                 ],
-                "id": "dc5bf7494f3431bf733f7aecf842a5d5"
+                "id": "0e38bcff36b4e50720b539dd4fff9663"
             }
         ]
     },
@@ -15365,22 +15840,63 @@
                                 "count": 3
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 20.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "297396672368a3eec24c58fafd52dc78"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "24c91cb202e17cb07557fa8550b065a8"
             },
             {
                 "type": "SS",
@@ -15434,7 +15950,7 @@
                         }
                     ]
                 ],
-                "id": "24c91cb202e17cb07557fa8550b065a8"
+                "id": "201a7499fb73b9bde55cd8de7f9a78a5"
             }
         ]
     },
@@ -15678,22 +16194,63 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 22.5,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "bb3107a23b29308b3f6f16f76b47a7c2"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "c1e5b95fc9435cc2817bc91e01e7bbf3"
             },
             {
                 "type": "SS",
@@ -15747,7 +16304,7 @@
                         }
                     ]
                 ],
-                "id": "c1e5b95fc9435cc2817bc91e01e7bbf3"
+                "id": "b136bca05699af5715ed037f6f5e14d6"
             }
         ]
     },
@@ -16005,22 +16562,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "2bd2e0f37d5918049c079e77dffb255e"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "a4293cd7ce42fc346fcbb6b219d87951"
             },
             {
                 "type": "SS",
@@ -16074,7 +16672,7 @@
                         }
                     ]
                 ],
-                "id": "a4293cd7ce42fc346fcbb6b219d87951"
+                "id": "61ee310c2c0725550e8174266ec4b31f"
             }
         ]
     },
@@ -16376,20 +16974,67 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": 6,
-                                "count": 3,
-                                "meta": "S/B"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "0ba3f18e074ba37418b550da9efc5f8b"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "73b33ce25061ec39ce60601ab9c884f8"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "PU",
                         "style": "STD",
@@ -16416,7 +17061,7 @@
                         ]
                     }
                 ],
-                "id": "0ba3f18e074ba37418b550da9efc5f8b"
+                "id": "82b8152d56e4b600aab7339b5ffc3c0b"
             }
         ]
     },
@@ -16782,23 +17427,67 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "SS",
-                        "sets": [
-                            {
-                                "wt": 22.5,
-                                "unit": "LB",
-                                "reps": [
-                                    8,
-                                    8
-                                ],
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "f470702327a2ae4af1785759d5145051"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 22.5,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "5b9cfd1228eb2306d6a849d7b9026c58"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "PU",
                         "style": "STD",
@@ -16813,7 +17502,7 @@
                         ]
                     }
                 ],
-                "id": "f470702327a2ae4af1785759d5145051"
+                "id": "d5242ed36f7db10d23b371cab52fb412"
             },
             {
                 "type": "SS",
@@ -16867,7 +17556,7 @@
                         }
                     ]
                 ],
-                "id": "5b9cfd1228eb2306d6a849d7b9026c58"
+                "id": "8fc79667235dd2c20b7910eb666b6282"
             }
         ]
     },
@@ -17113,20 +17802,67 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 25.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "30b999ab49152dcb8563312aabec3167"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 25.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "28d0683e52ed4352efe73c02af921d9a"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "PU",
                         "style": "STD",
@@ -17165,7 +17901,7 @@
                         ]
                     }
                 ],
-                "id": "30b999ab49152dcb8563312aabec3167"
+                "id": "531aad39ad2e54b0471c0c7a0abaed54"
             }
         ]
     },
@@ -17461,20 +18197,67 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 30.0,
-                                "unit": "LB",
-                                "reps": 6,
-                                "count": 3,
-                                "meta": "S/)"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                "id": "e74c9afbd5e5f7e9310fee818742d268"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "46c2e3f6d80db2db07c77738cd4862a9"
+            },
+            {
+                "type": "MS",
+                "work": [
                     {
                         "key": "PU",
                         "style": "STD",
@@ -17489,7 +18272,7 @@
                         ]
                     }
                 ],
-                "id": "e74c9afbd5e5f7e9310fee818742d268"
+                "id": "8be53e9ecf3c10e416453e9e8718997a"
             },
             {
                 "type": "SS",
@@ -17511,7 +18294,7 @@
                         }
                     ]
                 ],
-                "id": "46c2e3f6d80db2db07c77738cd4862a9"
+                "id": "b81969fc9b540d6ba0ef8882f424e3ef"
             }
         ]
     },
@@ -18138,15 +18921,14 @@
                         ]
                     },
                     {
-                        "key": "DBR",
+                        "key": "DBR/B",
                         "style": "STD",
                         "sets": [
                             {
                                 "wt": 12.0,
                                 "unit": "LB",
                                 "reps": 10,
-                                "count": 3,
-                                "meta": "BO"
+                                "count": 3
                             }
                         ]
                     },
@@ -18409,15 +19191,14 @@
                         ]
                     },
                     {
-                        "key": "DBR",
+                        "key": "DBR/B",
                         "style": "STD",
                         "sets": [
                             {
                                 "wt": 12.0,
                                 "unit": "LB",
                                 "reps": 10,
-                                "count": 3,
-                                "meta": "BO"
+                                "count": 3
                             }
                         ]
                     },
@@ -18730,15 +19511,14 @@
                         ]
                     },
                     {
-                        "key": "DBR",
+                        "key": "DBR/B",
                         "style": "STD",
                         "sets": [
                             {
                                 "wt": 20.0,
                                 "unit": "LB",
                                 "reps": 10,
-                                "count": 1,
-                                "meta": "BO"
+                                "count": 1
                             }
                         ]
                     },
@@ -19162,7 +19942,7 @@
                         ]
                     },
                     {
-                        "key": "DBR",
+                        "key": "DBRW",
                         "style": "STD",
                         "sets": [
                             {
@@ -21287,7 +22067,7 @@
                 "sets": [
                     [
                         {
-                            "key": "DBR",
+                            "key": "DBRW",
                             "reps": 6,
                             "wt": 110.0,
                             "unit": "LB",
@@ -21303,7 +22083,7 @@
                     ],
                     [
                         {
-                            "key": "DBR",
+                            "key": "DBRW",
                             "reps": 6,
                             "wt": 110.0,
                             "unit": "LB",
@@ -21319,7 +22099,7 @@
                     ],
                     [
                         {
-                            "key": "DBR",
+                            "key": "DBRW",
                             "reps": 6,
                             "wt": 110.0,
                             "unit": "LB",
@@ -22209,25 +22989,63 @@
                                 "count": 4
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "SS",
-                        "sets": [
-                            {
-                                "wt": 30.0,
-                                "unit": "LB",
-                                "reps": [
-                                    8,
-                                    8
-                                ],
-                                "count": 3,
-                                "meta": "F/S"
-                            }
-                        ]
                     }
                 ],
                 "id": "e3929c2fc6bee1aababecf33b962b4b0"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/F",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "fe6cb06955f2275e77130d9c956b8af6"
             },
             {
                 "type": "SS",
@@ -22249,7 +23067,7 @@
                         }
                     ]
                 ],
-                "id": "fe6cb06955f2275e77130d9c956b8af6"
+                "id": "497a5ee3cb900929a6aa4be8a132fa40"
             },
             {
                 "type": "MS",
@@ -22267,7 +23085,7 @@
                         ]
                     }
                 ],
-                "id": "261bf3b767bc559bc5ec251f493dbe7e"
+                "id": "a4f8ef0f5a08426eb5bbd54f59e10544"
             }
         ]
     },
@@ -22512,22 +23330,63 @@
                                 "count": 5
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 30.0,
-                                "unit": "LB",
-                                "reps": 16,
-                                "count": 3,
-                                "meta": "S/B"
-                            }
-                        ]
                     }
                 ],
                 "id": "f946ce2dbeaee3633c3be5db224e8f78"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "e7e6ff4184551081d11f0fd13f2759cc"
             },
             {
                 "type": "SS",
@@ -22556,7 +23415,7 @@
                         }
                     ]
                 ],
-                "id": "e7e6ff4184551081d11f0fd13f2759cc"
+                "id": "327340394972283ca0c721fe67159dd6"
             }
         ]
     },
@@ -22815,22 +23674,63 @@
                                 "meta": "2+3"
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 30.0,
-                                "unit": "LB",
-                                "reps": 8,
-                                "count": 3,
-                                "meta": "S/B"
-                            }
-                        ]
                     }
                 ],
                 "id": "8af0235d50fdf4f1a026489f3e476b3a"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 8,
+                            "wt": 30.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "ee9223908d1de048d79f9b4266c74cfa"
             },
             {
                 "type": "SS",
@@ -22866,7 +23766,7 @@
                         }
                     ]
                 ],
-                "id": "ee9223908d1de048d79f9b4266c74cfa"
+                "id": "e37247bb705290bfbb53ad53738d8eef"
             }
         ]
     },
@@ -23196,22 +24096,63 @@
                                 "meta": "2+3"
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 35.0,
-                                "unit": "LB",
-                                "reps": 6,
-                                "count": 3,
-                                "meta": "S/B"
-                            }
-                        ]
                     }
                 ],
                 "id": "eadcca20e304c8aa7bc617d07cba68de"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "4a9df95d285efea88a91d58a4f460487"
             },
             {
                 "type": "SS",
@@ -23233,7 +24174,7 @@
                         }
                     ]
                 ],
-                "id": "4a9df95d285efea88a91d58a4f460487"
+                "id": "277a111f2d23061826dbe11e18ebd13d"
             },
             {
                 "type": "MS",
@@ -23263,7 +24204,7 @@
                         ]
                     }
                 ],
-                "id": "ab7de8f2d8a47b0a4c6c5b77b087f971"
+                "id": "ba3a9458eafb8c4cccac0bbb7cc87903"
             }
         ]
     },
@@ -23655,22 +24596,63 @@
                                 "count": 1
                             }
                         ]
-                    },
-                    {
-                        "key": "DBR",
-                        "style": "STD",
-                        "sets": [
-                            {
-                                "wt": 35.0,
-                                "unit": "LB",
-                                "reps": 6,
-                                "count": 3,
-                                "meta": "S/B"
-                            }
-                        ]
                     }
                 ],
                 "id": "b9aeb390fcb9c26dec2e565117a99064"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "DBR/S",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "DBR/B",
+                            "reps": 6,
+                            "wt": 35.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "19543d91c9f4addb8d717737b2cf9d0d"
             },
             {
                 "type": "SS",
@@ -23692,7 +24674,7 @@
                         }
                     ]
                 ],
-                "id": "19543d91c9f4addb8d717737b2cf9d0d"
+                "id": "aa09e27fe87fec1ffef029aa480b03a1"
             },
             {
                 "type": "MS",
@@ -23722,7 +24704,7 @@
                         ]
                     }
                 ],
-                "id": "5f78eb45b175ec09909f79fd21ebea7d"
+                "id": "557373086d7575f87c8ad69b5328af6e"
             }
         ]
     },
@@ -41751,7 +42733,7 @@
                 "type": "MS",
                 "work": [
                     {
-                        "key": "DBR",
+                        "key": "DBRW",
                         "style": "STD",
                         "sets": [
                             {
@@ -74813,6 +75795,19 @@
                     }
                 ],
                 "id": "ded22f7f9e2eba7d06a66c04be305914"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-18T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Install Roam Rails",
+                "id": "f0c8a5f0b60243e41f1a1f22d206fc4d"
             }
         ]
     }
