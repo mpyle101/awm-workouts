@@ -64772,97 +64772,85 @@
                     },
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -65068,97 +65056,85 @@
                     },
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -65436,97 +65412,85 @@
                     },
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 27.5,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -66551,97 +66515,85 @@
                     },
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 58.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 58.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 58.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 30.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 30.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 30.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -67470,97 +67422,85 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -67827,125 +67767,109 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 55.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 50.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 56.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 53.0,
                                 "unit": "KG",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 0.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 7.5,
                                 "unit": "LB",
                                 "reps": 5,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 10.0,
                                 "unit": "LB",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -68200,97 +68124,85 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 53.0,
                                 "unit": "KG",
                                 "reps": 5,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 0.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 10.0,
                                 "unit": "LB",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -68563,49 +68475,43 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 53.0,
                                 "unit": "KG",
                                 "reps": 5,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -68623,49 +68529,43 @@
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 0.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 10.0,
                                 "unit": "LB",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -68952,49 +68852,43 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 53.0,
                                 "unit": "KG",
                                 "reps": 5,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -69012,49 +68906,43 @@
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 0.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 10.0,
                                 "unit": "LB",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -69450,49 +69338,43 @@
                 "work": [
                     {
                         "key": "OHP",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 51.0,
                                 "unit": "KG",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 52.0,
                                 "unit": "KG",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 57.0,
                                 "unit": "KG",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 53.0,
                                 "unit": "KG",
                                 "reps": 3,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },
@@ -69510,49 +69392,43 @@
                     },
                     {
                         "key": "PU",
-                        "style": "STD",
+                        "style": "WAVE",
                         "sets": [
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 0.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 5.0,
                                 "unit": "LB",
                                 "reps": 6,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 25.0,
                                 "unit": "LB",
                                 "reps": 1,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             },
                             {
                                 "wt": 10.0,
                                 "unit": "LB",
                                 "reps": 4,
-                                "count": 1,
-                                "meta": "WAVE"
+                                "count": 1
                             }
                         ]
                     },

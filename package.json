@@ -13,8 +13,7 @@
     "reload": "./setupdb.sh && npm start",
     "setupdb": "./setupdb.sh",
     "start": "npm run build && npm run loaddb",
-    "test": "npm run build && node build/testdb.js",
-    "up": "docker-compose up"
+    "test": "npm run build && node build/testdb.js"
   },
   "dependencies": {
     "pg-promise": "^10.3.5",

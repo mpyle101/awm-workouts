@@ -1,6 +1,13 @@
 import { readFile } from 'fs'
 import { Database } from './dbutils'
-import { create_set_record } from './factory'
+import {
+  create_set_record,
+  from_ms_clus,
+  from_ms_emom,
+  from_ms_block,
+  from_ss_block,
+  get_group_style
+} from './factories'
 
 import {
   insert_block,
@@ -50,60 +57,22 @@ export const read_json = (path: string): Promise<any[]> =>
   })
 
 
-const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
-const get_set_type = style => style === 'TIMED' ? 'TMD' : 'STD'
-
 export function* get_set_groups(block_id: number, block) {
-  let seqno = 0
-  let setno = 0
-  if (block.type === 'SS') {
-    for (const arr of block.sets) {
-      seqno += 1
-      const group = { block_id, seqno, style: 'SS', interval: null }
-      const sets = arr.map(set => {
-        setno += 1
-        return create_set_record(block_id, get_set_type(set.style), set.key, set, setno)
-      })
-      yield { group, sets }
-    }
-  } else if (block.type === 'MS') {
-    for (const grp of block.work) {
-      const style = get_group_style(grp.style)
-      const exercise = grp.key
+  let seqno = { value: 0 }
+  if (block.type === 'MS') {
+    for (const work of block.work) {
+      const style = get_group_style(work.style)
       if (style === 'CLUS') {
-        const set_type = 'STD'
-        for (const set of grp.sets) {
-          const sets = set.reps.map(reps => {
-            setno += 1
-            const rec = create_set_record(block_id, set_type, exercise, set, setno)
-            return { ...rec, reps }
-          })
-
-          for (let i = 0; i < set.count; i++) {
-            seqno += 1
-            const group = { block_id, seqno, style, interval: null }
-            yield { group, sets }
-          }
-        }
+        yield from_ms_clus(seqno, block_id, work)
+      } else if (style === 'EMOM') {
+        yield from_ms_emom(seqno, block_id, work)
       } else {
-        seqno += 1
-        const group = { block_id, seqno, style, interval: null }
-        const set_type = get_set_type(grp.style)
-        const sets = grp.sets.reduce((acc, set) => {
-          const rec = create_set_record(block_id, set_type, exercise, set)
-          for (let i = 0; i < set.count; i++) {
-            setno += 1
-            acc.push({ ...rec, setno })
-          }
-          return acc
-        }, [])
-
-        yield { group, sets }
+        yield from_ms_block(seqno, block_id, work)
       }
     }
   } else if (block.type === 'SS') {
-    return {}
+    yield from_ss_block(seqno, block_id, block.sets)
   }
 
-  return {}
+  return []
 }

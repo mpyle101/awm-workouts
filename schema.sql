@@ -114,6 +114,7 @@ CREATE TABLE awm.hic_block (
 );
 
 -- Tracks a collection of sets by logical grouping
+-- seqno => group number within a block
 -- #MS	SDL: 93x5, 109x1, 97x5, 113x1, 101x5, 117x1
 -- 1 block (MS)
 -- 1 set_group (STD), 6 set/standard_set
@@ -141,6 +142,7 @@ CREATE TABLE awm.set_group (
 );
 
 -- Basic set values
+-- setno => set number within a group
 CREATE TABLE awm.set (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     block_id BIGINT REFERENCES awm.block (id),

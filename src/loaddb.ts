@@ -24,6 +24,19 @@ import {
   read_json
 } from './utils'
 
+interface IWorkout {
+  date: string
+  workout_id: number
+  blocks: any[]
+}
+
+interface IBlock {
+  seqno: number
+  notes: string
+  type: string
+  groups: any[]
+}
+
 const main = async () => {
   const db = connect('postgres://jester@localhost/awm')
 
@@ -37,35 +50,44 @@ const main = async () => {
   }
   
   const user_id = await insert_mpyle(db)
+  const workouts: any[] = []
 
-  let seqno = 1
+  let order = 1
   let count = 0
   let last_workout = null
-  const workouts: any[] = []
   for (const rec of await read_json('./workouts.json')) {
     const date = rec.date.$date.split('T')[0]
-    seqno = date === last_workout ? seqno + 1 : 1
+    order = date === last_workout ? order + 1 : 1
     last_workout = date
 
     try {
       await db.tx(async trx => {
-        let blkno = 0
-        const workout_id = await insert_workout(trx, user_id, seqno, date)
         count += 1
+        const workout_id = await insert_workout(trx, user_id, order, date)
+        const wo: IWorkout = { date, workout_id, blocks: [] }
+
+        let seqno = 0
         for (const block of rec.blocks) {
-          blkno += 1
+          seqno += 1
           const notes = block.notes || null;
           const block_type = get_block_type(block)
           if (block_type !== 'BR') {
-            const block_id = await insert_block(trx, workout_id, blkno, block_type, notes)
-            for (const tpl of get_set_groups(block_id, block)) {
-              workouts.push(tpl)
-              const { group, sets } = tpl
-              const group_id = await insert_set_group(trx, group)
-              await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
+            const block_id = await insert_block(trx, workout_id, seqno, block_type, notes)
+            const blk: IBlock = { seqno, notes, type: block_type, groups: [] }
+
+            for (const groups of get_set_groups(block_id, block)) {
+              for (const { group, sets } of groups) {
+                blk.groups.push({ group, sets })
+                const group_id = await insert_set_group(trx, group)
+                await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
+              }
             }
+
+            wo.blocks.push(blk)
           }
         }
+
+        workouts.push(wo)
       })
     } catch (e) {
       console.log('Failed to insert workout:', e)
@@ -73,7 +95,7 @@ const main = async () => {
     }
   }
 
-  writeFileSync('./data.json', JSON.stringify(workouts, null, 4))
+  writeFileSync('./data.json', JSON.stringify(workouts, null, 2))
 
   // Await'ing the transaction doesn't appear to actually pause until it's done.
   console.log(`${count} workouts inserted`)
