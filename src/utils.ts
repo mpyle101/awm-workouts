@@ -55,28 +55,34 @@ const get_set_type = style => style === 'TIMED' ? 'TMD' : 'STD'
 
 export function* get_set_groups(block_id: number, block) {
   let seqno = 0
-  if (block.type === 'MS') {
-    let setno = 0
+  let setno = 0
+  if (block.type === 'SS') {
+    for (const arr of block.sets) {
+      seqno += 1
+      const group = { block_id, seqno, style: 'SS', interval: null }
+      const sets = arr.map(set => {
+        setno += 1
+        return create_set_record(block_id, get_set_type(set.style), set.key, set, setno)
+      })
+      yield { group, sets }
+    }
+  } else if (block.type === 'MS') {
     for (const grp of block.work) {
       const style = get_group_style(grp.style)
       const exercise = grp.key
       if (style === 'CLUS') {
         const set_type = 'STD'
         for (const set of grp.sets) {
-          const group = { block_id, seqno, style, interval: null }
           const sets = set.reps.map(reps => {
             setno += 1
-            const rec = create_set_record(block_id, set_type, exercise, set)
-            rec.reps = reps
-            rec.setno = setno
-            return {...rec}
+            const rec = create_set_record(block_id, set_type, exercise, set, setno)
+            return { ...rec, reps }
           })
 
           for (let i = 0; i < set.count; i++) {
             seqno += 1
-            group.seqno = seqno
-            console.log(group, sets)
-            yield {group, sets}
+            const group = { block_id, seqno, style, interval: null }
+            yield { group, sets }
           }
         }
       } else {
@@ -85,21 +91,14 @@ export function* get_set_groups(block_id: number, block) {
         const set_type = get_set_type(grp.style)
         const sets = grp.sets.reduce((acc, set) => {
           const rec = create_set_record(block_id, set_type, exercise, set)
-          if (set_type === 'STD') {
-            rec.reps = set.reps
-          } else {
-            rec.period = set.reps
-          }
           for (let i = 0; i < set.count; i++) {
             setno += 1
-            rec.setno = setno
-            acc.push({ ...rec })
+            acc.push({ ...rec, setno })
           }
-
           return acc
         }, [])
 
-        yield {group, sets}
+        yield { group, sets }
       }
     }
   } else if (block.type === 'SS') {

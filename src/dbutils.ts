@@ -4,7 +4,6 @@ import { ITask } from 'pg-promise'
 const pgp = pg_promise()
 
 export type Database = ReturnType<typeof connect> | ITask<{}>
-export const connect = (url: string) => pgp(url)
 
 const load_sql = (fname: string) => {
   const path = join(__dirname, 'sql', fname)
@@ -19,6 +18,8 @@ const sql_insert_block     = load_sql('insert_block.sql')
 const sql_insert_set       = load_sql('insert_set.sql')
 const sql_insert_set_group = load_sql('insert_set_group.sql')
 
+export const connect = (url: string) => pgp(url)
+
 export const truncate_all = (db: Database) => db.query(sql_truncate_all)
 
 export const insert_user = async (db: Database, user) =>
@@ -28,7 +29,7 @@ export const insert_exercise = (db: Database, rec) =>
   db.query(sql_insert_exercise, rec)
 
 export const insert_cycle = (db: Database, name, start, end) =>
-  db.query(sql_insert_cycle, {name, start, end})
+  db.query(sql_insert_cycle, { name, start, end })
 
 export const insert_workout = async (
   db: Database,
@@ -51,7 +52,7 @@ export const insert_block = (
 ) =>
   db.one(
     sql_insert_block,
-    {workout_id, block_type, seqno, notes},
+    { workout_id, block_type, seqno, notes },
     block => block.id as number
   )
 
@@ -80,3 +81,20 @@ interface ISet {
 }
 export const insert_set = (db: Database, set: ISet) =>
   db.one(sql_insert_set, set, set => set.id as number)
+
+
+const set_columns = new pgp.helpers.ColumnSet([
+  'block_id',
+  'group_id',
+  'exercise',
+  'unit',
+  'set_type',
+  'weight',
+  'notes',
+  'setno',
+  'reps',
+  'period'
+], { table: { table: 'set', schema: 'awm' } })
+
+export const insert_sets = (db: Database, values) =>
+  db.none(pgp.helpers.insert(values, set_columns))

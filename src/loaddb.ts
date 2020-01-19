@@ -1,14 +1,14 @@
 import { writeFileSync } from 'fs'
 import pg_promise = require('pg-promise')
 
-const pgp = pg_promise()
+const pgp = pg_promise({ capSQL: true })
 
 import {
   connect,
   insert_block,
   insert_cycle,
   insert_exercise,
-  insert_set,
+  insert_sets,
   insert_set_group,
   insert_user,
   insert_workout,
@@ -62,9 +62,7 @@ const main = async () => {
               workouts.push(tpl)
               const { group, sets } = tpl
               const group_id = await insert_set_group(trx, group)
-              for (const set of sets) {
-                await insert_set(trx, {...set, group_id})
-              }
+              await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
             }
           }
         }
