@@ -1,5 +1,4 @@
 TRUNCATE
-    awm.distance_set,
     awm.set,
     awm.set_group,
     awm.fbt_block,

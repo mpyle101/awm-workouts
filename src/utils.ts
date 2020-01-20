@@ -2,6 +2,8 @@ import { readFile } from 'fs'
 import { Database } from './dbutils'
 import {
   create_set_record,
+  from_en_block,
+  from_fbt_block,
   from_gc_block,
   from_ms_clus,
   from_ms_emom,
@@ -57,7 +59,6 @@ export const read_json = (path: string): Promise<any[]> =>
     )
   })
 
-
 export function* get_set_groups(block_id: number, block) {
   let seqno = { value: 0 }
   if (block.type === 'MS') {
@@ -75,6 +76,12 @@ export function* get_set_groups(block_id: number, block) {
     yield from_ss_block(seqno, block_id, block.sets)
   } else if (block.type === 'GC') {
     yield from_gc_block(seqno, block_id, block)
+  } else if (block.type === 'EN') {
+    if (block.key === 'FBT') {
+      yield from_fbt_block(seqno, block_id, block)
+    } else {
+      yield from_en_block(seqno, block_id, block)
+    }
   }
 
   return []

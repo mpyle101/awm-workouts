@@ -489,7 +489,7 @@ def process_E(dt, mvmts):
                 work = 'PT' + v
             else:
                 style = 'DIST'
-                work = 'D' + v
+                work = v
 
         elif key == 'MISC':
             sets = None

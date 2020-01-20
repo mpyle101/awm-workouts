@@ -27,20 +27,20 @@ CREATE TABLE awm.user (
     id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
     username VARCHAR(50),
     password VARCHAR(72),
-    email VARCHAR,
-    first_name VARCHAR,
-    last_name VARCHAR
+    email TEXT,
+    first_name TEXT,
+    last_name TEXT
 );
 
 CREATE TABLE awm.exercise (
-    key VARCHAR PRIMARY KEY,
-    name VARCHAR,
+    key TEXT PRIMARY KEY,
+    name TEXT,
     exercise_unit awm.exercise_unit_t
 );
 
 CREATE TABLE awm.cycle (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name VARCHAR,
+    name TEXT,
     start_date DATE,
     end_date DATE
 );
@@ -71,7 +71,7 @@ CREATE TABLE awm.block (
     workout_id INT REFERENCES awm.workout (id),
     block_type awm.block_type_t,
     seqno SMALLINT,
-    notes VARCHAR,
+    notes TEXT,
     UNIQUE (id, block_type)
 );
 
@@ -81,7 +81,7 @@ CREATE TABLE awm.block (
 -- 1 set group / 4 set / 4 standard_set (PD)
 CREATE TABLE awm.fbt_block (
     id BIGINT PRIMARY KEY REFERENCES awm.block (id),
-    exercise VARCHAR REFERENCES awm.exercise (key),
+    exercise TEXT REFERENCES awm.exercise (key),
     style awm.fbt_style_t,
     period INTERVAL,
     block_type awm.block_type_t DEFAULT 'FBT' CHECK (block_type = 'FBT'),
@@ -143,31 +143,24 @@ CREATE TABLE awm.set_group (
 
 -- Basic set values
 -- setno => set number within a group
+-- set_type: STD (reps), TMD & DST (period or distance or both)
+-- reps     => exercise done a number of times
+-- period   => exercise time interval
+-- distance => exercise distance
 CREATE TABLE awm.set (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     block_id BIGINT REFERENCES awm.block (id),
     group_id BIGINT REFERENCES awm.set_group (id),
-    exercise VARCHAR REFERENCES awm.exercise (key),
+    exercise TEXT REFERENCES awm.exercise (key),
     unit awm.exercise_unit_t,
     set_type awm.set_type_t,
     weight REAL,
-    notes VARCHAR,
+    notes TEXT,
     setno SMALLINT,
     reps SMALLINT,
     period INTERVAL,
+    distance TEXT,
     UNIQUE (id, set_type)
-);
-
--- An exercise done over a distance
--- Row 400m
--- Run 2.8mi, 24m48s
-CREATE TABLE awm.distance_set (
-    id BIGINT PRIMARY KEY REFERENCES awm.set (id),
-    period INTERVAL,
-    distance REAL,
-    distance_unit awm.distance_unit_t,
-    set_type awm.set_type_t DEFAULT 'DST' CHECK (set_type = 'DST'),
-    FOREIGN KEY (id, set_type) REFERENCES awm.set (id, set_type)
 );
 
 

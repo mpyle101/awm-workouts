@@ -10,23 +10,24 @@ export const create_set_record = (
     block_id,
     set_type,
     exercise,
-    unit: set.unit as string,
+    unit: set.unit as string || 'BW',
     notes: set.meta as string || null,
-    weight: set.wt as number,
+    weight: set.wt as number || 0,
     reps: null,
-    period: null
+    period: null,
+    distance: null
   }
 
   if (set_type === 'STD') {
     rec.reps = set.reps
-  } else {
+  } else if (set_type === 'TMD') {
     rec.period = set.reps
   }
 
   return rec
 }
 
-const get_set_type = style => style === 'TIMED' ? 'TMD' : 'STD'
+const get_set_type = style => style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
 export const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
 
 export const from_ms_block = (seqno, block_id, work) => {
@@ -119,8 +120,24 @@ const get_gc_exercise = block => {
 export const from_gc_block = (seqno, block_id, block) => {
   const exercise = get_gc_exercise(block)
   const set_type = get_set_type(block.style)
-  const rec = { unit: 'BW', wt: 0, reps: block.work, meta: null }
+  const rec = { reps: block.work, meta: null }
   if (exercise === 'RUN') rec.meta = block.meta
   const set = create_set_record(block_id, set_type, exercise, rec, 1)
   return [{ sets: [set] }]
 }
+
+export const from_en_block = (seqno, block_id, block) => {
+  const meta     = block.key === 'LSD' ? null : block.meta
+  const exercise = block.key === 'LSD' ? 'TRNR' : block.key
+  const set_type = get_set_type(block.style)
+  const set = create_set_record(block_id, set_type, exercise, { meta }, 1)
+  if (set_type === 'TMD') {
+    set.period = block.work
+  } else {
+    set.distance = block.work
+  }
+
+  return [{ sets: [set] }]
+}
+
+export const from_fbt_block = (seqno, block_id, block) => []

@@ -365,6 +365,11 @@
         "unit": "KG"
     },
     {
+        "key": "MISC",
+        "name": "Miscellaneous",
+        "unit": "KG"
+    },
+    {
         "key": "MP",
         "name": "Military Press",
         "unit": "KG"

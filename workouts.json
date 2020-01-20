@@ -34631,7 +34631,7 @@
             {
                 "type": "EN",
                 "key": "ROW",
-                "work": "D500M",
+                "work": "500M",
                 "wt": 0.0,
                 "unit": "BW",
                 "style": "DIST",
@@ -75684,6 +75684,24 @@
                 "type": "OFF",
                 "notes": "Install Roam Rails",
                 "id": "f0c8a5f0b60243e41f1a1f22d206fc4d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-19T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "afb74623f759af17560204b81d78fdd3"
             }
         ]
     }
