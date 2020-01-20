@@ -98,3 +98,29 @@ export const from_ss_block = (seqno, block_id, work) =>
     acc.push({ group, sets })
     return acc
   }, [])
+
+
+const GC_EXER = new Map([
+  ['ROWROW', 'ROW'],
+  ['BIKECX', 'BIKE/CX'],
+  ['BIKEGRVL', 'BIKE/GR'],
+  ['BIKEROAD', 'BIKE/RD'],
+  ['BIKESS', 'BIKE/SS'],
+  ['BIKETRNR', 'TRNR'],
+  ['SKICX', 'SKI/CX']
+])
+const get_gc_exercise = block => {
+  if (block.key === 'RUN') {
+    return 'RUN'
+  }
+  return GC_EXER.get(block.key + block.meta) || 'NONE'
+}
+
+export const from_gc_block = (seqno, block_id, block) => {
+  const exercise = get_gc_exercise(block)
+  const set_type = get_set_type(block.style)
+  const rec = { unit: 'BW', wt: 0, reps: block.work, meta: null }
+  if (exercise === 'RUN') rec.meta = block.meta
+  const set = create_set_record(block_id, set_type, exercise, rec, 1)
+  return [{ sets: [set] }]
+}

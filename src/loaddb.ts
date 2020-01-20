@@ -78,7 +78,7 @@ const main = async () => {
             for (const groups of get_set_groups(block_id, block)) {
               for (const { group, sets } of groups) {
                 blk.groups.push({ group, sets })
-                const group_id = await insert_set_group(trx, group)
+                const group_id = group ? await insert_set_group(trx, group) : null
                 await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
               }
             }

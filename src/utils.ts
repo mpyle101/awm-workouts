@@ -2,6 +2,7 @@ import { readFile } from 'fs'
 import { Database } from './dbutils'
 import {
   create_set_record,
+  from_gc_block,
   from_ms_clus,
   from_ms_emom,
   from_ms_block,
@@ -72,6 +73,8 @@ export function* get_set_groups(block_id: number, block) {
     }
   } else if (block.type === 'SS') {
     yield from_ss_block(seqno, block_id, block.sets)
+  } else if (block.type === 'GC') {
+    yield from_gc_block(seqno, block_id, block)
   }
 
   return []
