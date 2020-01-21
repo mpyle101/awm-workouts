@@ -4,6 +4,7 @@ import {
   create_set_record,
   from_en_block,
   from_gc_block,
+  from_hgc_block,
   from_ms_clus,
   from_ms_emom,
   from_ms_block,
@@ -86,6 +87,8 @@ export function* get_set_groups(block_id: number, block) {
     } else {
       yield from_en_block(seqno, block_id, block)
     }
+  } else if (block.type === 'HGC') {
+    yield from_hgc_block(seqno, block_id, block)
   }
 
   return []

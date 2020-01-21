@@ -1,3 +1,5 @@
+const get_set_type = style => style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
+
 export const create_set_record = (
     block_id: number,
     set_type: string,
@@ -27,7 +29,7 @@ export const create_set_record = (
   return rec
 }
 
-const get_set_type = style => style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
+
 export const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
 
 export const from_ms_block = (seqno, block_id, work) => {
@@ -48,6 +50,7 @@ export const from_ms_block = (seqno, block_id, work) => {
 
   return [{ group, sets }]
 }
+
 
 export const from_ms_clus = (seqno, block_id, work) =>
   work.sets.reduce((acc, set) => {
@@ -87,6 +90,7 @@ export const from_ms_emom = (seqno, block_id, work) => {
   return [{ group, sets }]
 }
 
+
 export const from_ss_block = (seqno, block_id, work) =>
   work.reduce((acc, arr) => {
     seqno.value += 1
@@ -99,6 +103,7 @@ export const from_ss_block = (seqno, block_id, work) =>
     acc.push({ group, sets })
     return acc
   }, [])
+
 
 export const from_se_block = (seqno, block_id, block) => {
   const first = block.sets[0][0]
@@ -141,6 +146,7 @@ export const from_gc_block = (seqno, block_id, block) => {
   return [{ sets: [set] }]
 }
 
+
 export const from_en_block = (seqno, block_id, block) => {
   const meta     = block.key === 'LSD' ? null : block.meta
   const exercise = block.key === 'LSD' ? 'TRNR' : block.key
@@ -149,6 +155,22 @@ export const from_en_block = (seqno, block_id, block) => {
   if (set_type === 'TMD') {
     set.period = block.work
   } else {
+    set.distance = block.work
+  }
+
+  return [{ sets: [set] }]
+}
+
+
+export const from_hgc_block = (seqno, block_id, block) => {
+  const exercise = block.key
+  const set_type = get_set_type(block.style)
+  const set = create_set_record(block_id, set_type, exercise, {}, 1)
+  if (set_type === 'TMD') {
+    set.period   = block.work
+    set.distance = block.meta
+  } else {
+    set.period   = block.meta
     set.distance = block.work
   }
 
