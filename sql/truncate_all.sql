@@ -3,6 +3,7 @@ TRUNCATE
     awm.set_group,
     awm.fbt_block,
     awm.hic_block,
+    awm.se_block,
     awm.block,
     awm.workout,
     awm.cycle,

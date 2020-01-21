@@ -15,6 +15,8 @@ const sql_insert_cycle     = load_sql('insert_cycle.sql')
 const sql_insert_exercise  = load_sql('insert_exercise.sql')
 const sql_insert_workout   = load_sql('insert_workout.sql')
 const sql_insert_block     = load_sql('insert_block.sql')
+const sql_insert_fbt_block = load_sql('insert_fbt_block.sql')
+const sql_insert_se_block  = load_sql('insert_se_block.sql')
 const sql_insert_set       = load_sql('insert_set.sql')
 const sql_insert_set_group = load_sql('insert_set_group.sql')
 
@@ -55,6 +57,21 @@ export const insert_block = (
     { workout_id, block_type, seqno, notes },
     block => block.id as number
   )
+
+export const insert_fbt_block = (
+  db: Database,
+  block_id: number,
+  exercise: string,
+  style: string,
+  period: string
+) => db.none(sql_insert_fbt_block, { block_id, exercise, style, period })
+
+
+export const insert_se_block = (
+  db: Database,
+  block_id: number,
+  period: string
+) => db.none(sql_insert_se_block, { block_id, period })
 
 
 interface ISetGroup {

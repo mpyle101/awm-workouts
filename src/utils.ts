@@ -3,11 +3,11 @@ import { Database } from './dbutils'
 import {
   create_set_record,
   from_en_block,
-  from_fbt_block,
   from_gc_block,
   from_ms_clus,
   from_ms_emom,
   from_ms_block,
+  from_se_block,
   from_ss_block,
   get_group_style
 } from './factories'
@@ -74,11 +74,15 @@ export function* get_set_groups(block_id: number, block) {
     }
   } else if (block.type === 'SS') {
     yield from_ss_block(seqno, block_id, block.sets)
+  } else if (block.type === 'SE') {
+    yield from_se_block(seqno, block_id, block)
   } else if (block.type === 'GC') {
     yield from_gc_block(seqno, block_id, block)
   } else if (block.type === 'EN') {
     if (block.key === 'FBT') {
-      yield from_fbt_block(seqno, block_id, block)
+      for (const work of block.actions) {
+        yield from_ms_block(seqno, block_id, work)
+      }
     } else {
       yield from_en_block(seqno, block_id, block)
     }

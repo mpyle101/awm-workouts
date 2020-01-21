@@ -18,6 +18,12 @@ const main = async () => {
   const blocks = await db.many('SELECT * FROM awm.block')
   console.log('Blocks: ', blocks.length)
 
+  const fbt_blocks = await db.many('SELECT * FROM awm.fbt_block')
+  console.log('FBT Blocks: ', fbt_blocks.length)
+
+  const se_blocks = await db.many('SELECT * FROM awm.se_block')
+  console.log('SE Blocks: ', se_blocks.length)
+
   const groups = await db.many('SELECT * FROM awm.set_group')
   console.log('Set Groups: ', groups.length)
 

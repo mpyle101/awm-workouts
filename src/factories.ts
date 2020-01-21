@@ -100,6 +100,21 @@ export const from_ss_block = (seqno, block_id, work) =>
     return acc
   }, [])
 
+export const from_se_block = (seqno, block_id, block) => {
+  const first = block.sets[0][0]
+  if (first.key === 'AS') {
+    // Air Squats are timed
+    seqno.value += 1
+    const group = { block_id, style: 'STD', seqno: seqno.value, interval: block.time }
+    const rec = { ...first, reps: block.time }
+    const set = create_set_record(block_id, 'TMD', rec.key, rec, 1)
+    set.reps = first.reps
+    return [{ group, sets: [set] }]
+  }
+
+  return from_ss_block(seqno, block_id, block.sets)
+}
+
 
 const GC_EXER = new Map([
   ['ROWROW', 'ROW'],
@@ -139,5 +154,3 @@ export const from_en_block = (seqno, block_id, block) => {
 
   return [{ sets: [set] }]
 }
-
-export const from_fbt_block = (seqno, block_id, block) => []

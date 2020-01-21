@@ -6,6 +6,8 @@ const pgp = pg_promise({ capSQL: true })
 import {
   connect,
   insert_block,
+  insert_fbt_block,
+  insert_se_block,
   insert_cycle,
   insert_exercise,
   insert_sets,
@@ -73,6 +75,11 @@ const main = async () => {
           const block_type = get_block_type(block)
           if (block_type !== 'BR') {
             const block_id = await insert_block(trx, workout_id, seqno, block_type, notes)
+            if (block_type === 'FBT') {
+              await insert_fbt_block(trx, block_id, 'TRNR', block.style, block.work)
+            } else if (block_type === 'SE') {
+              await insert_se_block(trx, block_id, block.time)
+            }
             const blk: IBlock = { seqno, notes, type: block_type, groups: [] }
 
             for (const groups of get_set_groups(block_id, block)) {

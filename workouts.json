@@ -75704,5 +75704,18 @@
                 "id": "afb74623f759af17560204b81d78fdd3"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-20T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Sauna & Stretch",
+                "id": "ef130df7f9a75eea7c7f0e5fae805e4a"
+            }
+        ]
     }
 ]

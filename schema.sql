@@ -13,15 +13,12 @@ CREATE TYPE awm.set_type_t AS ENUM ('STD', 'TMD', 'DST');
 -- CLUS: Cluster
 -- EMOM: Every Minute on the Minute
 -- FNT: FOBBIT
--- NR: No rest
 -- SS: Super Set
 -- TAB: Tabata
 -- WAVE: Contrast wave
-CREATE TYPE awm.group_style_t AS ENUM ('STD', 'AMRAP', 'CIR', 'CLUS', 'EMOM', 'FBT', 'NR', 'SS', 'TAB', 'WAVE');
+CREATE TYPE awm.group_style_t AS ENUM ('STD', 'AMRAP', 'CIR', 'CLUS', 'EMOM', 'FBT', 'SS', 'TAB', 'WAVE');
 CREATE TYPE awm.block_type_t AS ENUM ('MS', 'EN', 'SE', 'GC', 'FBT', 'HIC', 'HGC', 'OFF');
-
 CREATE TYPE awm.exercise_unit_t AS ENUM ('KG', 'LB', 'BW');
-CREATE TYPE awm.distance_unit_t AS ENUM ('MT', 'MI', 'FT');
 
 CREATE TABLE awm.user (
     id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -67,7 +64,7 @@ CREATE TABLE awm.workout (
 -- #HGC ROW, T: 15m, 3374m
 -- 1 block (HGC), 1 set (ROW), 1 distance_set (3374m, 15m)
 CREATE TABLE awm.block (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     workout_id INT REFERENCES awm.workout (id),
     block_type awm.block_type_t,
     seqno SMALLINT,
@@ -80,7 +77,7 @@ CREATE TABLE awm.block (
 -- 1 set_group / 4 set / 4 standard_set (GD)
 -- 1 set group / 4 set / 4 standard_set (PD)
 CREATE TABLE awm.fbt_block (
-    id BIGINT PRIMARY KEY REFERENCES awm.block (id),
+    id INT PRIMARY KEY REFERENCES awm.block (id),
     exercise TEXT REFERENCES awm.exercise (key),
     style awm.fbt_style_t,
     period INTERVAL,
@@ -104,12 +101,19 @@ CREATE TABLE awm.fbt_block (
 -- 1 set_group (NR) / set 10 1R, 10 BRP, 10 SJ, 10 RPS, 9 IR, 9 BRP, 9 SJ, 9 RPS, etc
 -- #HIC	DESC (10@24m20s), BBRx40, BRP, SJ, RPS
 CREATE TABLE awm.hic_block (
-    id BIGINT PRIMARY KEY REFERENCES awm.block (id),
+    id INT PRIMARY KEY REFERENCES awm.block (id),
     style awm.hic_style_t,
     period INTERVAL,
-    distance SMALLINT,
-    distance_unit awm.distance_unit_t,
+    distance TEXT,
     block_type awm.block_type_t DEFAULT 'HIC' CHECK (block_type = 'HIC'),
+    FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
+);
+
+-- Strength Endurance
+CREATE TABLE awm.se_block (
+    id INT PRIMARY KEY REFERENCES awm.block (id),
+    period INTERVAL,
+    block_type awm.block_type_t DEFAULT 'SE' CHECK (block_type = 'SE'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
 );
 
@@ -134,8 +138,8 @@ CREATE TABLE awm.hic_block (
 -- 1 block (HIC) / 1 hic_block (TAB)
 -- 1 set_group (TAB), 1 set (TRNR) / 1 timed_set (4m)
 CREATE TABLE awm.set_group (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    block_id BIGINT REFERENCES awm.block (id),
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    block_id INT REFERENCES awm.block (id),
     style awm.group_style_t,
     interval INTERVAL,
     seqno SMALLINT
@@ -148,9 +152,9 @@ CREATE TABLE awm.set_group (
 -- period   => exercise time interval
 -- distance => exercise distance
 CREATE TABLE awm.set (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    block_id BIGINT REFERENCES awm.block (id),
-    group_id BIGINT REFERENCES awm.set_group (id),
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    block_id INT REFERENCES awm.block (id),
+    group_id INT REFERENCES awm.set_group (id),
     exercise TEXT REFERENCES awm.exercise (key),
     unit awm.exercise_unit_t,
     set_type awm.set_type_t,
