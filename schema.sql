@@ -4,19 +4,19 @@ CREATE EXTENSION pgcrypto;
 CREATE SCHEMA awm;
 
 CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE');
-CREATE TYPE awm.hic_style_t AS ENUM ('INT', 'TAB', 'CIR', 'DESC', 'AMRAP');
-
 CREATE TYPE awm.set_type_t AS ENUM ('STD', 'TMD', 'DST');
-
--- AMRAP: As Many Reps/Sets As Possible
--- CIR: Circuit
--- CLUS: Cluster
--- EMOM: Every Minute on the Minute
--- FNT: FOBBIT
--- SS: Super Set
--- TAB: Tabata
--- WAVE: Contrast wave
-CREATE TYPE awm.group_style_t AS ENUM ('STD', 'AMRAP', 'CIR', 'CLUS', 'EMOM', 'FBT', 'SS', 'TAB', 'WAVE');
+CREATE TYPE awm.group_style_t AS ENUM (
+    'AMRAP',    -- As Many Reps (sets) As Possible
+    'CIR',      -- Ciruit
+    'CLUS',     -- Cluster sets
+    'DESC',     -- Descending Circuit
+    'EMOM',     -- Every Minute On the Minute
+    'INT',      -- Intervals
+    'SS',       -- Super sets
+    'STD',      -- Standard sets
+    'TAB',      -- Tabate
+    'WAVE'      -- Contrast Wave
+);
 CREATE TYPE awm.block_type_t AS ENUM ('MS', 'EN', 'SE', 'GC', 'FBT', 'HIC', 'HGC', 'OFF');
 CREATE TYPE awm.exercise_unit_t AS ENUM ('KG', 'LB', 'BW');
 
@@ -97,12 +97,11 @@ CREATE TABLE awm.fbt_block (
 -- #HIC	RUN (HS), 5x40s, REST: 2m
 
 -- #HIC	DESC (10@27m2s), IR, BRP, SJ, RPS
--- 1 block (HIC) / 1 hic_block (DESC, 27m2s)
--- 1 set_group (NR) / set 10 1R, 10 BRP, 10 SJ, 10 RPS, 9 IR, 9 BRP, 9 SJ, 9 RPS, etc
+-- 1 block (HIC) / 1 hic_block (27m2s)
+-- 1 set_group (DESC) / set 10 1R, 10 BRP, 10 SJ, 10 RPS, 9 IR, 9 BRP, 9 SJ, 9 RPS, etc
 -- #HIC	DESC (10@24m20s), BBRx40, BRP, SJ, RPS
 CREATE TABLE awm.hic_block (
     id INT PRIMARY KEY REFERENCES awm.block (id),
-    style awm.hic_style_t,
     period INTERVAL,
     distance TEXT,
     block_type awm.block_type_t DEFAULT 'HIC' CHECK (block_type = 'HIC'),
@@ -136,7 +135,7 @@ CREATE TABLE awm.se_block (
 -- 5 on the minute => 5 awm.standard_set w/parent_id to 1 set_group (EMOM, 1m)
 -- #HIC	TABATA (4m)	Trainer
 -- 1 block (HIC) / 1 hic_block (TAB)
--- 1 set_group (TAB), 1 set (TRNR) / 1 timed_set (4m)
+-- 1 set_group (TAB), 1 set (TRNR, 4m)
 CREATE TABLE awm.set_group (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     block_id INT REFERENCES awm.block (id),
