@@ -32,9 +32,8 @@ export const create_set_record = (
 const create_set_group = (
   block_id: number,
   style: string,
-  seqno: number,
-  duration: string | null = null
-) => ({ block_id, style, seqno, duration })
+  seqno: number
+) => ({ block_id, style, seqno })
 
 
 export const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
@@ -117,7 +116,7 @@ export const from_se_block = (seqno, block_id, block) => {
   if (first.key === 'AS') {
     // Air Squats are timed
     seqno.value += 1
-    const group = create_set_group(block_id, 'STD', seqno.value, block.time)
+    const group = create_set_group(block_id, 'STD', seqno.value)
     const rec = { ...first, reps: block.time }
     const set = create_set_record(block_id, 'TMD', rec.key, rec, 1)
     set.reps = first.reps
@@ -150,6 +149,10 @@ export const from_gc_block = (seqno, block_id, block) => {
   const rec = { reps: block.work, meta: null }
   if (exercise === 'RUN') rec.meta = block.meta
   const set = create_set_record(block_id, set_type, exercise, rec, 1)
+
+  seqno.value += 1
+  const group = create_set_group(block_id, 'STD', seqno.value)
+
   return [{ sets: [set] }]
 }
 
@@ -165,7 +168,10 @@ export const from_en_block = (seqno, block_id, block) => {
     set.distance = block.work
   }
 
-  return [{ sets: [set] }]
+  seqno.value += 1
+  const group = create_set_group(block_id, 'STD', seqno.value)
+
+  return [{ group, sets: [set] }]
 }
 
 
@@ -181,20 +187,28 @@ export const from_hgc_block = (seqno, block_id, block) => {
     set.distance = block.work
   }
 
-  return [{ sets: [set] }]
+  seqno.value += 1
+  const group = create_set_group(block_id, 'STD', seqno.value)
+
+  return [{ group, sets: [set] }]
 }
 
 
 export const from_hic_block = (seqno, block_id, block) => {
   const style = block.key
   if (style === 'TAB') {
+    seqno.value += 1
+    const group = create_set_group(block_id, 'STD', seqno.value)
+  
     const exercise = block.activity
     const rec = { wt: block.wt, unit: block.unit, reps: block.work }
     const set = create_set_record(block_id, 'TMD', exercise, rec, 1)
     if (exercise === 'MBRT') set.weight = 14
-    return [{ sets: [set] }]
+    return [{ group, sets: [set] }]
+
   } else if (style === 'CIR' || style === 'AMRAP' ) {
     return from_ss_block(seqno, block_id, block)
+
   } else if (style === 'INT') {
     seqno.value += 1
     const group = create_set_group(block_id, 'SS', seqno.value)

@@ -4,12 +4,6 @@ CREATE EXTENSION pgcrypto;
 CREATE SCHEMA awm;
 
 CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE');
-CREATE TYPE awm.hic_style_t AS ENUM (
-    'AMRAP',    -- As Many Reps (sets) As Possible
-    'CIR',      -- Curcuit
-    'INT',      -- Intervals
-    'TAB'       -- Tabata
-);
 CREATE TYPE awm.group_style_t AS ENUM (
     'CLUS',     -- Cluster sets
     'EMOM',     -- Every Minute On the Minute
@@ -17,9 +11,15 @@ CREATE TYPE awm.group_style_t AS ENUM (
     'STD',      -- Standard sets
     'WAVE'      -- Contrast Wave
 );
+CREATE TYPE awm.hic_style_t AS ENUM (
+    'AMRAP',    -- As Many Reps (sets) As Possible
+    'CIR',      -- Curcuit
+    'INT',      -- Intervals
+    'TAB'       -- Tabata
+);
 CREATE TYPE awm.set_type_t AS ENUM ('STD', 'TMD', 'DST');
 CREATE TYPE awm.block_type_t AS ENUM ('MS', 'EN', 'SE', 'GC', 'FBT', 'HIC', 'HGC', 'OFF');
-CREATE TYPE awm.exercise_unit_t AS ENUM ('KG', 'LB', 'BW');
+CREATE TYPE awm.weight_unit_t AS ENUM ('KG', 'LB', 'BW');
 
 CREATE TABLE awm.user (
     id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -32,22 +32,22 @@ CREATE TABLE awm.user (
 
 CREATE TABLE awm.exercise (
     key TEXT PRIMARY KEY,
-    name TEXT,
-    exercise_unit awm.exercise_unit_t
+    name TEXT NOT NULL,
+    weight_unit awm.weight_unit_t NOT NULL
 );
 
 CREATE TABLE awm.cycle (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT,
-    start_date DATE,
-    end_date DATE
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
 );
 
 CREATE TABLE awm.workout (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    user_id UUID REFERENCES awm.user (id),
+    user_id UUID NOT NULL REFERENCES awm.user (id),
     date DATE NOT NULL,
-    seqno SMALLINT
+    seqno SMALLINT NOT NULL
 );
 
 -- #GC RUN, 2.8mi, 24m56s
@@ -66,44 +66,47 @@ CREATE TABLE awm.workout (
 -- 1 block (HGC), 1 set (ROW), 1 distance_set (3374m, 15m)
 CREATE TABLE awm.block (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    workout_id INT REFERENCES awm.workout (id),
-    block_type awm.block_type_t,
-    seqno SMALLINT,
+    workout_id INT NOT NULL REFERENCES awm.workout (id),
+    block_type awm.block_type_t NOT NULL,
+    seqno SMALLINT NOT NULL,
     notes TEXT,
     UNIQUE (id, block_type)
 );
 
 -- #E FOBBIT (MS)	Trainer	GD: 4x0x10	PD: 4x110x10	65m
 -- 1 block (FBT) / 1 fbt_block (MS, TRNR, 60m)
--- 1 set_group / 4 set / 4 standard_set (GD)
--- 1 set group / 4 set / 4 standard_set (PD)
+-- 1 set_group / 4 sets (GD, STD)
+-- 1 set group / 4 sets (PD, STD)
 CREATE TABLE awm.fbt_block (
-    id INT PRIMARY KEY REFERENCES awm.block (id),
-    exercise TEXT REFERENCES awm.exercise (key),
-    style awm.fbt_style_t,
+    id INT NOT NULL PRIMARY KEY REFERENCES awm.block (id),
+    exercise TEXT NOT NULL REFERENCES awm.exercise (key),
+    style awm.fbt_style_t NOT NULL,
     duration INTERVAL,
     block_type awm.block_type_t DEFAULT 'FBT' CHECK (block_type = 'FBT'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
 );
 
 -- #HIC	TABATA (4m)	Trainer
--- 1 block (HIC) / 1 hic_block (TAB)
--- 1 set_group (TAB), 1 set (TRNR) / 1 timed_set (4m)
-
+-- 1 block (HIC) / 1 hic_block (TAB, 4m)
+-- 1 set_group (STD), 1 set (TRNR, TMD, 4m)
+--
 -- #HIC	ROW, 5x1m, Rest: 1m, 1484m
--- 1 block (HIC) / 1 hic_block (INT, 1484m)
--- 1 set_group (NR), timed_set (ROW, 1m), timed_set (REST, 1m), etc
+-- 1 block (HIC) / 1 hic_block (INT, 1m, 1484m)
+-- 1 set_group (SS), 5 sets (ROW, TMD, 1m)
 -- #HIC	ROW, 5x2m, Rest: 4m
 -- #HIC	ROW, 5x2m, Rest: 3-5m
 -- #HIC	RUN (HS), 5x40s, REST: 2m
-
+--
 -- #HIC	DESC (10@27m2s), IR, BRP, SJ, RPS
--- 1 block (HIC) / 1 hic_block (27m2s)
--- 1 set_group (DESC) / set 10 1R, 10 BRP, 10 SJ, 10 RPS, 9 IR, 9 BRP, 9 SJ, 9 RPS, etc
+-- 1 block (HIC) / 1 hic_block (CIR, 27m2s)
+-- 1 set_group (SS) / 4 sets (IR, 10), (BRP, 10) (SJ, 10) (RPS 10)
+-- 1 set_group (SS) / 4 sets (IR, 9), (BRP, 9) (SJ, 9) (RPS 9)
+-- ...
+-- 1 set_group (SS) / 4 sets (IR, 1), (BRP, 1) (SJ, 1) (RPS 1)
 -- #HIC	DESC (10@24m20s), BBRx40, BRP, SJ, RPS
 CREATE TABLE awm.hic_block (
-    id INT PRIMARY KEY REFERENCES awm.block (id),
-    style awm.hic_style_t,
+    id INT NOT NULL PRIMARY KEY REFERENCES awm.block (id),
+    style awm.hic_style_t NOT NULL,
     duration INTERVAL,
     distance TEXT,
     block_type awm.block_type_t DEFAULT 'HIC' CHECK (block_type = 'HIC'),
@@ -112,38 +115,37 @@ CREATE TABLE awm.hic_block (
 
 -- Strength Endurance
 CREATE TABLE awm.se_block (
-    id INT PRIMARY KEY REFERENCES awm.block (id),
+    id INT NOT NULL PRIMARY KEY REFERENCES awm.block (id),
     duration INTERVAL,
     block_type awm.block_type_t DEFAULT 'SE' CHECK (block_type = 'SE'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
 );
 
--- Tracks a collection of sets by logical grouping
+-- Tracks a collection of one or more sets by logical grouping
 -- seqno => group number within a block
 -- #MS	SDL: 93x5, 109x1, 97x5, 113x1, 101x5, 117x1
 -- 1 block (MS)
 -- 1 set_group (STD), 6 set/standard_set
 -- #HIC	AMRAP (10m), KBS/2: 3x24x10; PS: 10, 10, 10; RR: 3x45x5; STEP: 5, 5, 5
--- 1 block / 1 hic_block (10m)
--- 1 set_group (AMRAP) / 12 sets in order
+-- 1 block / 1 hic_block (AMRAP, 10m)
+-- 1 set_group (SS) / 12 sets in order
 -- #HIC	CIRCUIT, KBS/2: 4x20x20s; PS: 20s, 20s, 20s, 20s; BJ: 20s, 20s, 20s, 20s; Rest: 4x1m
 -- 1 block / 1 hic_block
 -- 4 set_group (CIR) w/KBS/2 set (20s), PS set (20s), BJ set (20s), Rest set (1m)
 -- #HIC	CIRCUIT (11m52s); JR: 90s, 90s, 60s, 60s; GD: 10, 10, 8, 8; TRX: 12, 12, 10, 10
 -- 4 set_group (CIR) w/JR set, GD set, TRX set
--- RD/IR => 2 awm.standard_set w/parent_id to 1 set_group (SUPER)
--- 3 1/6 contrast waves => 2 awm.standard_set w/parent_id to 1 set_group (WAVE) per wave
--- 3/3/2 => 3 awm.standard_set w/parent_id to 1 set_group (CLUS, 20s)
--- 5 on the minute => 5 awm.standard_set w/parent_id to 1 set_group (EMOM, 1m)
+-- RD/IR => 2 awm.standard_set w/group_id to 1 set_group (SUPER)
+-- 3 1/6 contrast waves => 2 awm.set w/group_id to 1 set_group (WAVE) per wave
+-- 3/3/2 => 3 awm.standard_set w/group_id to 1 set_group (CLUS, 20s)
+-- 5 on the minute => 5 awm.standard_set w/group_id to 1 set_group (EMOM, 1m)
 -- #HIC	TABATA (4m)	Trainer
--- 1 block (HIC) / 1 hic_block (TAB)
--- 1 set_group (TAB), 1 set (TRNR, 4m)
+-- 1 block (HIC) / 1 hic_block (TAB, 4m)
+-- 1 set_group (STD), 1 set (TRNR, 4m)
 CREATE TABLE awm.set_group (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    block_id INT REFERENCES awm.block (id),
-    style awm.group_style_t,
-    duration INTERVAL,
-    seqno SMALLINT
+    block_id INT NOT NULL REFERENCES awm.block (id),
+    style awm.group_style_t NOT NULL,
+    seqno SMALLINT NOT NULL
 );
 
 -- Basic set values
@@ -154,14 +156,14 @@ CREATE TABLE awm.set_group (
 -- distance => exercise distance
 CREATE TABLE awm.set (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    block_id INT REFERENCES awm.block (id),
-    group_id INT REFERENCES awm.set_group (id),
-    exercise TEXT REFERENCES awm.exercise (key),
-    unit awm.exercise_unit_t,
-    set_type awm.set_type_t,
-    weight REAL,
+    block_id INT NOT NULL REFERENCES awm.block (id),
+    group_id INT NOT NULL REFERENCES awm.set_group (id),
+    exercise TEXT NOT NULL REFERENCES awm.exercise (key),
+    unit awm.weight_unit_t NOT NULL,
+    set_type awm.set_type_t NOT NULL,
+    weight REAL DEFAULT 0.0 NOT NULL,
+    setno SMALLINT NOT NULL,
     notes TEXT,
-    setno SMALLINT,
     reps SMALLINT,
     duration INTERVAL,
     distance TEXT,
