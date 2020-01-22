@@ -95,6 +95,7 @@ export const insert_hic_block = (
   } else if (style === 'CIR' || style === 'AMRAP') {
     duration = block.meta
   } else if (style === 'INT') {
+    duration = block.rest
     distance = block.meta
   }
 

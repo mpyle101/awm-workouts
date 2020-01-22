@@ -191,13 +191,18 @@ export const from_hic_block = (seqno, block_id, block) => {
     const exercise = block.activity
     const rec = { wt: block.wt, unit: block.unit, reps: block.work }
     const set = create_set_record(block_id, 'TMD', exercise, rec, 1)
-    if (exercise === 'MBRT') {
-      set.weight = 14
-    }
-
+    if (exercise === 'MBRT') set.weight = 14
     return [{ sets: [set] }]
   } else if (style === 'CIR' || style === 'AMRAP' ) {
     return from_ss_block(seqno, block_id, block)
+  } else if (style === 'INT') {
+    seqno.value += 1
+    const group = create_set_group(block_id, 'SS', seqno.value)
+    const exercise = block.activity
+    const sets = block.work.map((set, idx) =>
+      create_set_record(block_id, 'TMD', exercise, { reps: set.reps }, idx + 1)
+    )
+    return [{ group, sets }]
   }
 
   return []
