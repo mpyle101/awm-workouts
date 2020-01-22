@@ -1,2 +1,2 @@
-INSERT INTO awm.fbt_block (id, exercise, style, period)
-VALUES (${block_id}, ${exercise}, ${style}, ${period})
+INSERT INTO awm.fbt_block (id, exercise, style, duration)
+VALUES (${block_id}, ${exercise}, ${style}, ${duration})

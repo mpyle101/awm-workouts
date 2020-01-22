@@ -16,18 +16,25 @@ export const create_set_record = (
     notes: set.meta as string || null,
     weight: set.wt as number || 0,
     reps: null,
-    period: null,
+    duration: null,
     distance: null
   }
 
   if (set_type === 'STD') {
     rec.reps = set.reps
   } else if (set_type === 'TMD') {
-    rec.period = set.reps
+    rec.duration = set.reps
   }
 
   return rec
 }
+
+const create_set_group = (
+  block_id: number,
+  style: string,
+  seqno: number,
+  duration: string | null = null
+) => ({ block_id, style, seqno, duration })
 
 
 export const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
@@ -35,7 +42,7 @@ export const get_group_style = style => style === 'TIMED' ? 'STD' : style as str
 export const from_ms_block = (seqno, block_id, work) => {
   seqno.value += 1
   const style = get_group_style(work.style)
-  const group = { block_id, style, seqno: seqno.value, interval: null }
+  const group = create_set_group(block_id, style, seqno.value)
   const set_type = get_set_type(work.style)
 
   let setno = 0
@@ -63,7 +70,7 @@ export const from_ms_clus = (seqno, block_id, work) =>
 
     for (let i = 0; i < set.count; i++) {
       seqno.value += 1
-      const group = { block_id, style: 'CLUS', seqno: seqno.value, interval: null }
+      const group = create_set_group(block_id, 'CLUS', seqno.value)
       acc.push({ group, sets })
     }
 
@@ -74,7 +81,7 @@ export const from_ms_clus = (seqno, block_id, work) =>
 export const from_ms_emom = (seqno, block_id, work) => {
   seqno.value += 1
   const style = 'EMOM'
-  const group = { block_id, style, seqno: seqno.value, interval: null }
+  const group = create_set_group(block_id, style, seqno.value)
   const set_type = get_set_type(work.style)
 
   let setno = 0
@@ -95,7 +102,7 @@ export const from_ss_block = (seqno, block_id, work) =>
   work.reduce((acc, arr) => {
     seqno.value += 1
     let setno = 0
-    const group = { block_id, style: 'SS', seqno: seqno.value, interval: null }
+    const group = create_set_group(block_id, 'SS', seqno.value)
     const sets = arr.map(set => {
       setno += 1
       return create_set_record(block_id, get_set_type(set.style), set.key, set, setno)
@@ -110,7 +117,7 @@ export const from_se_block = (seqno, block_id, block) => {
   if (first.key === 'AS') {
     // Air Squats are timed
     seqno.value += 1
-    const group = { block_id, style: 'STD', seqno: seqno.value, interval: block.time }
+    const group = create_set_group(block_id, 'STD', seqno.value, block.time)
     const rec = { ...first, reps: block.time }
     const set = create_set_record(block_id, 'TMD', rec.key, rec, 1)
     set.reps = first.reps
@@ -153,7 +160,7 @@ export const from_en_block = (seqno, block_id, block) => {
   const set_type = get_set_type(block.style)
   const set = create_set_record(block_id, set_type, exercise, { meta }, 1)
   if (set_type === 'TMD') {
-    set.period = block.work
+    set.duration = block.work
   } else {
     set.distance = block.work
   }
@@ -167,10 +174,10 @@ export const from_hgc_block = (seqno, block_id, block) => {
   const set_type = get_set_type(block.style)
   const set = create_set_record(block_id, set_type, exercise, {}, 1)
   if (set_type === 'TMD') {
-    set.period   = block.work
+    set.duration = block.work
     set.distance = block.meta
   } else {
-    set.period   = block.meta
+    set.duration = block.meta
     set.distance = block.work
   }
 

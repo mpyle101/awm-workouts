@@ -45142,14 +45142,14 @@
                         {
                             "key": "JR",
                             "reps": 100,
-                            "wt": 10.0,
+                            "wt": 0.0,
                             "unit": "KG",
                             "style": "STD"
                         },
                         {
                             "key": "BRP",
                             "reps": 5,
-                            "wt": 10.0,
+                            "wt": 0.0,
                             "unit": "KG",
                             "style": "STD"
                         },
@@ -45163,7 +45163,277 @@
                         {
                             "key": "AS",
                             "reps": 10,
-                            "wt": 10.0,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "JR",
+                            "reps": 100,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BRP",
+                            "reps": 5,
+                            "wt": 0.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PS",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "AS",
+                            "reps": 10,
+                            "wt": 0.0,
                             "unit": "LB",
                             "style": "STD"
                         }

@@ -63,21 +63,21 @@ export const insert_fbt_block = (
   block_id: number,
   exercise: string,
   style: string,
-  period: string
-) => db.none(sql_insert_fbt_block, { block_id, exercise, style, period })
+  duration: string
+) => db.none(sql_insert_fbt_block, { block_id, exercise, style, duration })
 
 
 export const insert_se_block = (
   db: Database,
   block_id: number,
-  period: string
-) => db.none(sql_insert_se_block, { block_id, period })
+  duration: string
+) => db.none(sql_insert_se_block, { block_id, duration })
 
 
 interface ISetGroup {
   block_id: number
   style: string
-  interval: string | null
+  duration: string | null
   seqno: number
 }
 export const insert_set_group = (db: Database, sq: ISetGroup) => 
@@ -92,7 +92,7 @@ interface ISet {
   unit: string
   weight: number
   reps: number | null
-  period: string | null
+  duration: string | null
   notes: string
   setno: number
 }
@@ -110,7 +110,7 @@ const set_columns = new pgp.helpers.ColumnSet([
   'notes',
   'setno',
   'reps',
-  'period'
+  'duration'
 ], { table: { table: 'set', schema: 'awm' } })
 
 export const insert_sets = (db: Database, values) =>

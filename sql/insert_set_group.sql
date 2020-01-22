@@ -1,3 +1,3 @@
-INSERT INTO awm.set_group (block_id, style, interval, seqno)
-VALUES (${block_id}, ${style}, ${interval}, ${seqno})
+INSERT INTO awm.set_group (block_id, style, duration, seqno)
+VALUES (${block_id}, ${style}, ${duration}, ${seqno})
 RETURNING id

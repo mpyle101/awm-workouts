@@ -6,7 +6,7 @@ INSERT INTO awm.set (
     unit,
     weight,
     reps,
-    period,
+    duration,
     notes,
     setno
 )
@@ -18,7 +18,7 @@ VALUES (
     ${unit},
     ${weight},
     ${reps},
-    ${period},
+    ${duration},
     ${notes},
     ${setno}
 )

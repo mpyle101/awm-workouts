@@ -80,8 +80,8 @@ const main = async () => {
             } else if (block_type === 'SE') {
               await insert_se_block(trx, block_id, block.time)
             }
+            
             const blk: IBlock = { seqno, notes, type: block_type, groups: [] }
-
             for (const groups of get_set_groups(block_id, block)) {
               for (const { group, sets } of groups) {
                 blk.groups.push({ group, sets })

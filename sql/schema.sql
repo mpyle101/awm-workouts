@@ -80,7 +80,7 @@ CREATE TABLE awm.fbt_block (
     id INT PRIMARY KEY REFERENCES awm.block (id),
     exercise TEXT REFERENCES awm.exercise (key),
     style awm.fbt_style_t,
-    period INTERVAL,
+    duration INTERVAL,
     block_type awm.block_type_t DEFAULT 'FBT' CHECK (block_type = 'FBT'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
 );
@@ -102,7 +102,7 @@ CREATE TABLE awm.fbt_block (
 -- #HIC	DESC (10@24m20s), BBRx40, BRP, SJ, RPS
 CREATE TABLE awm.hic_block (
     id INT PRIMARY KEY REFERENCES awm.block (id),
-    period INTERVAL,
+    duration INTERVAL,
     distance TEXT,
     block_type awm.block_type_t DEFAULT 'HIC' CHECK (block_type = 'HIC'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
@@ -111,7 +111,7 @@ CREATE TABLE awm.hic_block (
 -- Strength Endurance
 CREATE TABLE awm.se_block (
     id INT PRIMARY KEY REFERENCES awm.block (id),
-    period INTERVAL,
+    duration INTERVAL,
     block_type awm.block_type_t DEFAULT 'SE' CHECK (block_type = 'SE'),
     FOREIGN KEY (id, block_type) REFERENCES awm.block (id, block_type)
 );
@@ -140,7 +140,7 @@ CREATE TABLE awm.set_group (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     block_id INT REFERENCES awm.block (id),
     style awm.group_style_t,
-    interval INTERVAL,
+    duration INTERVAL,
     seqno SMALLINT
 );
 
@@ -161,7 +161,7 @@ CREATE TABLE awm.set (
     notes TEXT,
     setno SMALLINT,
     reps SMALLINT,
-    period INTERVAL,
+    duration INTERVAL,
     distance TEXT,
     UNIQUE (id, set_type)
 );
