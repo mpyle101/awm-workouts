@@ -98,8 +98,8 @@ export const from_ms_emom = (seqno, block_id, work) => {
 }
 
 
-export const from_ss_block = (seqno, block_id, work) =>
-  work.reduce((acc, arr) => {
+export const from_ss_block = (seqno, block_id, block) =>
+  block.sets.reduce((acc, arr) => {
     seqno.value += 1
     let setno = 0
     const group = create_set_group(block_id, 'SS', seqno.value)
@@ -124,7 +124,7 @@ export const from_se_block = (seqno, block_id, block) => {
     return [{ group, sets: [set] }]
   }
 
-  return from_ss_block(seqno, block_id, block.sets)
+  return from_ss_block(seqno, block_id, block)
 }
 
 
@@ -182,4 +182,23 @@ export const from_hgc_block = (seqno, block_id, block) => {
   }
 
   return [{ sets: [set] }]
+}
+
+
+export const from_hic_block = (seqno, block_id, block) => {
+  const style = block.key
+  if (style === 'TAB') {
+    const exercise = block.activity
+    const rec = { wt: block.wt, unit: block.unit, reps: block.work }
+    const set = create_set_record(block_id, 'TMD', exercise, rec, 1)
+    if (exercise === 'MBRT') {
+      set.weight = 14
+    }
+
+    return [{ sets: [set] }]
+  } else if (style === 'CIR' || style === 'AMRAP' ) {
+    return from_ss_block(seqno, block_id, block)
+  }
+
+  return []
 }

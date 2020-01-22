@@ -5,6 +5,7 @@ import {
   from_en_block,
   from_gc_block,
   from_hgc_block,
+  from_hic_block,
   from_ms_clus,
   from_ms_emom,
   from_ms_block,
@@ -60,36 +61,54 @@ export const read_json = (path: string): Promise<any[]> =>
     )
   })
 
+
 export function* get_set_groups(block_id: number, block) {
   let seqno = { value: 0 }
-  if (block.type === 'MS') {
-    for (const work of block.work) {
-      const style = get_group_style(work.style)
-      if (style === 'CLUS') {
-        yield from_ms_clus(seqno, block_id, work)
-      } else if (style === 'EMOM') {
-        yield from_ms_emom(seqno, block_id, work)
+  switch (block.type) {
+    case 'SS':
+      yield from_ss_block(seqno, block_id, block)
+      break
+    case 'SE':
+      yield from_se_block(seqno, block_id, block)
+      break
+    case 'GC':
+      yield from_gc_block(seqno, block_id, block)
+      break
+    case 'HGC':
+      yield from_hgc_block(seqno, block_id, block)
+      break
+    case 'HIC':
+      yield from_hic_block(seqno, block_id, block)
+      break
+    case 'EN':
+      if (block.key === 'FBT') {
+        for (const work of block.actions) {
+          yield from_ms_block(seqno, block_id, work)
+        }
       } else {
-        yield from_ms_block(seqno, block_id, work)
+        yield from_en_block(seqno, block_id, block)
       }
-    }
-  } else if (block.type === 'SS') {
-    yield from_ss_block(seqno, block_id, block.sets)
-  } else if (block.type === 'SE') {
-    yield from_se_block(seqno, block_id, block)
-  } else if (block.type === 'GC') {
-    yield from_gc_block(seqno, block_id, block)
-  } else if (block.type === 'EN') {
-    if (block.key === 'FBT') {
-      for (const work of block.actions) {
-        yield from_ms_block(seqno, block_id, work)
+      break
+    case 'MS':
+      for (const work of block.work) {
+        const style = get_group_style(work.style)
+        switch (style) {
+          case 'CLUS':
+            yield from_ms_clus(seqno, block_id, work)
+            break
+          case 'EMOM':
+            yield from_ms_emom(seqno, block_id, work)
+            break
+          default:
+            yield from_ms_block(seqno, block_id, work)
+            break
+        }
       }
-    } else {
-      yield from_en_block(seqno, block_id, block)
-    }
-  } else if (block.type === 'HGC') {
-    yield from_hgc_block(seqno, block_id, block)
+      break
+    case 'OFF':
+      return []
+      break
+    default:
+      throw new Error(`Unknown block type: ${JSON.stringify(block)}`)
   }
-
-  return []
 }

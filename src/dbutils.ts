@@ -16,6 +16,7 @@ const sql_insert_exercise  = load_sql('insert_exercise.sql')
 const sql_insert_workout   = load_sql('insert_workout.sql')
 const sql_insert_block     = load_sql('insert_block.sql')
 const sql_insert_fbt_block = load_sql('insert_fbt_block.sql')
+const sql_insert_hic_block = load_sql('insert_hic_block.sql')
 const sql_insert_se_block  = load_sql('insert_se_block.sql')
 const sql_insert_set       = load_sql('insert_set.sql')
 const sql_insert_set_group = load_sql('insert_set_group.sql')
@@ -62,16 +63,43 @@ export const insert_fbt_block = (
   db: Database,
   block_id: number,
   exercise: string,
-  style: string,
-  duration: string
-) => db.none(sql_insert_fbt_block, { block_id, exercise, style, duration })
+  block: any
+) => {
+  const style = block.style
+  const duration = block.work
+  return db.none(sql_insert_fbt_block, { block_id, exercise, style, duration })
+}
 
 
 export const insert_se_block = (
   db: Database,
   block_id: number,
-  duration: string
-) => db.none(sql_insert_se_block, { block_id, duration })
+  block: any
+) => {
+  const duration = block.time
+  return db.none(sql_insert_se_block, { block_id, duration })
+}
+
+
+export const insert_hic_block = (
+  db: Database,
+  block_id: number,
+  block: any
+) => {
+  const style = block.key
+
+  let duration = null
+  let distance = null
+  if (style === 'TAB') {
+    duration = block.work
+  } else if (style === 'CIR' || style === 'AMRAP') {
+    duration = block.meta
+  } else if (style === 'INT') {
+    distance = block.meta
+  }
+
+  return db.none(sql_insert_hic_block, { block_id, style, duration, distance })
+}
 
 
 interface ISetGroup {

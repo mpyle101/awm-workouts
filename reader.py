@@ -359,7 +359,7 @@ def process_HIC(dt, mvmts):
             if len(mvmts) > 3:
                 meta = mvmts[3].upper()
 
-            block = {'type': 'HIC', 'key': 'INT', 'activity': 'Row', 'work': work, 'rest': rest}
+            block = {'type': 'HIC', 'key': 'INT', 'activity': 'ROW', 'work': work, 'rest': rest}
             if meta: block['meta'] = meta
 
         elif key == 'AMRAP':
@@ -374,9 +374,7 @@ def process_HIC(dt, mvmts):
             key = details[0].upper()
             wt = float(details[1]) if len(details) > 1 else 0.0
             unit = legend[key]['unit']
-            name = legend[key]['name']
-
-            block = {'type': 'HIC', 'key': 'TAB', 'activity': name, 'work': work, 'wt': wt, 'unit': unit}
+            block = {'type': 'HIC', 'key': 'TAB', 'activity': key, 'work': work, 'wt': wt, 'unit': unit}
 
         elif key == 'CIRCUIT':
             block = process_SE(dt, mvmts[1:])
@@ -392,7 +390,7 @@ def process_HIC(dt, mvmts):
             details = mvmts[2].split(':')
             rest = 'PT' + details[1].strip().upper()
 
-            block = {'type': 'HIC', 'key': 'INT', 'activity': 'Run', 'work': work, 'rest': rest}
+            block = {'type': 'HIC', 'key': 'INT', 'activity': 'RUN', 'work': work, 'rest': rest}
 
         elif key == 'DESC':
             details = meta.split('@')
@@ -411,7 +409,7 @@ def process_HIC(dt, mvmts):
                     sets.append({'key': key, 'reps': i, 'wt': wt, 'unit': unit, 'style': 'STD'})
                 work.append(sets)
 
-            block = {'type': 'HIC', 'key': 'CIR', 'work': work, 'meta': time}
+            block = {'type': 'HIC', 'key': 'CIR', 'sets': work, 'meta': time}
 
         else:
              print(dt, 'HIC', mvmts)
@@ -618,7 +616,6 @@ legend['IRR']['func']   = process_bodyweight
 legend['KBW/1']['func'] = process_timed
 legend['KBW/2']['func'] = process_timed
 legend['MBPS']['func']  = process_bodyweight
-legend['MBRT']['func']  = process_bodyweight
 legend['PS']['func']    = process_bodyweight
 legend['REST']['func']  = process_bodyweight
 legend['SRR']['func']   = process_bodyweight

@@ -16758,8 +16758,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -16774,8 +16774,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -16790,8 +16790,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -17142,8 +17142,8 @@
                         "style": "STD",
                         "sets": [
                             {
-                                "wt": 0.0,
-                                "unit": "KG",
+                                "wt": 14.0,
+                                "unit": "LB",
                                 "reps": 25,
                                 "count": 3
                             }
@@ -22181,7 +22181,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -22326,7 +22326,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -32989,8 +32989,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33012,8 +33012,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33035,8 +33035,8 @@
                         {
                             "key": "MBRT",
                             "reps": 40,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33354,8 +33354,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33377,8 +33377,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33400,8 +33400,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33712,8 +33712,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33735,8 +33735,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -33758,8 +33758,8 @@
                         {
                             "key": "MBRT",
                             "reps": 40,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -34309,8 +34309,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -34332,8 +34332,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -34355,8 +34355,8 @@
                         {
                             "key": "MBRT",
                             "reps": 40,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -34909,8 +34909,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -34932,8 +34932,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -34955,8 +34955,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -34978,8 +34978,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -35423,8 +35423,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -35446,8 +35446,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -35469,8 +35469,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -35492,8 +35492,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -36069,8 +36069,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36092,8 +36092,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36115,8 +36115,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36138,8 +36138,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -36787,8 +36787,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36810,8 +36810,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36833,8 +36833,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -36856,8 +36856,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -37382,8 +37382,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37405,8 +37405,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37428,8 +37428,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37451,8 +37451,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -37928,8 +37928,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37951,8 +37951,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37974,8 +37974,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -37997,8 +37997,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -38313,8 +38313,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38336,8 +38336,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38359,8 +38359,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38382,8 +38382,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -38731,8 +38731,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38754,8 +38754,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38777,8 +38777,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -38800,8 +38800,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -39272,8 +39272,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39295,8 +39295,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39318,8 +39318,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39341,8 +39341,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -39751,8 +39751,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39767,8 +39767,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39783,8 +39783,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -39799,8 +39799,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ]
@@ -40057,8 +40057,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40080,8 +40080,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40103,8 +40103,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40126,8 +40126,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40537,8 +40537,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40560,8 +40560,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40583,8 +40583,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -40606,8 +40606,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41045,8 +41045,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41068,8 +41068,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41091,8 +41091,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41114,8 +41114,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41606,8 +41606,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41629,8 +41629,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41652,8 +41652,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -41675,8 +41675,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42093,8 +42093,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42116,8 +42116,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42139,8 +42139,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42162,8 +42162,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42620,8 +42620,8 @@
                         {
                             "key": "MBRT",
                             "reps": 35,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42643,8 +42643,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42666,8 +42666,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -42689,8 +42689,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 14.0,
+                            "unit": "LB",
                             "style": "STD"
                         },
                         {
@@ -43224,7 +43224,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Bicycle Crunch",
+                "activity": "BC",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -43361,10 +43361,10 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Medicine Ball Russian Twist",
+                "activity": "MBRT",
                 "work": "PT4M",
                 "wt": 0.0,
-                "unit": "KG",
+                "unit": "LB",
                 "id": "8e0896deb258c8dc6c40979128252cbd"
             }
         ]
@@ -43626,7 +43626,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Bicycle Crunch",
+                "activity": "BC",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -43763,7 +43763,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Vertical Plate Raise",
+                "activity": "VPR",
                 "work": "PT4M",
                 "wt": 10.0,
                 "unit": "KG",
@@ -44083,7 +44083,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Bicycle Crunch",
+                "activity": "BC",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -44186,7 +44186,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Run",
+                "activity": "RUN",
                 "work": [
                     {
                         "reps": "PT40S",
@@ -44294,8 +44294,8 @@
                         "style": "STD",
                         "sets": [
                             {
-                                "wt": 0.0,
-                                "unit": "KG",
+                                "wt": 14.0,
+                                "unit": "LB",
                                 "reps": 60,
                                 "count": 1
                             }
@@ -44428,7 +44428,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Bicycle Crunch",
+                "activity": "BC",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -44445,7 +44445,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -44568,7 +44568,7 @@
             {
                 "type": "HIC",
                 "key": "CIR",
-                "work": [
+                "sets": [
                     [
                         {
                             "key": "IR",
@@ -45009,7 +45009,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -45032,7 +45032,7 @@
                         "style": "TIMED"
                     }
                 ],
-                "rest": "PT3M/PT5M",
+                "rest": "PT4M",
                 "id": "bb92db0e4bd5c7186eca0d56daa4dd5c"
             }
         ]
@@ -45817,7 +45817,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -46062,7 +46062,7 @@
             {
                 "type": "HIC",
                 "key": "CIR",
-                "work": [
+                "sets": [
                     [
                         {
                             "key": "BBR",
@@ -46506,7 +46506,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -47426,7 +47426,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -47449,7 +47449,7 @@
                         "style": "TIMED"
                     }
                 ],
-                "rest": "PT3M/PT5M",
+                "rest": "PT4M",
                 "id": "bf7d1e0c05f964ffcfe406e6f7a4872c"
             }
         ]
@@ -49074,7 +49074,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -50939,8 +50939,8 @@
                         {
                             "key": "MBRT",
                             "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 3.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -50972,13 +50972,6 @@
                             "wt": 16.0,
                             "unit": "KG",
                             "style": "STD"
-                        },
-                        {
-                            "key": "MBRT",
-                            "reps": 20,
-                            "wt": 0.0,
-                            "unit": "KG",
-                            "style": "STD"
                         }
                     ],
                     [
@@ -51007,13 +51000,6 @@
                             "key": "KBGS",
                             "reps": 20,
                             "wt": 16.0,
-                            "unit": "KG",
-                            "style": "STD"
-                        },
-                        {
-                            "key": "MBRT",
-                            "reps": 20,
-                            "wt": 0.0,
                             "unit": "KG",
                             "style": "STD"
                         }
@@ -51346,8 +51332,8 @@
                         {
                             "key": "MBRT",
                             "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
+                            "wt": 3.0,
+                            "unit": "LB",
                             "style": "STD"
                         }
                     ],
@@ -51379,13 +51365,6 @@
                             "wt": 16.0,
                             "unit": "KG",
                             "style": "STD"
-                        },
-                        {
-                            "key": "MBRT",
-                            "reps": 30,
-                            "wt": 0.0,
-                            "unit": "KG",
-                            "style": "STD"
                         }
                     ],
                     [
@@ -51414,13 +51393,6 @@
                             "key": "KBGS",
                             "reps": 25,
                             "wt": 16.0,
-                            "unit": "KG",
-                            "style": "STD"
-                        },
-                        {
-                            "key": "MBRT",
-                            "reps": 30,
-                            "wt": 0.0,
                             "unit": "KG",
                             "style": "STD"
                         }
@@ -51816,7 +51788,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -52051,7 +52023,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT2M",
@@ -52695,15 +52667,15 @@
                         "style": "STD",
                         "sets": [
                             {
-                                "wt": 0.0,
-                                "unit": "KG",
+                                "wt": 14.0,
+                                "unit": "LB",
                                 "reps": 60,
                                 "count": 1,
                                 "meta": "STD"
                             },
                             {
-                                "wt": 0.0,
-                                "unit": "KG",
+                                "wt": 14.0,
+                                "unit": "LB",
                                 "reps": 100,
                                 "count": 1,
                                 "meta": "STD"
@@ -52724,7 +52696,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -53226,7 +53198,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -53593,7 +53565,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -54089,7 +54061,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -55291,7 +55263,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -55344,7 +55316,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -55513,7 +55485,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -55832,7 +55804,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -56350,7 +56322,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -56908,7 +56880,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -57231,7 +57203,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -61034,7 +61006,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -61670,7 +61642,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -62470,7 +62442,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -62718,7 +62690,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -62837,7 +62809,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -63174,7 +63146,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -63423,7 +63395,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -65244,7 +65216,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -65587,7 +65559,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -66645,7 +66617,7 @@
             {
                 "type": "HIC",
                 "key": "INT",
-                "activity": "Row",
+                "activity": "ROW",
                 "work": [
                     {
                         "reps": "PT1M",
@@ -72367,7 +72339,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -72691,7 +72663,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -73921,7 +73893,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -74625,7 +74597,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
@@ -75006,7 +74978,7 @@
             {
                 "type": "HIC",
                 "key": "TAB",
-                "activity": "Trainer",
+                "activity": "TRNR",
                 "work": "PT4M",
                 "wt": 0.0,
                 "unit": "LB",
