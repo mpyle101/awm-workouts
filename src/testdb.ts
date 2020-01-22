@@ -21,6 +21,9 @@ const main = async () => {
   const fbt_blocks = await db.many('SELECT * FROM awm.fbt_block')
   console.log('FBT Blocks: ', fbt_blocks.length)
 
+  const hic_blocks = await db.many('SELECT * FROM awm.hic_block')
+  console.log('HIC Blocks: ', hic_blocks.length)
+
   const se_blocks = await db.many('SELECT * FROM awm.se_block')
   console.log('SE Blocks: ', se_blocks.length)
 

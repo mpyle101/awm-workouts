@@ -106,8 +106,6 @@ const main = async () => {
   }
 
   writeFileSync('./data.json', JSON.stringify(workouts, null, 2))
-
-  // Await'ing the transaction doesn't appear to actually pause until it's done.
   console.log(`${count} workouts inserted`)
 }
 
