@@ -153,7 +153,7 @@ export const from_gc_block = (seqno, block_id, block) => {
   seqno.value += 1
   const group = create_set_group(block_id, 'STD', seqno.value)
 
-  return [{ sets: [set] }]
+  return [{ group, sets: [set] }]
 }
 
 

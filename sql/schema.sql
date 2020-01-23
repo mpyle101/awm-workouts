@@ -40,7 +40,7 @@ CREATE TABLE awm.cycle (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT,
     start_date DATE NOT NULL,
-    end_date DATE NOT NULL,
+    end_date DATE NOT NULL
 );
 
 CREATE TABLE awm.workout (

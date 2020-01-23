@@ -75959,5 +75959,136 @@
                 "id": "ef130df7f9a75eea7c7f0e5fae805e4a"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-22T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 102.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4,
+                                "meta": "slow"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "CDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 58.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "MP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 3
+                            },
+                            {
+                                "wt": 41.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 155.0,
+                                "unit": "LB",
+                                "reps": 3,
+                                "count": 3
+                            },
+                            {
+                                "wt": 135.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SH",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 160.0,
+                                "unit": "KG",
+                                "reps": 14,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 15,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            }
+                        ]
+                    }
+                ],
+                "id": "f7afa0b436cfba30d5fd899693d1b1f4"
+            }
+        ]
     }
 ]
