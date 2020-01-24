@@ -5,7 +5,7 @@ const pgp = pg_promise()
 
 export type Database = ReturnType<typeof connect> | ITask<{}>
 
-const load_sql = (fname: string) => {
+export const load_sql = (fname: string) => {
   const path = join(__dirname, 'sql', fname)
   return new pgp.QueryFile(path, {minify: true})
 }

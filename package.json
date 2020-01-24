@@ -10,6 +10,7 @@
     "build": "tsc",
     "postbuild": "shx cp -r ./sql ./build",
     "lint": "tslint",
+    "get": "npm run build && node build/get-workout.js",
     "reload": "./setupdb.sh && npm start",
     "setupdb": "./setupdb.sh",
     "start": "npm run build && npm run loaddb",

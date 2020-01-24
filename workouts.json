@@ -76090,5 +76090,22 @@
                 "id": "f7afa0b436cfba30d5fd899693d1b1f4"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-23T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "key": "TAB",
+                "activity": "TRNR",
+                "work": "PT4M",
+                "wt": 0.0,
+                "unit": "LB",
+                "id": "9479debb1cf93654a3e09af8bd24bc42"
+            }
+        ]
     }
 ]
