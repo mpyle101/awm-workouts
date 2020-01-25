@@ -67,7 +67,7 @@ const main = async () => {
       await db.tx(async trx => {
         count += 1
         let workout_id = await insert_workout(trx, user_id, order, date)
-        const wo: IWorkout = { date, workout_id, blocks: [] }
+        let wo: IWorkout = { date, workout_id, blocks: [] }
 
         let seqno = 0
         for (const block of rec.blocks) {
@@ -75,9 +75,11 @@ const main = async () => {
           const notes = block.notes || '';
           const block_type = get_block_type(block)
           if (block_type === 'BR') {
+            workouts.push(wo)
             seqno -= 1
             order += 1
             workout_id = await insert_workout(trx, user_id, order, date)
+            wo = { date, workout_id, blocks: [] } 
             continue
           } else {
             const block_id = await insert_block(trx, workout_id, seqno, block_type, notes)

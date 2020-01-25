@@ -37,14 +37,14 @@ CREATE TABLE awm.exercise (
 );
 
 CREATE TABLE awm.cycle (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SMALLINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL
 );
 
 CREATE TABLE awm.workout (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SMALLINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id UUID NOT NULL REFERENCES awm.user (id),
     seqno SMALLINT NOT NULL,
     workout_date DATE CHECK (workout_date > '2015-01-01'),
@@ -67,7 +67,7 @@ CREATE TABLE awm.workout (
 -- 1 block (HGC), 1 set (ROW), 1 distance_set (3374m, 15m)
 CREATE TABLE awm.block (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    workout_id INT NOT NULL REFERENCES awm.workout (id),
+    workout_id SMALLINT NOT NULL REFERENCES awm.workout (id),
     block_type awm.block_type_t NOT NULL,
     seqno SMALLINT NOT NULL,
     notes TEXT NOT NULL DEFAULT '',

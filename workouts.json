@@ -76124,5 +76124,180 @@
                 "id": "e59405936c33165bba7417deda7269de"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-25T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "KBS/2",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 24.0,
+                                "unit": "KG",
+                                "reps": 45,
+                                "count": 1
+                            },
+                            {
+                                "wt": 40.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SSU",
+                        "style": "TIMED",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": "PT8S",
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 58.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 58.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 2
+                            },
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "MP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 2
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            },
+                            {
+                                "wt": 41.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 155.0,
+                                "unit": "LB",
+                                "reps": 4,
+                                "count": 3
+                            },
+                            {
+                                "wt": 135.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SH",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 165.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            },
+                            {
+                                "wt": 145.0,
+                                "unit": "KG",
+                                "reps": 12,
+                                "count": 1,
+                                "meta": "hold/1s"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "KR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 110.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "6f11b7a76577fc3743d4103b33a89d82"
+            },
+            {
+                "type": "HIC",
+                "key": "TAB",
+                "activity": "MBRT",
+                "work": "PT2M",
+                "wt": 0.0,
+                "unit": "LB",
+                "id": "b3aab0475a6c53c837acbfe6d374fec9"
+            }
+        ]
     }
 ]
