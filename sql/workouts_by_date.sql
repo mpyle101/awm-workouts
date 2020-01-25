@@ -1,5 +1,6 @@
 SELECT
-  awm.workout.date AS date,
+  awm.workout.created,
+  awm.workout.workout_date AS date,
   awm.workout.seqno AS wrk_no,
   awm.block.seqno AS blk_no,
   awm.set_group.seqno AS grp_no,
@@ -43,4 +44,4 @@ LEFT JOIN
 LEFT JOIN
   awm.fbt_block ON awm.block.id = awm.fbt_block.id AND awm.block.block_type = 'FBT'
 WHERE
-  awm.workout.date = ${date}
+  awm.workout.workout_date = ${date}

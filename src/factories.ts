@@ -13,7 +13,7 @@ export const create_set_record = (
     set_type,
     exercise,
     unit: set.unit as string || 'BW',
-    notes: set.meta as string || null,
+    notes: set.meta as string || '',
     weight: set.wt as number || 0,
     reps: null,
     duration: null,

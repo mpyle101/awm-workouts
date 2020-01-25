@@ -72,7 +72,7 @@ const main = async () => {
         let seqno = 0
         for (const block of rec.blocks) {
           seqno += 1
-          const notes = block.notes || null;
+          const notes = block.notes || '';
           const block_type = get_block_type(block)
           if (block_type === 'BR') {
             seqno -= 1

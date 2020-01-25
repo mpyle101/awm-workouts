@@ -51,7 +51,7 @@ export const insert_block = (
   workout_id: number,
   seqno: number,
   block_type: string,
-  notes: string | null
+  notes = ''
 ) =>
   db.one(
     sql_insert_block,

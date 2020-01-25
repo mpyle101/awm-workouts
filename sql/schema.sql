@@ -38,7 +38,7 @@ CREATE TABLE awm.exercise (
 
 CREATE TABLE awm.cycle (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name TEXT,
+    name TEXT NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL
 );
@@ -46,8 +46,9 @@ CREATE TABLE awm.cycle (
 CREATE TABLE awm.workout (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id UUID NOT NULL REFERENCES awm.user (id),
-    date DATE NOT NULL,
-    seqno SMALLINT NOT NULL
+    seqno SMALLINT NOT NULL,
+    workout_date DATE CHECK (workout_date > '2015-01-01'),
+    created TIMESTAMP WITHOUT TIME ZONE DEFAULT (now() AT TIME ZONE 'UTC')
 );
 
 -- #GC RUN, 2.8mi, 24m56s
@@ -69,7 +70,7 @@ CREATE TABLE awm.block (
     workout_id INT NOT NULL REFERENCES awm.workout (id),
     block_type awm.block_type_t NOT NULL,
     seqno SMALLINT NOT NULL,
-    notes TEXT,
+    notes TEXT NOT NULL DEFAULT '',
     UNIQUE (id, block_type)
 );
 
@@ -163,7 +164,7 @@ CREATE TABLE awm.set (
     set_type awm.set_type_t NOT NULL,
     weight REAL DEFAULT 0.0 NOT NULL,
     setno SMALLINT NOT NULL,
-    notes TEXT,
+    notes TEXT NOT NULL DEFAULT '',
     reps SMALLINT,
     duration INTERVAL,
     distance TEXT,
