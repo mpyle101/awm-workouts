@@ -2,14 +2,17 @@ import { connect, load_sql } from './dbutils'
 
 const main = async () => {
   const db = connect('postgres://jester@localhost/awm')
-  const sql_select_workout = load_sql('select_workout.sql')
-  let rows = await db.any(sql_select_workout, { date: '2017-09-23' })
+  const sql_workouts_by_date = load_sql('workouts_by_date.sql')
+  let rows = await db.any(sql_workouts_by_date, { date: '2017-09-23' })
   console.log(rows)
 
-  rows = await db.any(sql_select_workout, { date: '2017-11-05' })
+  rows = await db.any(sql_workouts_by_date, { date: '2017-11-05' })
   console.log(rows)
 
-  rows = await db.any(sql_select_workout, { date: '2020-01-023' })
+  rows = await db.any(sql_workouts_by_date, { date: '2020-01-023' })
+  console.log(rows)
+
+  rows = await db.any(sql_workouts_by_date, { date: '2017-06-01'})
   console.log(rows)
 }
 

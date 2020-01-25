@@ -76107,5 +76107,22 @@
                 "id": "9479debb1cf93654a3e09af8bd24bc42"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-01-24T18:00:00.000Z"
+        },
+        "type": "GC",
+        "blocks": [
+            {
+                "type": "GC",
+                "key": "BIKE",
+                "style": "TIMED",
+                "work": "PT40M",
+                "notes": null,
+                "meta": "GRVL",
+                "id": "e59405936c33165bba7417deda7269de"
+            }
+        ]
     }
 ]
