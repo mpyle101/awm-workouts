@@ -2,9 +2,9 @@
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./.tsbuildinfo",
-    "target": "ESNEXT",
+    "target": "ESNext",
     "module": "commonjs",
-    "lib": ["es6"],
+    "lib": ["ES2019"],
     "outDir": "./build",
     "rootDir": "./src",
 
