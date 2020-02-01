@@ -111,6 +111,7 @@ const main = async () => {
 
   writeFileSync('./data.json', JSON.stringify(workouts, null, 2))
   console.log(`${count} workouts inserted`)
+  db.$pool.end()
 }
 
 main()
