@@ -34,7 +34,7 @@ export const insert_exercise = (db: Database, rec) =>
 export const insert_cycle = (db: Database, name, start, end) =>
   db.query(sql_insert_cycle, { name, start, end })
 
-export const insert_workout = async (
+export const insert_workout = (
   db: Database,
   user_id: string,
   seqno: number,
@@ -70,7 +70,6 @@ export const insert_fbt_block = (
   return db.none(sql_insert_fbt_block, { block_id, exercise, style, duration })
 }
 
-
 export const insert_se_block = (
   db: Database,
   block_id: number,
@@ -79,7 +78,6 @@ export const insert_se_block = (
   const duration = block.time
   return db.none(sql_insert_se_block, { block_id, duration })
 }
-
 
 export const insert_hic_block = (
   db: Database,

@@ -1,7 +1,4 @@
 import { writeFileSync } from 'fs'
-import pg_promise = require('pg-promise')
-
-const pgp = pg_promise({ capSQL: true })
 
 import {
   connect,

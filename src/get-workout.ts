@@ -9,7 +9,7 @@ const main = async () => {
   rows = await db.any(sql_workouts_by_date, { date: '2017-11-05' })
   console.log(rows)
 
-  rows = await db.any(sql_workouts_by_date, { date: '2020-01-023' })
+  rows = await db.any(sql_workouts_by_date, { date: '2020-01-23' })
   console.log(rows)
 
   rows = await db.any(sql_workouts_by_date, { date: '2017-06-01'})
