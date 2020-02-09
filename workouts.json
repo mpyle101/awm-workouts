@@ -72478,7 +72478,7 @@
     },
     {
         "date": {
-            "$date": "2020-10-20T18:00:00.000Z"
+            "$date": "2019-10-20T18:00:00.000Z"
         },
         "type": "EN",
         "blocks": [
@@ -72490,7 +72490,7 @@
                 "unit": "BW",
                 "meta": "TRAINER",
                 "style": "TIMED",
-                "id": "f7cf1dad75ae2e7cdbfc0e93ffc46187"
+                "id": "6d5ff563a393ac99b6ec10e37981bc18"
             }
         ]
     },
@@ -75124,7 +75124,7 @@
     },
     {
         "date": {
-            "$date": "2020-12-29T18:00:00.000Z"
+            "$date": "2019-12-29T18:00:00.000Z"
         },
         "type": "EN",
         "blocks": [
@@ -75136,13 +75136,13 @@
                 "unit": "BW",
                 "meta": "TRAINER",
                 "style": "TIMED",
-                "id": "3ef29c2f1b536d9c0547dc43295bec28"
+                "id": "54dce61d0c8dbdca72b5a77d599f7a6e"
             }
         ]
     },
     {
         "date": {
-            "$date": "2020-12-30T18:00:00.000Z"
+            "$date": "2019-12-30T18:00:00.000Z"
         },
         "type": "EN",
         "blocks": [
@@ -75154,7 +75154,7 @@
                 "unit": "BW",
                 "meta": "SALIDA",
                 "style": "TIMED",
-                "id": "21d72481f242f00db2116c737369ada0"
+                "id": "7eb07bd2fb51e1c3e4b53b88fe896855"
             }
         ]
     },
