@@ -76724,5 +76724,192 @@
                 "id": "4d45ff066a9fcb25ca4d596aec9de6b4"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-02-04T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "sets": [
+                    [
+                        {
+                            "key": "PS",
+                            "reps": 20,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "SU",
+                            "reps": 20,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "KBS/1",
+                            "reps": 20,
+                            "wt": 16.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BC",
+                            "reps": 40,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "PS",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "SU",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "KBS/1",
+                            "reps": 15,
+                            "wt": 16.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BC",
+                            "reps": 30,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "PS",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "SU",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "KBS/1",
+                            "reps": 15,
+                            "wt": 16.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BC",
+                            "reps": 30,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "PS",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "SU",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "KBS/1",
+                            "reps": 15,
+                            "wt": 16.0,
+                            "unit": "KG",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "BC",
+                            "reps": 30,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "key": "CIR",
+                "id": "13b73680ed396356dd397e7df3f0fb80"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-02-05T18:00:00.000Z"
+        },
+        "type": "SE",
+        "blocks": [
+            {
+                "type": "SE",
+                "sets": [
+                    [
+                        {
+                            "key": "AS",
+                            "reps": 135,
+                            "wt": 20.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "time": "PT5M",
+                "id": "a6368979274c91e3fe4a3c09bd20918f"
+            },
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT30M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "HOTEL MACHINES",
+                "style": "TIMED",
+                "id": "e2b85c5bd164fc8d933a25a8c9034c68"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-02-07T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT90M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "SNOW SHOVEL",
+                "style": "TIMED",
+                "id": "0e1ead93dda93554042f857ba73f151b"
+            }
+        ]
     }
 ]
