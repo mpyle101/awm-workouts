@@ -1,5 +1,5 @@
 import { readFile } from 'fs'
-import { Database } from './dbutils'
+import { Database } from './db-utils'
 import {
   create_set_record,
   from_en_block,
@@ -16,10 +16,10 @@ import {
 
 import {
   insert_block,
-  insert_cycle,
-  insert_exercise,
+  insert_cycles,
+  insert_exercises,
   insert_user,
-} from './dbutils'
+} from './db-utils'
 
 export const get_block_type = block => {
   if (block.type === 'EN' && block.key === 'FBT') {
@@ -40,18 +40,22 @@ export const insert_mpyle = async db =>
     last_name: 'Pyle'
   })
 
-export const load_exercises =  async db => {
-  for (const rec of await read_json('./exercises.json')) {
-    await insert_exercise(db, rec)
-  }
+export const load_exercises = async db => {
+  const exercises = await read_json('./exercises.json')
+  const values = exercises.map(
+    ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit})
+  )
+  return insert_exercises(db, values)
 }
 
 export const load_cycles = async db => {
-  for (const rec of await read_json('./cycles.json')) {
-    const start = rec.start.$date.split('T')[0]
-    const end = rec.end.$date.split('T')[0]
-    await insert_cycle(db, rec.name, start, end)
-  }
+  const cycles = await read_json('./cycles.json')
+  const values = cycles.map(({ name, start, end }) => ({
+    name,
+    start_date: start.$date.split('T')[0],
+    end_date:   end.$date.split('T')[0]
+  })) 
+  return insert_cycles(db, values)
 }
 
 export const read_json = (path: string): Promise<any[]> =>

@@ -1,4 +1,4 @@
-import { connect } from './dbutils'
+import { connect } from './db-utils'
 
 const main = async () => {
   const db = connect('postgres://jester@localhost/awm')

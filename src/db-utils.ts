@@ -11,8 +11,6 @@ export const load_sql = (fname: string) => {
 }
 const sql_truncate_all     = load_sql('truncate_all.sql')
 const sql_insert_user      = load_sql('insert_user.sql')
-const sql_insert_cycle     = load_sql('insert_cycle.sql')
-const sql_insert_exercise  = load_sql('insert_exercise.sql')
 const sql_insert_workout   = load_sql('insert_workout.sql')
 const sql_insert_block     = load_sql('insert_block.sql')
 const sql_insert_fbt_block = load_sql('insert_fbt_block.sql')
@@ -27,12 +25,6 @@ export const truncate_all = (db: Database) => db.query(sql_truncate_all)
 
 export const insert_user = async (db: Database, user) =>
   await db.one(sql_insert_user, user, user => user.id) as string
-
-export const insert_exercise = (db: Database, rec) => 
-  db.query(sql_insert_exercise, rec)
-
-export const insert_cycle = (db: Database, name, start, end) =>
-  db.query(sql_insert_cycle, { name, start, end })
 
 export const insert_workout = (
   db: Database,
@@ -111,34 +103,26 @@ export const insert_set_group = (db: Database, sq: ISetGroup) =>
   db.one(sql_insert_set_group, sq, group => group.id as number)
 
 
-interface ISet {
-  block_id: number
-  group_id: number
-  set_type: string
-  exercise: string
-  unit: string
-  weight: number
-  reps: number | null
-  duration: string | null
-  notes: string
-  setno: number
-}
-export const insert_set = (db: Database, set: ISet) =>
-  db.one(sql_insert_set, set, set => set.id as number)
-
-
 const set_columns = new pgp.helpers.ColumnSet([
-  'block_id',
-  'group_id',
-  'exercise',
-  'unit',
-  'set_type',
-  'weight',
-  'notes',
-  'setno',
-  'reps',
-  'duration'
+  'block_id', 'group_id', 'exercise', 'unit', 'set_type',
+  'weight', 'notes', 'setno', 'reps', 'duration'
 ], { table: { table: 'set', schema: 'awm' } })
 
 export const insert_sets = (db: Database, values) =>
   db.none(pgp.helpers.insert(values, set_columns))
+
+
+const exercise_columns = new pgp.helpers.ColumnSet([
+  'key', 'name', 'weight_unit'
+], { table: { table: 'exercise', schema: 'awm' } })
+
+export const insert_exercises = (db: Database, values) =>
+  db.none(pgp.helpers.insert(values, exercise_columns))
+
+
+const cycle_columns = new pgp.helpers.ColumnSet([
+  'name', 'start_date', 'end_date'
+], { table: { table: 'cycle', schema: 'awm' } })
+
+export const insert_cycles = (db: Database, values) =>
+  db.none(pgp.helpers.insert(values, cycle_columns))

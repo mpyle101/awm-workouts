@@ -6,14 +6,11 @@ import {
   insert_fbt_block,
   insert_hic_block,
   insert_se_block,
-  insert_cycle,
-  insert_exercise,
   insert_sets,
   insert_set_group,
-  insert_user,
   insert_workout,
   truncate_all
-} from './dbutils'
+} from './db-utils'
 
 import {
   get_block_type,
@@ -92,7 +89,7 @@ const main = async () => {
             for (const groups of get_set_groups(block_id, block)) {
               for (const { group, sets } of groups) {
                 blk.groups.push({ group, sets })
-                const group_id = group ? await insert_set_group(trx, group) : null
+                const group_id = await insert_set_group(trx, group)
                 await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
               }
             }
