@@ -76911,5 +76911,51 @@
                 "id": "0e1ead93dda93554042f857ba73f151b"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2020-02-09T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "FBT",
+                "work": "PT75M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "SE",
+                "actions": [
+                    {
+                        "key": "PS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 20,
+                                "count": 3,
+                                "meta": "STD"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SRR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 20,
+                                "count": 3,
+                                "meta": "STD"
+                            }
+                        ]
+                    }
+                ],
+                "id": "066e7131fdcb88695c7aace717abde30"
+            }
+        ]
     }
 ]
