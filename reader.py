@@ -244,6 +244,9 @@ def process_GC(dt, mvmts):
                 style = 'DIST'
                 work = v
 
+            if len(mvmts) > 2:
+                notes = mvmts[2]
+                
             meta = 'ROW'
 
         elif key == 'RUN':

@@ -7,7 +7,7 @@ import {
   insert_hic_block,
   insert_se_block,
   insert_sets,
-  insert_set_group,
+  insert_set_groups,
   insert_workout,
   truncate_all
 } from './db-utils'
@@ -20,19 +20,6 @@ import {
   load_exercises,
   read_json
 } from './utils'
-
-interface IWorkout {
-  date: string
-  workout_id: number
-  blocks: any[]
-}
-
-interface IBlock {
-  seqno: number
-  notes: string
-  type: string
-  groups: any[]
-}
 
 const main = async () => {
   const db = connect('postgres://jester@localhost/awm')
@@ -47,7 +34,6 @@ const main = async () => {
   }
   
   const user_id = await insert_mpyle(db)
-  const workouts: any[] = []
 
   let order = 1
   let count = 0
@@ -61,19 +47,16 @@ const main = async () => {
       await db.tx(async trx => {
         count += 1
         let workout_id = await insert_workout(trx, user_id, order, date)
-        let wo: IWorkout = { date, workout_id, blocks: [] }
-
         let seqno = 0
         for (const block of rec.blocks) {
           seqno += 1
           const notes = block.notes || '';
           const block_type = get_block_type(block)
           if (block_type === 'BR') {
-            workouts.push(wo)
             seqno -= 1
             order += 1
+            count += 1
             workout_id = await insert_workout(trx, user_id, order, date)
-            wo = { date, workout_id, blocks: [] } 
             continue
           } else {
             const block_id = await insert_block(trx, workout_id, seqno, block_type, notes)
@@ -85,20 +68,22 @@ const main = async () => {
               await insert_hic_block(trx, block_id, block)
             }
 
-            const blk: IBlock = { seqno, notes, type: block_type, groups: [] }
+            const blk_grps: any[] = []
+            const blk_sets: any[] = []
             for (const groups of get_set_groups(block_id, block)) {
               for (const { group, sets } of groups) {
-                blk.groups.push({ group, sets })
-                const group_id = await insert_set_group(trx, group)
-                await insert_sets(trx, sets.map(s => ({ ...s, group_id })))
+                blk_grps.push(group)
+                blk_sets.push(sets)
               }
             }
-
-            wo.blocks.push(blk)
+            if (blk_grps.length) {
+              const group_ids = (await insert_set_groups(trx, blk_grps)).map(g => g.id)
+              const set_recs = group_ids.reduce((acc, group_id, idx) =>
+                acc.concat(blk_sets[idx].map(s => ({ ...s, group_id }))), [])
+              await insert_sets(trx, set_recs)
+            }
           }
         }
-
-        workouts.push(wo)
       })
     } catch (e) {
       console.log(`Failed to insert workout from ${date}:`, e)
@@ -106,7 +91,6 @@ const main = async () => {
     }
   }
 
-  writeFileSync('./data.json', JSON.stringify(workouts, null, 2))
   console.log(`${count} workouts inserted`)
   db.$pool.end()
 }

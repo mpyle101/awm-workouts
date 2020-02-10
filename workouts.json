@@ -25757,7 +25757,7 @@
                 "key": "ROW",
                 "style": "TIMED",
                 "work": "PT15M",
-                "notes": null,
+                "notes": "D: 3125m",
                 "meta": "ROW",
                 "id": "e3e5e6164683c0a594adcdbb55823312"
             }

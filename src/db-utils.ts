@@ -43,7 +43,7 @@ export const insert_block = (
   workout_id: number,
   seqno: number,
   block_type: string,
-  notes = ''
+  notes: string
 ) =>
   db.one(
     sql_insert_block,
@@ -103,9 +103,17 @@ export const insert_set_group = (db: Database, sq: ISetGroup) =>
   db.one(sql_insert_set_group, sq, group => group.id as number)
 
 
+const set_group_columns = new pgp.helpers.ColumnSet([
+  'block_id', 'style', 'seqno'
+], { table: { table: 'set_group', schema: 'awm' } })
+
+export const insert_set_groups = (db: Database, values) =>
+  db.many(pgp.helpers.insert(values, set_group_columns) + 'RETURNING id')
+
+
 const set_columns = new pgp.helpers.ColumnSet([
   'block_id', 'group_id', 'exercise', 'unit', 'set_type',
-  'weight', 'notes', 'setno', 'reps', 'duration'
+  'weight', 'notes', 'setno', 'reps', 'duration', 'distance'
 ], { table: { table: 'set', schema: 'awm' } })
 
 export const insert_sets = (db: Database, values) =>
