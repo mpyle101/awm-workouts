@@ -200,6 +200,11 @@
         "unit": "KG"
     },
     {
+        "key": "DH",
+        "name": "Dead Hang",
+        "unit": "LB"
+    },
+    {
         "key": "DL",
         "name": "Deadlift",
         "unit": "KG"
@@ -437,6 +442,11 @@
     {
         "key": "PD",
         "name": "Pull Down",
+        "unit": "LB"
+    },
+    {
+        "key": "PD/CG",
+        "name": "Pull Down - Close Grip",
         "unit": "LB"
     },
     {
