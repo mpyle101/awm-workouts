@@ -95,4 +95,4 @@ const main = async () => {
   db.$pool.end()
 }
 
-main()
+main().then(() => console.log('done'))

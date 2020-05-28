@@ -8,7 +8,7 @@
   "scripts": {
     "loaddb": "node build/loaddb.js",
     "build": "tsc",
-    "postbuild": "shx cp -r ./sql ./build",
+    "postbuild": "cp -r ./sql ./build",
     "lint": "tslint",
     "get": "npm run build && node build/get-workout.js",
     "reload": "./setupdb.sh && npm start",
@@ -17,12 +17,10 @@
     "test": "npm run build && node build/testdb.js"
   },
   "dependencies": {
-    "pg-promise": "^10.4.4"
+    "pg-promise": "^10.5.6"
   },
   "devDependencies": {
-    "@types/node": "^13.7.7",
-    "eslint": "^6.8.0",
-    "shx": "^0.3.2",
-    "typescript": "^3.8.2"
+    "@types/node": "^14.0.5",
+    "eslint": "^6.8.0"
   }
 }

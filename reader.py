@@ -616,6 +616,7 @@ with open('Legend.csv', newline='') as fp:
         legend[rec[0]] = {'key': rec[0], 'name': rec[1], 'unit': rec[2], 'func': process_std}
 
 legend['IRR']['func']   = process_bodyweight
+legend['DH']['func']    = process_timed
 legend['KBW/1']['func'] = process_timed
 legend['KBW/2']['func'] = process_timed
 legend['MBPS']['func']  = process_bodyweight

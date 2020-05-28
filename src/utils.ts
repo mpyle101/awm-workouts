@@ -31,8 +31,8 @@ export const get_block_type = block => {
   return block.type as string
 }
 
-export const insert_mpyle = async db =>
-  await insert_user(db, {
+export const insert_mpyle = db =>
+  insert_user(db, {
     username: 'mpyle',
     password: 'jester',
     email: 'mpyle101@gmail.com',

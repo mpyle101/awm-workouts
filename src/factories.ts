@@ -128,13 +128,14 @@ export const from_se_block = (seqno, block_id, block) => {
 
 
 const GC_EXER = new Map([
-  ['ROWROW', 'ROW'],
-  ['BIKECX', 'BIKE/CX'],
+  ['ROWROW',   'ROW'],
+  ['BIKECX',   'BIKE/CX'],
   ['BIKEGRVL', 'BIKE/GR'],
+  ['BIKEMTN',  'BIKE/MT'],
   ['BIKEROAD', 'BIKE/RD'],
-  ['BIKESS', 'BIKE/SS'],
+  ['BIKESS',   'BIKE/SS'],
   ['BIKETRNR', 'TRNR'],
-  ['SKICX', 'SKI/CX']
+  ['SKICX',    'SKI/CX']
 ])
 const get_gc_exercise = block => {
   if (block.key === 'RUN') {
