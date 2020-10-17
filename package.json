@@ -6,21 +6,22 @@
   "description": "Workouts Database Loader",
   "main": "build/loaddb.js",
   "scripts": {
-    "loaddb": "node build/loaddb.js",
     "build": "tsc",
-    "postbuild": "cp -r ./sql ./build",
+    "clean": "rm -r build/*",
     "lint": "tslint",
-    "get": "npm run build && node build/get-workout.js",
+    "loaddb": "node build/loaddb.js",
+    "postbuild": "cp -r ./sql ./build",
     "reload": "./setupdb.sh && npm start",
+    "sample": "npm run build && node build/sample.js",
     "setupdb": "./setupdb.sh",
     "start": "npm run build && npm run loaddb",
     "test": "npm run build && node build/testdb.js"
   },
   "dependencies": {
-    "pg-promise": "^10.5.6"
+    "pg-promise": "10.7.0"
   },
   "devDependencies": {
-    "@types/node": "^14.0.5",
-    "eslint": "^7.1.0"
+    "@types/node": "14.11.10",
+    "eslint": "7.11.0"
   }
 }

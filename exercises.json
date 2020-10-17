@@ -190,6 +190,11 @@
         "unit": "LB"
     },
     {
+        "key": "DBPO",
+        "name": "Dumbbell Pullover",
+        "unit": "LB"
+    },
+    {
         "key": "DC",
         "name": "Drag Curl",
         "unit": "KG"
@@ -530,7 +535,7 @@
         "unit": "KG"
     },
     {
-        "key": "SP",
+        "key": "SNP",
         "name": "Snatch Press",
         "unit": "KG"
     },
@@ -578,6 +583,11 @@
         "key": "TRAINER",
         "name": "Trainer",
         "unit": "LB"
+    },
+    {
+        "key": "TBDL",
+        "name": "Trap Bar Deadlift",
+        "unit": "KG"
     },
     {
         "key": "TRX",
