@@ -64198,7 +64198,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Bootcamp",
+                "notes": "Alteryx Bootcamp",
                 "id": "ec1dc1ede7dd0c72e9e85ccbb181cca2"
             }
         ]
@@ -64211,7 +64211,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Bootcamp",
+                "notes": "Alteryx Bootcamp",
                 "id": "d6487f9a7485c082ea977497d71f2a31"
             }
         ]
@@ -64224,7 +64224,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Bootcamp",
+                "notes": "Alteryx Bootcamp",
                 "id": "e0e02f8ddbef620578b8b5ebe3aec71b"
             }
         ]
@@ -64237,7 +64237,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Bootcamp",
+                "notes": "Alteryx Bootcamp",
                 "id": "4ab3d3dfd87aaef738c7a1eb441bdb24"
             }
         ]
@@ -87961,6 +87961,3937 @@
                 "notes": "Lobo / Cottonwood / Res",
                 "meta": "GRVL",
                 "id": "9b9940647b1aaf3dfc55f15cb506c75a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-18T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT45M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "3a94713bc9fe6b7d722527575df0ccf8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-19T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "80d30dc362e9dbe7e16cf909b84ea4f9"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-20T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 62.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 2
+                            },
+                            {
+                                "wt": 52.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 98.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 100.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 92.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 15,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 12,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 14,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SNP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "2dabf052d18b88ccc19de22141a1a4e3"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-21T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Bonnie",
+                "id": "7044e81379f7ac07ab116439a850035f"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-22T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Bonnie",
+                "id": "1fe4fa6a331199a43d74d23ae31dcc72"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-23T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 120.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 100.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "cec6e6cb0cb2204657367478aa54848a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-24T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT70M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "LEAFING",
+                "style": "TIMED",
+                "id": "4f2c47534740ce78c7ab1adfb8249aed"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-25T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "786c6d30d13250e37010c5fed5567bc5"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-26T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT135M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "SNOW SHOVEL",
+                "style": "TIMED",
+                "id": "89edb727c84995663c09349903e8fa73"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-27T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Recover Donna\u2019s B-day",
+                "id": "4c04e62912fd91baf04804fd95771e3c"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-28T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            },
+                            {
+                                "wt": 82.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 120.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "eea07857427c42f2459991bac9744d5a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-29T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Driving to Ohio, Day 1",
+                "id": "ce967f016d837dee4d66a761636ab8ea"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-30T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Driving to Ohio, Day 2",
+                "id": "35ecc3eb6e20c38f90347bd6f4cc691a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-10-31T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "House cleaning",
+                "id": "4de2a403626dc3c17aca58b7e26405a8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-01T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "House cleaning",
+                "id": "ec66a29e6677dc9f5bb68d1bd026c940"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-02T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "House cleaning",
+                "id": "6ce42962a769ce01daff23861dbf0ed9"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-03T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Bonnie",
+                "id": "1fa11701e5e42eccf52fbe3d00f7673a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-04T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "House cleaning",
+                "id": "1c4ba08eeaed5e2cc7bf8ff2f18e1d16"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-05T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Driving Home, Day 1",
+                "id": "acb24becac0ef660da2713511f741a9f"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-06T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Driving Home, Day 2",
+                "id": "9c0236e772084201b75853cb5029ba17"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-09T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "959d58d38c46328d4f00e2c56c715321"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-10T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 120.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "989d5754d7437d7afb6787b10f29f4b3"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-11T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "c898c3e05c5e89415ddaab2cf328bf11"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-12T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "00bfbaf8755b6f4b25612e079da5ae45"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-13T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "c5cdc6ff3b65cb31f37e473afa7ab2df"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-14T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "ff45c0bccab1deedf29d80453ac09de8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-15T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "b0ea0d66ee3bcf7c10399a3bf645da1d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-16T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "key": "TAB",
+                "activity": "TRNR",
+                "work": "PT4M",
+                "wt": 0.0,
+                "unit": "LB",
+                "id": "8f2269aee1d4fac3930717f627aeab0e"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-17T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 15,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 12,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "7a1960dcb84af8a5e0802a80a18a894d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-18T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 115.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "5acf5e49070dc2561d510acf4f9682b6"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-19T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "c726477cd548224af99150502794c51a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-20T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "61e846a14c098598855dc9b0806fc073"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-21T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Tired",
+                "id": "f287bfa91c80fb08d39ad413cd9deda3"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-22T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "FBT",
+                "work": "PT50M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "MS",
+                "actions": [
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 4,
+                                "meta": "STD"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 4,
+                                "meta": "STD"
+                            }
+                        ]
+                    }
+                ],
+                "id": "3f9dd1b10c3c479d0f54152db3a5095a"
+            },
+            {
+                "type": "BR"
+            },
+            {
+                "type": "HIC",
+                "key": "TAB",
+                "activity": "TRNR",
+                "work": "PT4M",
+                "wt": 0.0,
+                "unit": "LB",
+                "id": "83aa95100f323f12689078eaaa5e6d99"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-23T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "d553bbdafd043ec6699094665be7dc07"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-24T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 58.5,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 2
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 92.5,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 2
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 16,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 15,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "09d31a3ff4a5c20a07f09aaad2d91d37"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-25T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 115.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "BC",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 100,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "d2a09a2af55845b5d669247519a70863"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-26T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Xmas Lights",
+                "id": "a153cc6866af3cfe1f4409cd970e5280"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-27T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Tired",
+                "id": "214d4f795735f6fd50c785fa3d82b901"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-28T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "8db895bd10089525deb9a4a6d0b27f44"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-29T18:00:00.000Z"
+        },
+        "type": "GC",
+        "blocks": [
+            {
+                "type": "GC",
+                "key": "BIKE",
+                "style": "TIMED",
+                "work": "PT65M",
+                "notes": "Big Ring Ladder",
+                "meta": "TRNR",
+                "id": "6ea9066826c25c3eedbd616d0e964077"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-11-30T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "e156cbd263496b7c2212d196656ef775"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-01T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT45M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "4d0890df00a28cbde99c3ed7a429a68e"
+            },
+            {
+                "type": "BR"
+            },
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 62.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 63.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 100.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 102.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "0e7e3698a1a7239426c0bf7c657e8239"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 15,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 12,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 12,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "858d8f0c50315fae83db8e4b929f5b2a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-02T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT45M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "76085d8b41bb3ca46fe25e2ac3cb2560"
+            },
+            {
+                "type": "BR"
+            },
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 115.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "e67c80547f04598ab5f89c846f2845ba"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-03T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "f95abf95be11f2dccf9ece77ea36bc6d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-04T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "0dcc2679acdd021ff2d4b928e42e0bc7"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-05T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "c9045cd3b74d76a6020eddafb47852db"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-06T18:00:00.000Z"
+        },
+        "type": "GC",
+        "blocks": [
+            {
+                "type": "GC",
+                "key": "BIKE",
+                "style": "TIMED",
+                "work": "PT65M",
+                "notes": "Big Ring Ladder x 2",
+                "meta": "TRNR",
+                "id": "501171aaecd897ccd119cb38a3005072"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-07T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "ebe442a66a9fc976c1941ed0589ef59d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-08T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "842a0d4f0089407550c122ca798112f4"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 16,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 15,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 12,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 11,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 9,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "341bdf5fccbfba62a4155f853a602d6a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-09T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 117.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 115.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "f838928a5622deb76d4811befe877b9c"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-10T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "5ef22ef6168c9014d56ca367aefe730a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-11T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "9b10edad2eb54b01f0506d287bea0854"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-12T18:00:00.000Z"
+        },
+        "type": "HGC",
+        "blocks": [
+            {
+                "type": "HGC",
+                "key": "ROW",
+                "style": "DIST",
+                "work": "2000M",
+                "meta": "PT8M30S",
+                "id": "7279cfae6188712972fefbb95523047a"
+            },
+            {
+                "type": "BR"
+            },
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT30M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "YOGA: SUN A & B",
+                "style": "TIMED",
+                "id": "9ffc6a55239454bcd6cea871f678f4d1"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-13T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "key": "TAB",
+                "activity": "TRNR",
+                "work": "PT4M",
+                "wt": 0.0,
+                "unit": "LB",
+                "id": "b7d702eec9589f4d603c21128d433c35"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-14T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "55b696b06eb39dbaa60caa2a6ce6c029"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-15T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 58.5,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            },
+                            {
+                                "wt": 58.5,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 97.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 92.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "ca50acbdc9b40075f4f77d4a87c785c9"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 16,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 15,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 12,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 12,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 10,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 8,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "b49a32e7c38adb4736ac5ca5325adaeb"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-16T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 117.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            },
+                            {
+                                "wt": 115.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "abd0880fa9bfb3fa4092c31229a97af8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-17T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "6a5ddf8a522455f5974e7c06e788532a"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-18T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 2
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "d9989df455c519dc71a2fe14f3632aaa"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-19T18:00:00.000Z"
+        },
+        "type": "HGC",
+        "blocks": [
+            {
+                "type": "HGC",
+                "key": "ROW",
+                "style": "DIST",
+                "work": "2000M",
+                "meta": "PT8M10S",
+                "id": "9c93a4cd8af83482a738d807a85f351d"
+            },
+            {
+                "type": "BR"
+            },
+            {
+                "type": "EN",
+                "key": "MISC",
+                "work": "PT30M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "YOGA: SUN A & B",
+                "style": "TIMED",
+                "id": "77cc130d567c9e86f9da986d4a74994c"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-20T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Tired",
+                "id": "54c99d67fbdea6f2f08e0794d65b86b8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-21T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "5ef02753abb64ab76a2ac29ff8776f20"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-22T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 59.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 62.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 98.0,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 83.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            },
+                            {
+                                "wt": 75.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "55d0c47c75bf75adb587a05245665d23"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 17,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 16,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 13,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 12,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 11,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "066fdf408696f435b3d594831be7265f"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-23T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 117.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "d014565d93748c88e3d7d6b991a8902d"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-24T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT50M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "a04672a4570b81a2700597ee73cf1af2"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-25T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "57c9359dd36358502abc93ed864bc4da"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-26T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "f728c08b1c2f77cf0132b46a2e778fd8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-27T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "8049447e0af5c57c6b9a34c89fd6f3bd"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-28T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "10a27d7e18405883e0363f02ee7ce078"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-29T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Mom",
+                "id": "a3c4b4f33422e991286be40e54f473fb"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-30T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Mom",
+                "id": "f87b8bb3c4b816a762056b36b7e9c677"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2020-12-31T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Mom",
+                "id": "e269fc50212931908ec4fe7f4b6d1145"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-01T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 100.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 17,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 16,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "8f00b11411c4dbdba22c7b40691e34b8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-02T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "cf86a30b10d1a25698e8b3b10de748bc"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-03T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Mom",
+                "id": "ffdbc8de5cdb3b0beab5ae257154b9fc"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-04T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "6158a78a977680ae66481885f1db0396"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-05T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "047ca8a0cd2b6360078adb87c0dee2be"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-06T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "id": "9c285c759fbe8a5816262c763c5ba6ff"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-07T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "1be6461271d4232aa6c6ed77e3bd6407"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-08T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 110.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 87.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 80.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "70715c35e8cdad2aa833aa761abee0c5"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-09T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "FBT",
+                "work": "PT50M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "MS",
+                "actions": [
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 0.0,
+                                "unit": "LB",
+                                "reps": 12,
+                                "count": 3,
+                                "meta": "STD"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 130.0,
+                                "unit": "LB",
+                                "reps": 12,
+                                "count": 3,
+                                "meta": "STD"
+                            }
+                        ]
+                    }
+                ],
+                "id": "cdcc56a95422aa0a24b85e581d9cf2b6"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-10T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Hurting - Hot Box",
+                "id": "e0a1bf948dbd0b08b6db90b508d45cc9"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-11T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "53861fbd2808f042dce0ec5e851695fd"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-12T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 52.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 45.0,
+                                "unit": "KG",
+                                "reps": 11,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 97.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 89.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 84.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 77.0,
+                                "unit": "KG",
+                                "reps": 10,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 6,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "667f8a7fcfe77b20344073e4767562a5"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 17,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 16,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 13,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 12,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 11,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 130.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "a6aef5d0cf500a1add1a2d14d242e1b8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-13T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 125.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 117.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 130.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "6438ecdcf5effcb4eee221e511558be2"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-14T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "74bdfdf2a3d2107131b84fe001e13bcf"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-15T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 55.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 89.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 81.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 6,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 11,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "2ff14ba8c0d73a60d389a234e6cde9fa"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-16T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "14de3b74d89cb11255c3148136766549"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-01-17T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "key": "INT",
+                "activity": "ROW",
+                "work": [
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    }
+                ],
+                "rest": "PT2M",
+                "meta": "TR1",
+                "id": "3bdff0b78f3cc2d5d56a2d139282cac4"
             }
         ]
     }
