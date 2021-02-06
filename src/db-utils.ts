@@ -34,12 +34,13 @@ export const insert_workout = (
 ) =>
   db.one(
     sql_insert_workout,
-    {date, user_id, seqno},
+    {user_id, date, seqno},
     workout => workout.id as number
   )
 
 export const insert_block = (
   db: Database,
+  user_id: string,
   workout_id: number,
   seqno: number,
   block_type: string,
@@ -47,32 +48,35 @@ export const insert_block = (
 ) =>
   db.one(
     sql_insert_block,
-    { workout_id, block_type, seqno, notes },
+    { user_id, workout_id, block_type, seqno, notes },
     block => block.id as number
   )
 
 export const insert_fbt_block = (
   db: Database,
+  user_id: string,
   block_id: number,
   exercise: string,
   block: any
 ) => {
   const style = block.style
   const duration = block.work
-  return db.none(sql_insert_fbt_block, { block_id, exercise, style, duration })
+  return db.none(sql_insert_fbt_block, { user_id, block_id, exercise, style, duration })
 }
 
 export const insert_se_block = (
   db: Database,
+  user_id: string,
   block_id: number,
   block: any
 ) => {
   const duration = block.time
-  return db.none(sql_insert_se_block, { block_id, duration })
+  return db.none(sql_insert_se_block, { user_id, block_id, duration })
 }
 
 export const insert_hic_block = (
   db: Database,
+  user_id: string,
   block_id: number,
   block: any
 ) => {
@@ -89,11 +93,12 @@ export const insert_hic_block = (
     distance = block.meta
   }
 
-  return db.none(sql_insert_hic_block, { block_id, style, duration, distance })
+  return db.none(sql_insert_hic_block, { user_id, block_id, style, duration, distance })
 }
 
 
 interface ISetGroup {
+  user_id: string,
   block_id: number
   style: string
   duration: string | null
@@ -104,7 +109,7 @@ export const insert_set_group = (db: Database, sq: ISetGroup) =>
 
 
 const set_group_columns = new pgp.helpers.ColumnSet([
-  'block_id', 'style', 'seqno'
+  'user_id', 'block_id', 'style', 'seqno'
 ], { table: { table: 'set_group', schema: 'awm' } })
 
 export const insert_set_groups = (db: Database, values) =>
@@ -112,7 +117,7 @@ export const insert_set_groups = (db: Database, values) =>
 
 
 const set_columns = new pgp.helpers.ColumnSet([
-  'block_id', 'group_id', 'exercise', 'unit', 'set_type',
+  'user_id', 'block_id', 'group_id', 'exercise', 'unit', 'set_type',
   'weight', 'notes', 'setno', 'reps', 'duration', 'distance'
 ], { table: { table: 'set', schema: 'awm' } })
 
@@ -129,7 +134,7 @@ export const insert_exercises = (db: Database, values) =>
 
 
 const cycle_columns = new pgp.helpers.ColumnSet([
-  'name', 'start_date', 'end_date'
+  'user_id', 'name', 'start_date', 'end_date'
 ], { table: { table: 'cycle', schema: 'awm' } })
 
 export const insert_cycles = (db: Database, values) =>

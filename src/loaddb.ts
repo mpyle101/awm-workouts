@@ -23,17 +23,22 @@ import {
 
 const main = async () => {
   const db = connect('postgres://jester@localhost/awm')
-
   try {
     await truncate_all(db)
+  } catch (e) {
+    console.log('Failed to clean database:', e)
+    process.exit()
+  }
+
+  const user_id = await insert_mpyle(db)
+
+  try {
     await load_exercises(db)
-    await load_cycles(db)
+    await load_cycles(db, user_id)
   } catch (e) {
     console.log('Failed to initialize:', e)
     process.exit()
   }
-  
-  const user_id = await insert_mpyle(db)
 
   let order = 1
   let count = 0
@@ -59,13 +64,13 @@ const main = async () => {
             workout_id = await insert_workout(trx, user_id, order, date)
             continue
           } else {
-            const block_id = await insert_block(trx, workout_id, seqno, block_type, notes)
+            const block_id = await insert_block(trx, user_id, workout_id, seqno, block_type, notes)
             if (block_type === 'FBT') {
-              await insert_fbt_block(trx, block_id, 'TRNR', block)
+              await insert_fbt_block(trx, user_id, block_id, 'TRNR', block)
             } else if (block_type === 'SE') {
-              await insert_se_block(trx, block_id, block)
+              await insert_se_block(trx, user_id, block_id, block)
             } else if (block_type === 'HIC') {
-              await insert_hic_block(trx, block_id, block)
+              await insert_hic_block(trx, user_id, block_id, block)
             }
 
             const blk_grps: any[] = []
@@ -77,9 +82,10 @@ const main = async () => {
               }
             }
             if (blk_grps.length) {
-              const group_ids = (await insert_set_groups(trx, blk_grps)).map(g => g.id)
+              const grp_recs = blk_grps.map(g => ({ ...g, user_id }))
+              const group_ids = (await insert_set_groups(trx, grp_recs)).map(g => g.id)
               const set_recs = group_ids.reduce((acc, group_id, idx) =>
-                acc.concat(blk_sets[idx].map(s => ({ ...s, group_id }))), [])
+                acc.concat(blk_sets[idx].map(s => ({ ...s, user_id, group_id }))), [])
               await insert_sets(trx, set_recs)
             }
           }

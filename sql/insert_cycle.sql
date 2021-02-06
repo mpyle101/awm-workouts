@@ -1,2 +1,2 @@
-INSERT INTO awm.cycle (name, start_date, end_date)
-VALUES (${name}, ${start}, ${end})
+INSERT INTO awm.cycle (user_id, name, start_date, end_date)
+VALUES (${user_id}, ${name}, ${start}, ${end})

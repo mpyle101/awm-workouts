@@ -1,3 +1,3 @@
-INSERT INTO awm.workout (workout_date, user_id, seqno)
-VALUES (${date}, ${user_id}, ${seqno})
+INSERT INTO awm.workout (user_id, workout_date, seqno)
+VALUES (${user_id}, ${date}, ${seqno})
 RETURNING id

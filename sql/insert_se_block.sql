@@ -1,2 +1,2 @@
-INSERT INTO awm.se_block (id, duration)
-VALUES (${block_id}, ${duration})
+INSERT INTO awm.se_block (user_id, id, duration)
+VALUES (${user_id}, ${block_id}, ${duration})

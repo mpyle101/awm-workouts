@@ -1,4 +1,5 @@
 INSERT INTO awm.set (
+    user_id,
     block_id,
     group_id,
     set_type,
@@ -11,6 +12,7 @@ INSERT INTO awm.set (
     setno
 )
 VALUES (
+    ${user_id},
     ${block_id},
     ${group_id},
     ${set_type},

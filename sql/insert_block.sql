@@ -1,3 +1,3 @@
-INSERT INTO awm.block (workout_id, block_type, seqno, notes)
-VALUES (${workout_id}, ${block_type}, ${seqno}, ${notes})
+INSERT INTO awm.block (user_id, workout_id, block_type, seqno, notes)
+VALUES (${user_id}, ${workout_id}, ${block_type}, ${seqno}, ${notes})
 RETURNING id
