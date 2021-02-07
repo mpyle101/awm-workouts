@@ -48,7 +48,7 @@ export const load_exercises = async db => {
   return insert_exercises(db, values)
 }
 
-export const load_cycles = async (db, user_id: string) => {
+export const load_cycles = async (db, user_id: number) => {
   const cycles = await read_json('./cycles.json')
   const values = cycles.map(({ name, start, end }) => ({
     name,

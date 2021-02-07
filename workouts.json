@@ -93163,5 +93163,23 @@
                 "id": "b53a8a3d3545a266ae5e1c2082f2dada"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-06T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "64653add547113810a2051f497355144"
+            }
+        ]
     }
 ]

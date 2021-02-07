@@ -24,11 +24,11 @@ export const connect = (url: string) => pgp(url)
 export const truncate_all = (db: Database) => db.query(sql_truncate_all)
 
 export const insert_user = async (db: Database, user) =>
-  await db.one(sql_insert_user, user, user => user.id) as string
+  await db.one(sql_insert_user, user, user => user.id) as number
 
 export const insert_workout = (
   db: Database,
-  user_id: string,
+  user_id: number,
   seqno: number,
   date: string
 ) =>
@@ -40,7 +40,7 @@ export const insert_workout = (
 
 export const insert_block = (
   db: Database,
-  user_id: string,
+  user_id: number,
   workout_id: number,
   seqno: number,
   block_type: string,
@@ -54,19 +54,22 @@ export const insert_block = (
 
 export const insert_fbt_block = (
   db: Database,
-  user_id: string,
+  user_id: number,
   block_id: number,
   exercise: string,
   block: any
 ) => {
   const style = block.style
   const duration = block.work
-  return db.none(sql_insert_fbt_block, { user_id, block_id, exercise, style, duration })
+  return db.none(
+    sql_insert_fbt_block,
+    { user_id, block_id, exercise, style, duration }
+  )
 }
 
 export const insert_se_block = (
   db: Database,
-  user_id: string,
+  user_id: number,
   block_id: number,
   block: any
 ) => {
@@ -76,7 +79,7 @@ export const insert_se_block = (
 
 export const insert_hic_block = (
   db: Database,
-  user_id: string,
+  user_id: number,
   block_id: number,
   block: any
 ) => {
@@ -93,12 +96,15 @@ export const insert_hic_block = (
     distance = block.meta
   }
 
-  return db.none(sql_insert_hic_block, { user_id, block_id, style, duration, distance })
+  return db.none(
+    sql_insert_hic_block,
+    { user_id, block_id, style, duration, distance }
+  )
 }
 
 
 interface ISetGroup {
-  user_id: string,
+  user_id: number,
   block_id: number
   style: string
   duration: string | null
