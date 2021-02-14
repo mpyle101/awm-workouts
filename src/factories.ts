@@ -1,6 +1,7 @@
 import { range } from './utils'
 
-const get_set_type = style => style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
+const get_set_type = style => 
+  style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
 
 export const create_set_record = (
     block_id: number,

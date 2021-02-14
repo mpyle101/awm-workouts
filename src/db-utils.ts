@@ -1,9 +1,9 @@
 import { join } from 'path'
 import pg_promise = require('pg-promise')
-import { ITask } from 'pg-promise'
+import { IDatabase, ITask } from 'pg-promise'
 const pgp = pg_promise()
 
-export type Database = ReturnType<typeof create_db> | ITask<{}>
+export type Database = IDatabase<any> | ITask<any>
 
 export const load_sql = (fname: string) => {
   const path = join(__dirname, 'sql', fname)
