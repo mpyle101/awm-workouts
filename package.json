@@ -1,29 +1,37 @@
 {
-  "name": "pg-loaddb",
+  "name": "awm-workouts",
   "author": "Michael Pyle",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Workouts Database Loader",
   "main": "build/loaddb.js",
   "scripts": {
-    "build"    : "tsc",
-    "clean"    : "rm -r build/*",
-    "lint"     : "tslint",
-    "loaddb"   : "node build/loaddb.js",
+    "build": "tsc",
+    "clean": "rm -r build/*",
+    "lint": "tslint",
+    "loaddb": "node build/main.js",
     "postbuild": "cp -r ./sql ./build",
-    "reload"   : "./setupdb.sh && npm start",
-    "reloaddb" : "npm run setupdb && npm run loaddb",
-    "sample"   : "npm run build && node build/sample.js",
-    "setupdb"  : "./setupdb.sh",
-    "start"    : "npm run build && npm run loaddb",
-    "test"     : "npm run build && node build/testdb.js"
+    "reload": "./setupdb.sh && npm start",
+    "reset": "npm run setupdb && npm run loaddb",
+    "sample": "npm run build && node build/sample.js",
+    "setupdb": "./setupdb.sh",
+    "start": "npm run build && npm run loaddb",
+    "test": "jest",
+    "testdb": "node build/testdb.js"
   },
   "dependencies": {
     "pg-promise": "10.9.2"
   },
   "devDependencies": {
-    "@types/node": "14.14.21",
-    "eslint": "7.18.0",
-    "typescript": "4.1.3"
+    "@types/jest": "26.0.20",
+    "@types/node": "14.14.27",
+    "eslint": "7.20.0",
+    "ts-jest": "26.5.1",
+    "typescript": "4.1.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "verbose": true,
+    "rootDir": "./src"
   }
 }

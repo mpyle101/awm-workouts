@@ -3,7 +3,7 @@ import pg_promise = require('pg-promise')
 import { ITask } from 'pg-promise'
 const pgp = pg_promise()
 
-export type Database = ReturnType<typeof connect> | ITask<{}>
+export type Database = ReturnType<typeof create_db> | ITask<{}>
 
 export const load_sql = (fname: string) => {
   const path = join(__dirname, 'sql', fname)
@@ -19,7 +19,7 @@ const sql_insert_se_block  = load_sql('insert_se_block.sql')
 const sql_insert_set       = load_sql('insert_set.sql')
 const sql_insert_set_group = load_sql('insert_set_group.sql')
 
-export const connect = (url: string) => pgp(url)
+export const create_db = (url: string) => pgp(url)
 
 export const truncate_all = (db: Database) => db.query(sql_truncate_all)
 

@@ -93181,5 +93181,403 @@
                 "id": "64653add547113810a2051f497355144"
             }
         ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-07T18:00:00.000Z"
+        },
+        "type": "HIC",
+        "blocks": [
+            {
+                "type": "HIC",
+                "key": "INT",
+                "activity": "ROW",
+                "work": [
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    },
+                    {
+                        "reps": "PT2M",
+                        "style": "TIMED"
+                    }
+                ],
+                "rest": "PT2M",
+                "meta": "TR1",
+                "id": "7a829743a7f5c151193736a8662b7b36"
+            },
+            {
+                "type": "SE",
+                "sets": [
+                    [
+                        {
+                            "key": "PS",
+                            "reps": 20,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "38bc14b9fb21ccdd91a81723217b54c8"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-08T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Hot Box",
+                "id": "24bf2191f9701210a519a17110ad1998"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-09T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 60.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 59.5,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 2
+                            },
+                            {
+                                "wt": 53.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 46.0,
+                                "unit": "KG",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 98.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 94.5,
+                                "unit": "KG",
+                                "reps": 3,
+                                "count": 1
+                            },
+                            {
+                                "wt": 94.5,
+                                "unit": "KG",
+                                "reps": 2,
+                                "count": 1
+                            },
+                            {
+                                "wt": 84.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            },
+                            {
+                                "wt": 77.0,
+                                "unit": "KG",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 95.0,
+                                "unit": "KG",
+                                "reps": 4,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "c2f1fa9ac0452cd295574fda0d71956b"
+            },
+            {
+                "type": "SS",
+                "sets": [
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 16,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 16,
+                            "wt": 135.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 12,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 12,
+                            "wt": 135.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ],
+                    [
+                        {
+                            "key": "GD",
+                            "reps": 11,
+                            "wt": 0.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        },
+                        {
+                            "key": "PD",
+                            "reps": 10,
+                            "wt": 135.0,
+                            "unit": "LB",
+                            "style": "STD"
+                        }
+                    ]
+                ],
+                "id": "93abbf5a42f8ccc637c064e2ed1c79bc"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-10T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "BS",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 127.5,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 120.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "TBDL",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 1
+                            },
+                            {
+                                "wt": 140.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 2
+                            }
+                        ]
+                    }
+                ],
+                "id": "f89fa048cb3fc9d9bd31b22bd327510b"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-11T18:00:00.000Z"
+        },
+        "type": "EN",
+        "blocks": [
+            {
+                "type": "EN",
+                "key": "LSD",
+                "work": "PT60M",
+                "wt": 0.0,
+                "unit": "BW",
+                "meta": "TRAINER",
+                "style": "TIMED",
+                "id": "b666b340485fbca25c230e65599265f7"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-02-12T18:00:00.000Z"
+        },
+        "type": "MS",
+        "blocks": [
+            {
+                "type": "MS",
+                "work": [
+                    {
+                        "key": "OHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 56.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 51.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PR",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 89.0,
+                                "unit": "KG",
+                                "reps": 1,
+                                "count": 1
+                            },
+                            {
+                                "wt": 81.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 4
+                            }
+                        ]
+                    },
+                    {
+                        "key": "SGHP",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 90.0,
+                                "unit": "KG",
+                                "reps": 5,
+                                "count": 3
+                            }
+                        ]
+                    },
+                    {
+                        "key": "GD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 8,
+                                "count": 1
+                            },
+                            {
+                                "wt": 25.0,
+                                "unit": "LB",
+                                "reps": 7,
+                                "count": 1
+                            }
+                        ]
+                    },
+                    {
+                        "key": "PD",
+                        "style": "STD",
+                        "sets": [
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 10,
+                                "count": 2
+                            },
+                            {
+                                "wt": 150.0,
+                                "unit": "LB",
+                                "reps": 9,
+                                "count": 1
+                            }
+                        ]
+                    }
+                ],
+                "id": "afe5aa83c7452ac9901e27498cbafdfd"
+            }
+        ]
     }
 ]

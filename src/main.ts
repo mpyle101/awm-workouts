@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs'
 
 import {
-  connect,
+  create_db,
   insert_block,
   insert_fbt_block,
   insert_hic_block,
@@ -22,7 +22,7 @@ import {
 } from './utils'
 
 const main = async () => {
-  const db = connect('postgres://jester@localhost/awm')
+  const db = create_db('postgres://jester@localhost/awm')
   try {
     await truncate_all(db)
   } catch (e) {

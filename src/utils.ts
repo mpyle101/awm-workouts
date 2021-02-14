@@ -1,4 +1,4 @@
-import { readFile } from 'fs'
+import { readFile } from 'fs/promises'
 import { Database } from './db-utils'
 import {
   create_set_record,
@@ -21,6 +21,8 @@ import {
   insert_user,
 } from './db-utils'
 
+export const range = (size: number) => [...Array(size).keys()]
+
 export const get_block_type = block => {
   if (block.type === 'EN' && block.key === 'FBT') {
     return 'FBT'
@@ -31,7 +33,7 @@ export const get_block_type = block => {
   return block.type as string
 }
 
-export const insert_mpyle = db =>
+export const insert_mpyle = (db: Database) =>
   insert_user(db, {
     username: 'mpyle',
     password: 'jester',
@@ -40,15 +42,15 @@ export const insert_mpyle = db =>
     last_name: 'Pyle'
   })
 
-export const load_exercises = async db => {
+export const load_exercises = async (db: Database) => {
   const exercises = await read_json('./exercises.json')
   const values = exercises.map(
-    ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit})
+    ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit })
   )
   return insert_exercises(db, values)
 }
 
-export const load_cycles = async (db, user_id: number) => {
+export const load_cycles = async (db: Database, user_id: number) => {
   const cycles = await read_json('./cycles.json')
   const values = cycles.map(({ name, start, end }) => ({
     name,
@@ -59,13 +61,10 @@ export const load_cycles = async (db, user_id: number) => {
   return insert_cycles(db, values)
 }
 
-export const read_json = (path: string): Promise<any[]> =>
-  new Promise((resolve, reject) => {
-    readFile(path, (err, data) =>
-      err ? reject(err) : resolve(JSON.parse(data.toString()))
-    )
-  })
-
+export const read_json = async (path: string): Promise<any[]> => {
+  const data = await readFile(path)
+  return JSON.parse(data.toString())
+}
 
 export function* get_set_groups(block_id: number, block) {
   let seqno = { value: 0 }

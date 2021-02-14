@@ -1,7 +1,7 @@
-import { connect } from './db-utils'
+import { create_db } from './db-utils'
 
-const main = async () => {
-  const db = connect('postgres://jester@localhost/awm')
+(async () => {
+  const db = create_db('postgres://jester@localhost/awm')
 
   const user = await db.one('SELECT * FROM awm.user')
   console.log('User: ', user)
@@ -32,6 +32,7 @@ const main = async () => {
 
   const sets = await db.many('SELECT * FROM awm.set')
   console.log('Sets: ', sets.length)
-}
 
-main()
+  db.$pool.end()
+})()
+

@@ -1,3 +1,5 @@
+import { range } from './utils'
+
 const get_set_type = style => style === 'TIMED' ? 'TMD' : style === 'DIST' ? 'DST' : 'STD'
 
 export const create_set_record = (
@@ -35,8 +37,8 @@ const create_set_group = (
   seqno: number
 ) => ({ block_id, style, seqno })
 
-
-export const get_group_style = style => style === 'TIMED' ? 'STD' : style as string
+export const get_group_style = style => 
+  style === 'TIMED' ? 'STD' : style as string
 
 export const from_ms_block = (seqno, block_id, work) => {
   seqno.value += 1
@@ -47,16 +49,14 @@ export const from_ms_block = (seqno, block_id, work) => {
   let setno = 0
   const sets = work.sets.reduce((acc, set) => {
     const rec = create_set_record(block_id, set_type, work.key, set)
-    for (let i = 0; i < set.count; i++) {
+    return acc.concat(range(set.count).map(() => {
       setno += 1
-      acc.push({ ...rec, setno })
-    }
-    return acc
+      return { ...rec, setno }
+    }))
   }, [])
 
   return [{ group, sets }]
 }
-
 
 export const from_ms_clus = (seqno, block_id, work) =>
   work.sets.reduce((acc, set) => {
@@ -67,15 +67,12 @@ export const from_ms_clus = (seqno, block_id, work) =>
       return { ...rec, reps }
     })
 
-    for (let i = 0; i < set.count; i++) {
+    return acc.concat(range(set.count).map(() => {
       seqno.value += 1
       const group = create_set_group(block_id, 'CLUS', seqno.value)
-      acc.push({ group, sets })
-    }
-
-    return acc
+      return { group, sets }
+    }))
   }, [])
-
 
 export const from_ms_emom = (seqno, block_id, work) => {
   seqno.value += 1
@@ -86,16 +83,14 @@ export const from_ms_emom = (seqno, block_id, work) => {
   let setno = 0
   const sets = work.sets.reduce((acc, set) => {
     const rec = create_set_record(block_id, set_type, work.key, set)
-    for (let i = 0; i < set.count; i++) {
+    return acc.concat(range(set.count).map(() => {
       setno += 1
-      acc.push({ ...rec, setno })
-    }
-    return acc
+      return { ...rec, setno }
+    }))
   }, [])
 
   return [{ group, sets }]
 }
-
 
 export const from_ss_block = (seqno, block_id, block) =>
   block.sets.reduce((acc, arr) => {
@@ -110,7 +105,6 @@ export const from_ss_block = (seqno, block_id, block) =>
     return acc
   }, [])
 
-
 export const from_se_block = (seqno, block_id, block) => {
   const first = block.sets[0][0]
   if (first.key === 'AS') {
@@ -120,12 +114,12 @@ export const from_se_block = (seqno, block_id, block) => {
     const rec = { ...first, reps: block.time }
     const set = create_set_record(block_id, 'TMD', rec.key, rec, 1)
     set.reps = first.reps
+
     return [{ group, sets: [set] }]
   }
 
   return from_ss_block(seqno, block_id, block)
 }
-
 
 const GC_EXER = new Map([
   ['ROWROW',   'ROW'],
@@ -137,12 +131,10 @@ const GC_EXER = new Map([
   ['BIKETRNR', 'TRNR'],
   ['SKICX',    'SKI/CX']
 ])
-const get_gc_exercise = block => {
-  if (block.key === 'RUN') {
-    return 'RUN'
-  }
-  return GC_EXER.get(block.key + block.meta) || 'NONE'
-}
+const get_gc_exercise = block =>
+  block.key === 'RUN'
+    ? 'RUN'
+    : GC_EXER.get(block.key + block.meta) || 'NONE'
 
 export const from_gc_block = (seqno, block_id, block) => {
   const exercise = get_gc_exercise(block)
@@ -156,7 +148,6 @@ export const from_gc_block = (seqno, block_id, block) => {
 
   return [{ group, sets: [set] }]
 }
-
 
 export const from_en_block = (seqno, block_id, block) => {
   const meta     = block.key === 'LSD' ? null : block.meta
@@ -175,7 +166,6 @@ export const from_en_block = (seqno, block_id, block) => {
   return [{ group, sets: [set] }]
 }
 
-
 export const from_hgc_block = (seqno, block_id, block) => {
   const exercise = block.key
   const set_type = get_set_type(block.style)
@@ -193,7 +183,6 @@ export const from_hgc_block = (seqno, block_id, block) => {
 
   return [{ group, sets: [set] }]
 }
-
 
 export const from_hic_block = (seqno, block_id, block) => {
   const style = block.key
