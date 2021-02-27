@@ -8,6 +8,7 @@
   "scripts": {
     "build"    : "tsc",
     "clean"    : "rm -r .tsbuildinfo build/*",
+    "crypto"   : "npm run build && node build/crypto.js",
     "lint"     : "tslint",
     "loaddb"   : "node build/main.js",
     "postbuild": "cp -r ./sql ./build",
