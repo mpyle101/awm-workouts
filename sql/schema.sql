@@ -69,7 +69,7 @@ CREATE TABLE awm.workout (
 CREATE TABLE awm.block (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id SMALLINT NOT NULL REFERENCES awm.user (id),
-    workout_id SMALLINT NOT NULL REFERENCES awm.workout (id),
+    workout_id INT NOT NULL REFERENCES awm.workout (id),
     block_type awm.block_type_t NOT NULL,
     seqno SMALLINT NOT NULL,
     notes TEXT NOT NULL DEFAULT '',

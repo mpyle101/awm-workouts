@@ -145,6 +145,11 @@
         "unit": "LB"
     },
     {
+        "key": "DBFW/2",
+        "name": "Dumbbell Farmers Walk - Two Handed",
+        "unit": "LB"
+    },
+    {
         "key": "DBR/F",
         "name": "Dumbbell Raise - Front",
         "unit": "LB"
@@ -166,7 +171,7 @@
     },
     {
         "key": "DBRW/2",
-        "name": "Dumbbell Row - Two Aem",
+        "name": "Dumbbell Row - Two Handed",
         "unit": "LB"
     },
     {
@@ -520,6 +525,11 @@
         "unit": "LB"
     },
     {
+        "key": "SIP",
+        "name": "Sprint in Place",
+        "unit": "LB"
+    },
+    {
         "key": "SJ",
         "name": "Squat Jump",
         "unit": "KG"
@@ -587,6 +597,11 @@
     {
         "key": "TBDL",
         "name": "Trap Bar Deadlift",
+        "unit": "KG"
+    },
+    {
+        "key": "TBDL/L",
+        "name": "Trap Bar Deadlift - Low Handles",
         "unit": "KG"
     },
     {

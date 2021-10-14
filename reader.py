@@ -344,7 +344,7 @@ def process_HIC(dt, mvmts):
         if len(parts) > 1:
             meta = parts[1][1:-1]
 
-        if key == 'ROW':
+        if key == 'ROW' or key == 'SIP':
             details = mvmts[1].split('x')
             work = []
             for i in range(int(details[0])):
@@ -362,7 +362,7 @@ def process_HIC(dt, mvmts):
             if len(mvmts) > 3:
                 meta = mvmts[3].upper()
 
-            block = {'type': 'HIC', 'key': 'INT', 'activity': 'ROW', 'work': work, 'rest': rest}
+            block = {'type': 'HIC', 'key': 'INT', 'activity': key, 'work': work, 'rest': rest}
             if meta: block['meta'] = meta
 
         elif key == 'AMRAP':
@@ -615,15 +615,16 @@ with open('Legend.csv', newline='') as fp:
     for rec in reader:
         legend[rec[0]] = {'key': rec[0], 'name': rec[1], 'unit': rec[2], 'func': process_std}
 
-legend['IRR']['func']   = process_bodyweight
-legend['DH']['func']    = process_timed
-legend['KBW/1']['func'] = process_timed
-legend['KBW/2']['func'] = process_timed
-legend['MBPS']['func']  = process_bodyweight
-legend['PS']['func']    = process_bodyweight
-legend['REST']['func']  = process_bodyweight
-legend['SRR']['func']   = process_bodyweight
-legend['SU']['func']    = process_bodyweight
+legend['IRR']['func']    = process_bodyweight
+legend['DH']['func']     = process_timed
+legend['KBW/1']['func']  = process_timed
+legend['KBW/2']['func']  = process_timed
+legend['DBFW/2']['func'] = process_timed
+legend['MBPS']['func']   = process_bodyweight
+legend['PS']['func']     = process_bodyweight
+legend['REST']['func']   = process_bodyweight
+legend['SRR']['func']    = process_bodyweight
+legend['SU']['func']     = process_bodyweight
 
 cycles = []
 workouts = OrderedDict()
