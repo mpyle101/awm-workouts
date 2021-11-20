@@ -165,10 +165,15 @@ def process_SE(dt, mvmts):
                 mvmt = mvmt.split(':')
                 name = mvmt[0].strip().split(' ')
                 key  = name[0].upper()
+                if len(name) > 1:
+                    meta = name[1][1:-1]
+                else:
+                    meta = None 
 
                 o = objs[idx]
-                o['key'] = key
+                o['key']  = key
                 o['unit'] = legend[key]['unit']
+                o['meta'] = meta
                 func = legend[key]['func']
 
                 sets = []
@@ -181,7 +186,7 @@ def process_SE(dt, mvmts):
                     for i in range(count):
                         sets.append({'reps': reps, 'wt': wt})
 
-                o['sets'] = sets
+                o['sets']  = sets
                 o['style'] = style
 
             except:
@@ -201,7 +206,14 @@ def process_SE(dt, mvmts):
         for o in objs:
             if i < len(o['sets']):
                 s = o['sets'][i]
-                b.append({'key': o['key'], 'reps': s['reps'], 'wt': s['wt'], 'unit': o['unit'], 'style': o['style']})
+                b.append({
+                    'key': o['key'],
+                    'reps': s['reps'],
+                    'wt': s['wt'],
+                    'unit': o['unit'],
+                    'style': o['style'],
+                    'meta': o['meta']
+                })
 
         sets.append(b)
 
