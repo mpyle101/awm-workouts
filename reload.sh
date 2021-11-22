@@ -1,4 +1,4 @@
-#! /usr/local/bin/fish
+#! /opt/homebrew/bin/fish
 
 osascript ./export.scpt
 python3 ./reader.py

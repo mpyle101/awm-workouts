@@ -97295,7 +97295,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Vaccine",
+                "notes": "Covid Vaccine",
                 "id": "5ec98f996344228ee941a2b7af385735"
             }
         ]
@@ -98197,7 +98197,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Vaccine",
+                "notes": "Covid Vaccine",
                 "id": "430a3d82e125286a9565ed164e58f832"
             }
         ]
@@ -98210,7 +98210,7 @@
         "blocks": [
             {
                 "type": "OFF",
-                "notes": "Vaccine",
+                "notes": "Covid Vaccine",
                 "id": "ac9daf1f2e76f9cd4cc98cd66bff9a6c"
             }
         ]
@@ -106503,6 +106503,19 @@
                     ]
                 ],
                 "id": "cae1f3767fadcfbcba03082f66d4a772"
+            }
+        ]
+    },
+    {
+        "date": {
+            "$date": "2021-11-20T18:00:00.000Z"
+        },
+        "type": "OFF",
+        "blocks": [
+            {
+                "type": "OFF",
+                "notes": "Covid Booster",
+                "id": "2d2727be27aaf9d8174eae5f0fd10049"
             }
         ]
     }

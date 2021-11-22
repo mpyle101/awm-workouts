@@ -1,4 +1,4 @@
-#! /usr/local/bin/fish
+#! /opt/homebrew/bin/fish
 
 dropdb -h localhost -U jester awm
 createdb -h localhost -U jester awm
