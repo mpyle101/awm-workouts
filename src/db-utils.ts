@@ -44,11 +44,12 @@ export const insert_block = (
   workout_id: number,
   seqno: number,
   block_type: string,
+  duration: string,
   notes: string
 ) =>
   db.one(
     sql_insert_block,
-    { user_id, workout_id, block_type, seqno, notes },
+    { user_id, workout_id, block_type, seqno, duration, notes },
     block => block.id as number
   )
 

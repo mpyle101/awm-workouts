@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises'
 import { Database } from './db-utils'
 import {
   create_set_record,
+  from_as_block,
   from_en_block,
   from_gc_block,
   from_hgc_block,
@@ -26,7 +27,7 @@ export const range = (size: number) => [...Array(size).keys()]
 export const get_block_type = block => {
   if (block.type === 'EN' && block.key === 'FBT') {
     return 'FBT'
-  } else if (block.type === 'SS') {
+  } else if (block.type === 'SS' || block.type === 'AS') {
     return 'MS'
   }
 
@@ -71,6 +72,9 @@ export function* get_set_groups(block_id: number, block) {
   switch (block.type) {
     case 'SS':
       yield from_ss_block(seqno, block_id, block)
+      break
+    case 'AS':
+      yield from_as_block(seqno, block_id, block)
       break
     case 'SE':
       yield from_se_block(seqno, block_id, block)

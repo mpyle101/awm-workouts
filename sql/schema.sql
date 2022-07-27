@@ -5,6 +5,7 @@ CREATE SCHEMA awm;
 
 CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE');
 CREATE TYPE awm.group_style_t AS ENUM (
+    'AS',       -- Alternating sets
     'CLUS',     -- Cluster sets
     'EMOM',     -- Every Minute On the Minute
     'SS',       -- Super sets
@@ -71,6 +72,7 @@ CREATE TABLE awm.block (
     user_id SMALLINT NOT NULL REFERENCES awm.user (id),
     workout_id INT NOT NULL REFERENCES awm.workout (id),
     block_type awm.block_type_t NOT NULL,
+    duration INTERVAL,
     seqno SMALLINT NOT NULL,
     notes TEXT NOT NULL DEFAULT '',
     UNIQUE (id, block_type)

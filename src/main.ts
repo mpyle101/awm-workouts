@@ -64,7 +64,7 @@ const main = async () => {
             workout_id = await insert_workout(trx, user_id, order, date)
             continue
           } else {
-            const block_id = await insert_block(trx, user_id, workout_id, seqno, block_type, notes)
+            const block_id = await insert_block(trx, user_id, workout_id, seqno, block_type, block.time, notes)
             if (block_type === 'FBT') {
               await insert_fbt_block(trx, user_id, block_id, 'TRNR', block)
             } else if (block_type === 'SE') {

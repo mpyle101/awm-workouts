@@ -230,6 +230,72 @@ def process_SS(dt, mvmts):
     return block
 
 
+def process_AS(dt, mvmts):
+    block = mvmts
+
+    time = None
+    objs = [dict() for i in mvmts]
+    for idx, mvmt in enumerate(mvmts):
+        if ':' in mvmt:
+            try:
+                mvmt = mvmt.split(':')
+                name = mvmt[0].strip().split(' ')
+                key  = name[0].upper()
+                if len(name) > 1:
+                    meta = name[1][1:-1]
+                else:
+                    meta = None 
+
+                o = objs[idx]
+                o['key']  = key
+                o['unit'] = legend[key]['unit']
+                o['meta'] = meta
+                func = legend[key]['func']
+
+                sets = []
+                details = mvmt[1]
+                for set in details.split(','):
+                    set = set.strip()
+                    parts = set.split('x')
+                    count, reps, wt, style = func(parts)
+
+                    for i in range(count):
+                        sets.append({'reps': reps, 'wt': wt})
+
+                o['sets']  = sets
+                o['style'] = style
+
+            except:
+                ex = sys.exc_info()[0]
+                print(dt, mvmts)
+                print(idx, objs)
+                traceback.print_exc()
+
+        else:
+            # rest time
+            del objs[idx]
+            time = 'PT' + mvmt.upper()
+
+    sets = []
+    for i in range(len(objs[0]['sets'])):
+        for o in objs:
+            if i < len(o['sets']):
+                s = o['sets'][i]
+                sets.append({
+                    'key': o['key'],
+                    'reps': s['reps'],
+                    'wt': s['wt'],
+                    'unit': o['unit'],
+                    'style': o['style'],
+                    'meta': o['meta']
+                })
+
+    block = {'type': 'AS', 'sets': sets}
+    if time: block['time'] = time
+
+    return block
+
+
 def process_GC(dt, mvmts):
     block = mvmts
 
@@ -427,8 +493,7 @@ def process_HIC(dt, mvmts):
             block = {'type': 'HIC', 'key': 'CIR', 'sets': work, 'meta': time}
 
         else:
-             print(dt, 'HIC', mvmts)
-           
+            print(dt, 'HIC', mvmts)
 
     except:
         ex = sys.exc_info()[0]
@@ -548,31 +613,39 @@ def process_record(dt, rec, unprocessed):
     while True:
         block_num += 1
         mt, rec = rec[0][1:], rec[1:]
+
+        parts = mt.split(' ')
+        key  = parts[0].upper()
+        time = parts[1][1:-1] if len(parts) > 1 else None
+
         for idx, item in enumerate(rec):
             if item == '' or item.startswith('#'):
                 break
 
         block, rec = rec[:idx], rec[idx:]
-        if mt == 'MS':
+        if key == 'MS':      # Max Strength
             block = process_MS(dt, block)
-        elif mt == 'SE':
+        elif key == 'SE':    # Strength Endurance
             block = process_SE(dt, block)
-        elif mt == 'SS':
+        elif key == 'SS':    # Super Sets
             block = process_SS(dt, block)
-        elif mt == 'GC':
+        elif key == 'AS':    # Alternating Sets
+            block = process_AS(dt, block)
+        elif key == 'GC':    # General Conditioning
             block = process_GC(dt, block)
-        elif mt == 'E':
+        elif key == 'E':     # Endurance
             block = process_E(dt, block)
-        elif mt == 'OFF':
+        elif key == 'OFF':   # Off
             block = process_OFF(dt, block)
-        elif mt == 'HGC':
+        elif key == 'HGC':   # High Intensity General Conditioning
             block = process_HIC_GC(dt, block)
-        elif mt == 'HIC':
+        elif key == 'HIC':   # High Intensity Conditioning
             block = process_HIC(dt, block)
         else:
-            unprocessed.add(mt)
+            unprocessed.add(key)
 
-        block['id'] = hash(dt + '/' + mt + '/' + str(block_num))
+        if time and 'time' not in block: block['time'] = time
+        block['id'] = hash(dt + '/' + key + '/' + str(block_num))
         workout.append(block)
         if len(rec) == 0 or rec[0] == '':
             break
@@ -585,8 +658,7 @@ def process_file(fname, workouts, cycles, unprocessed):
         reader = csv.reader(fp)
         for rec in reader:
             try:
-                cycle = rec[0]
-
+                cycle   = rec[0]
                 datestr = rec[1]
                 dateobj = {'$date': datestr + 'T18:00:00.000Z'}
 
@@ -601,7 +673,6 @@ def process_file(fname, workouts, cycles, unprocessed):
                         'name' : cycle,
                         'start': dateobj,
                     })
-
 
                 blocks = process_record(datestr, rec[2:], unprocessed)
                 if datestr in workouts:
@@ -618,7 +689,6 @@ def process_file(fname, workouts, cycles, unprocessed):
                 print('Processing', fname)
                 print(rec)
                 traceback.print_exc()
-
 
 
 legend = {}
