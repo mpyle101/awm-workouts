@@ -3,7 +3,7 @@ CREATE EXTENSION pgcrypto;
 \connect awm;
 CREATE SCHEMA awm;
 
-CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE');
+CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE', 'SS');
 CREATE TYPE awm.group_style_t AS ENUM (
     'AS',       -- Alternating sets
     'CLUS',     -- Cluster sets
@@ -48,6 +48,7 @@ CREATE TABLE awm.cycle (
 CREATE TABLE awm.workout (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id SMALLINT NOT NULL REFERENCES awm.user (id),
+    csv TEXT NOT NULL,
     seqno SMALLINT NOT NULL,
     workout_date DATE CHECK (workout_date > '2015-01-01'),
     created TIMESTAMP WITHOUT TIME ZONE DEFAULT (now() AT TIME ZONE 'UTC')

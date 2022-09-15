@@ -130,6 +130,36 @@
         "unit": "KG"
     },
     {
+        "key": "CBL/CF",
+        "name": "Cable - Chest Fly",
+        "unit": "LB"
+    },
+    {
+        "key": "CBL/CP",
+        "name": "Cable - Chest Press",
+        "unit": "LB"
+    },
+    {
+        "key": "CBL/CR",
+        "name": "Cable - Cross Row",
+        "unit": "LB"
+    },
+    {
+        "key": "CBL/OHP",
+        "name": "Cable - Overhead Press",
+        "unit": "LB"
+    },
+    {
+        "key": "CBL/RW",
+        "name": "Cable - Standing Row",
+        "unit": "LB"
+    },
+    {
+        "key": "CBL/SR",
+        "name": "Cable - Side Row",
+        "unit": "LB"
+    },
+    {
         "key": "CU",
         "name": "Chin Ups",
         "unit": "LB"
@@ -140,8 +170,18 @@
         "unit": "KG"
     },
     {
-        "key": "DBC",
+        "key": "DBC/2",
+        "name": "Dumbell Curl - Two Handed",
+        "unit": "LB"
+    },
+    {
+        "key": "DBC/A",
         "name": "Dumbell Curl - Alternating",
+        "unit": "LB"
+    },
+    {
+        "key": "DBC/H",
+        "name": "Dumbell Curl - Hammer",
         "unit": "LB"
     },
     {
@@ -185,6 +225,11 @@
         "unit": "LB"
     },
     {
+        "key": "DBKB",
+        "name": "Dumbbell Kickback",
+        "unit": "LB"
+    },
+    {
         "key": "DBLR",
         "name": "Dumbbell Lateral Raise",
         "unit": "LB"
@@ -223,6 +268,16 @@
         "key": "DL",
         "name": "Deadlift",
         "unit": "KG"
+    },
+    {
+        "key": "EZC/C",
+        "name": "Easybar Curl - Close Grip",
+        "unit": "LB"
+    },
+    {
+        "key": "EZC/W",
+        "name": "Easybar Curl - Wide Grip",
+        "unit": "LB"
     },
     {
         "key": "FCL",
@@ -266,7 +321,7 @@
     },
     {
         "key": "HC",
-        "name": "Hammer Curls",
+        "name": "Hammer Curl",
         "unit": "LB"
     },
     {
@@ -325,6 +380,11 @@
         "unit": "KG"
     },
     {
+        "key": "KBR/2",
+        "name": "Kettle Bell Row - Two Handed",
+        "unit": "KG"
+    },
+    {
         "key": "KBS/2",
         "name": "Kettle Bell Swing - Two Handed",
         "unit": "KG"
@@ -377,6 +437,11 @@
     {
         "key": "LMPP",
         "name": "Landmine Push Press",
+        "unit": "KG"
+    },
+    {
+        "key": "LMR/T",
+        "name": "Landmine Row - T Bar",
         "unit": "KG"
     },
     {
@@ -511,7 +576,7 @@
     },
     {
         "key": "RDR",
-        "name": "Rear Delt Raise",
+        "name": "Rear Delt Row",
         "unit": "LB"
     },
     {
@@ -562,6 +627,11 @@
     {
         "key": "SH",
         "name": "Shrugs - Barbell",
+        "unit": "KG"
+    },
+    {
+        "key": "SH/WG",
+        "name": "Shrugs - Barbell Wide Grip",
         "unit": "KG"
     },
     {
@@ -630,6 +700,16 @@
         "unit": "KG"
     },
     {
+        "key": "TPD",
+        "name": "Tricep Push Down",
+        "unit": "LB"
+    },
+    {
+        "key": "TRE",
+        "name": "Tricep Rope Extension",
+        "unit": "LB"
+    },
+    {
         "key": "TRNR",
         "name": "Trainer",
         "unit": "LB"
@@ -651,6 +731,11 @@
     },
     {
         "key": "TRX",
+        "name": "TRX Row",
+        "unit": "LB"
+    },
+    {
+        "key": "TRX/RW",
         "name": "TRX Row",
         "unit": "LB"
     },

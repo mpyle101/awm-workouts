@@ -30,11 +30,12 @@ export const insert_workout = (
   db: Database,
   user_id: number,
   seqno: number,
-  date: string
+  date: string,
+  csv: string,
 ) =>
   db.one(
     sql_insert_workout,
-    {user_id, date, seqno},
+    {user_id, date, seqno, csv},
     workout => workout.id as number
   )
 
