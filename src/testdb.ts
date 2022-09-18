@@ -1,38 +1,46 @@
-import { create_db } from './db-utils'
+import { open_db } from './db-utils'
 
-(async () => {
-  const db = create_db('postgres://jester@localhost/awm')
+(() => {
+    const db = open_db('./awm.db')
 
-  const user = await db.one('SELECT * FROM awm.user')
-  console.log('User: ', user)
+    let stmt = db.prepare('SELECT * FROM user')
+    const user = stmt.get(stmt)
+    console.log('User: ', user)
 
-  const cycles = await db.many('SELECT * FROM awm.cycle')
-  console.log('Cycles: ', cycles.length)
+    stmt = db.prepare('SELECT * FROM cycle')
+    const cycles = stmt.get(stmt)
+    console.log('Cycles: ', cycles.length)
 
-  const exercises = await db.many('SELECT * FROM awm.exercise')
-  console.log('Exercises: ', exercises.length)
+    stmt = db.prepare('SELECT * FROM exercise')
+    const exercises = stmt.get(stmt)
+    console.log('Exercises: ', exercises.length)
 
-  const workouts = await db.many('SELECT * FROM awm.workout')
-  console.log('Workouts: ', workouts.length)
+    stmt = db.prepare('SELECT * FROM workout')
+    const workouts = stmt.get(stmt)
+    console.log('Workouts: ', workouts.length)
 
-  const blocks = await db.many('SELECT * FROM awm.block')
-  console.log('Blocks: ', blocks.length)
+    stmt = db.prepare('SELECT * FROM block')
+    const blocks = stmt.get(stmt)
+    console.log('Blocks: ', blocks.length)
 
-  const fbt_blocks = await db.many('SELECT * FROM awm.fbt_block')
-  console.log('FBT Blocks: ', fbt_blocks.length)
+    stmt = db.prepare('SELECT * FROM fbt_block')
+    const fbt_blocks = stmt.get(stmt)
+    console.log('FBT Blocks: ', fbt_blocks.length)
 
-  const hic_blocks = await db.many('SELECT * FROM awm.hic_block')
-  console.log('HIC Blocks: ', hic_blocks.length)
+    stmt = db.prepare('SELECT * FROM hic_block')
+    const hic_blocks = stmt.get(stmt)
+    console.log('HIC Blocks: ', hic_blocks.length)
 
-  const se_blocks = await db.many('SELECT * FROM awm.se_block')
-  console.log('SE Blocks: ', se_blocks.length)
+    stmt = db.prepare('SELECT * FROM se_block')
+    const se_blocks = stmt.get(stmt)
+    console.log('SE Blocks: ', se_blocks.length)
 
-  const groups = await db.many('SELECT * FROM awm.set_group')
-  console.log('Set Groups: ', groups.length)
+    stmt = db.prepare('SELECT * FROM set_group')
+    const groups = stmt.get(stmt)
+    console.log('Set Groups: ', groups.length)
 
-  const sets = await db.many('SELECT * FROM awm.set')
-  console.log('Sets: ', sets.length)
-
-  db.$pool.end()
+    stmt = db.prepare('SELECT * FROM workout_set')
+    const sets = stmt.get(stmt)
+    console.log('Sets: ', sets.length)
 })()
 

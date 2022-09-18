@@ -1,5 +1,3 @@
-#! /opt/homebrew/bin/fish
+#! /bin/zsh
 
-dropdb -h localhost -U jester awm
-createdb -h localhost -U jester awm
-psql -h localhost -U jester -d awm -f ./sql/schema.sql -q
+sqlite awm.db ".read ./sql/schema-sqlite.sql"

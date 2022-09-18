@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises'
+import { readFileSync } from 'fs'
 import { Database } from './db-utils'
 import {
   create_set_record,
@@ -43,8 +43,8 @@ export const insert_mpyle = (db: Database) =>
     last_name: 'Pyle'
   })
 
-export const load_exercises = async (db: Database) => {
-  const exercises = await read_json('./exercises.json')
+export const load_exercises = (db: Database) => {
+  const exercises = read_json('./exercises.json')
   const values = exercises.map(
     ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit })
   )
@@ -62,8 +62,8 @@ export const load_cycles = async (db: Database, user_id: number) => {
   return insert_cycles(db, values)
 }
 
-export const read_json = async (path: string): Promise<any[]> => {
-  const data = await readFile(path)
+export const read_json = (path: string) => {
+  const data = readFileSync(path)
   return JSON.parse(data.toString())
 }
 

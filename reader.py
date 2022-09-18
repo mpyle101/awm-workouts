@@ -40,7 +40,7 @@ def process_std(parts):
     elif len(parts) == 2:
         if parts[1] == 'M':
             count = int(parts[0])
-            reps = -1
+            reps = None
             set_style = 'STD'
         else:
             wt = float(parts[0])
@@ -51,7 +51,7 @@ def process_std(parts):
         count = int(parts[0])
 
         if parts[2] == 'M':
-            reps = -1
+            reps = None
             set_style = 'STD'
         else:
             reps, set_style = process_reps(parts[2])
@@ -70,7 +70,7 @@ def process_emom(parts):
         wt = 0.0
         if parts[1] == 'M':
             count = int(parts[0])
-            reps = -1
+            reps = None
         else:
             reps, style = process_reps(parts[1])
             count = int(parts[0])

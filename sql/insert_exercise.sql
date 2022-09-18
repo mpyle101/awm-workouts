@@ -1,2 +1,2 @@
-INSERT INTO awm.exercise (key, name, weight_unit)
-VALUES (${key}, ${name}, ${unit})
+INSERT INTO exercise (key, name, weight_unit)
+VALUES (:key, :name, :weight_unit)

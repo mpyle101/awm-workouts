@@ -5,7 +5,10 @@
 /tmp
 /out-tsc
 /public
-data.json
+
+# data files
+*.db
+*.csv
 
 # dependencies
 /node_modules
@@ -38,6 +41,4 @@ testem.log
 
 # System Files
 .DS_Store
-Thumbs.db
-*.csv
 .tsbuildinfo
