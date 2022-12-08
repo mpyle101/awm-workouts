@@ -116,16 +116,18 @@ export function* get_set_groups(block_id: number, block) {
       }
       break
     case 'FBT':
-      for (const work of block.actions) {
-        switch(work.type) {
+      for (const action of block.actions) {
+        switch(action.type) {
           case 'SE':
-            yield from_se_block(seqno, block_id, work)
+            yield from_se_block(seqno, block_id, action)
             break
           case 'SS':
-            yield from_ss_block(seqno, block_id, work)
+            yield from_ss_block(seqno, block_id, action)
             break
           default:
-            yield from_ms_block(seqno, block_id, work)
+            for (const work of action.work) {
+              yield from_ms_block(seqno, block_id, work)
+            }
             break
         }
       }
