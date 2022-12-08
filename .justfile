@@ -16,7 +16,7 @@ build:
     echo 'Converting to JSON'
     python3 ./reader.py
 
-reload: export convert load
+doit: export convert load
 
 setup:
     echo 'Creating database schema'
