@@ -240,6 +240,11 @@
         "unit": "KG"
     },
     {
+        "key": "FW/2",
+        "name": "Farmer\u2019s Walk - Two Handed",
+        "unit": "KG"
+    },
+    {
         "key": "GD",
         "name": "Gironda Dip",
         "unit": "LB"
