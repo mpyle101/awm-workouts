@@ -168,6 +168,13 @@ def process_HYP(dt, mvmts):
     return block
 
 
+def process_GS(dt, mvmts):
+    block = process_MS(dt, mvmts)
+    block['type'] = 'GS'
+
+    return block
+
+
 def process_SE(dt, mvmts):
     block = mvmts
 
@@ -685,6 +692,8 @@ def process_record(dt, rec, unprocessed):
             block = process_SE(dt, block)
         elif key == 'SS':    # Super Sets
             block = process_SS(dt, block)
+        elif key == 'GS':    # Giant Sets
+            block = process_GS(dt, block)
         elif key == 'AS':    # Alternating Sets
             block = process_AS(dt, block)
         elif key == 'GC':    # General Conditioning
@@ -772,9 +781,9 @@ with open(LEGEND_CSV, newline='') as fp:
 
 legend['IRR']['func']    = process_bodyweight
 legend['DH']['func']     = process_timed
-legend['KBW/1']['func']  = process_timed
-legend['KBW/2']['func']  = process_timed
-legend['DBFW/2']['func'] = process_timed
+legend['KB/W1']['func']  = process_timed
+legend['KB/W2']['func']  = process_timed
+legend['DB/FW2']['func'] = process_timed
 legend['MBPS']['func']   = process_bodyweight
 legend['PS']['func']     = process_bodyweight
 legend['REST']['func']   = process_bodyweight
