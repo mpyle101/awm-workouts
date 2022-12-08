@@ -656,7 +656,7 @@ def process_OFF(dt, mvmts):
 
 
 def process_record(dt, rec, unprocessed):
-    workout = []
+    blocks = []
     block_num = 0
 
     while True:
@@ -698,11 +698,13 @@ def process_record(dt, rec, unprocessed):
 
         if time and 'time' not in block: block['time'] = 'PT' + time.strip().upper()
         block['id'] = hash(dt + '/' + key + '/' + str(block_num))
-        workout.append(block)
+        blocks.append(block)
         if len(rec) == 0 or rec[0] == '':
             break
 
-    return workout
+    type = 'MS' if blocks[0]['type'] == 'AS' else blocks[0]['type']
+
+    return type, blocks
 
 
 def process_file(fname, workouts, cycles, unprocessed):
@@ -728,7 +730,7 @@ def process_file(fname, workouts, cycles, unprocessed):
                     })
 
                 record = rec[2:]
-                blocks = process_record(datestr, record, unprocessed)
+                type, blocks = process_record(datestr, record, unprocessed)
                 count += 1
                 rec_csv = ','.join(record).rstrip(',')
                 if datestr in workouts:
@@ -741,7 +743,7 @@ def process_file(fname, workouts, cycles, unprocessed):
                         'row'   : [count],
                         'csv'   : rec_csv,
                         'date'  : dateobj,
-                        'type'  : blocks[0]['type'],
+                        'type'  : type,
                         'blocks': blocks
                     }
             except:
