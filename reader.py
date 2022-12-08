@@ -742,6 +742,8 @@ def process_file(fname, workouts, cycles, unprocessed):
                 print('Processing', fname)
                 print(rec)
                 traceback.print_exc()
+    
+    return count
 
 
 legend = {}
@@ -764,7 +766,7 @@ legend['SU']['func']     = process_bodyweight
 cycles = []
 workouts = OrderedDict()
 unprocessed = set()
-process_file('/space/awm-data/workouts.csv', workouts, cycles, unprocessed)
+count = process_file('/space/awm-data/workouts.csv', workouts, cycles, unprocessed)
 
 last_cycle = cycles[-1]
 cycle_end  = {'$date': date.today().isoformat() + 'T18:00:00.000Z'}
@@ -785,4 +787,4 @@ with open('/space/awm-data/cycles.json', 'w') as fp:
 if len(unprocessed) > 0:
     print(unprocessed)
 
-
+print(f'{count} processed')
