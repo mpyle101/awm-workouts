@@ -150,6 +150,11 @@
         "unit": "LB"
     },
     {
+        "key": "CBL/KB",
+        "name": "Cable - Kickback",
+        "unit": "LB"
+    },
+    {
         "key": "CBL/RW",
         "name": "Cable - Standing Row",
         "unit": "LB"
@@ -177,6 +182,11 @@
     {
         "key": "DBC/A",
         "name": "Dumbell Curl - Alternating",
+        "unit": "LB"
+    },
+    {
+        "key": "DBC/D",
+        "name": "Dumbell Curl - Drag",
         "unit": "LB"
     },
     {
