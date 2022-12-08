@@ -10,7 +10,7 @@ build:
 
 @load:
     echo 'Loading workouts into database'
-    npm run loaddb
+    node build/main.js
 
 @convert:
     echo 'Converting to JSON'
