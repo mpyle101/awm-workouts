@@ -698,7 +698,7 @@ def process_record(dt, rec, unprocessed):
             block = process_HIC_GC(dt, block)
         elif key == 'HIC':   # High Intensity Conditioning
             block = process_HIC(dt, block)
-        elif key == 'HYP':   # Hypertropy
+        elif key == 'HYP':   # Hypertrophy
             block = process_HYP(dt, block)
         elif key == 'OFF':   # Off
             block = process_OFF(dt, block)
