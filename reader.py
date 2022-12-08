@@ -599,6 +599,48 @@ def process_E(dt, mvmts):
     return block
 
 
+# #FBT (70m),TRNR,@SS,BBC: 4x25x10,TRE: 4x45x10,@MS,DBC/A: 4x30x12,TPD: 4x40x8
+def process_FBT(dt, mvmts):
+    actions = []
+    key, rec = mvmts[0], mvmts[1:]
+    while True:
+        mt, rec = rec[0][1:], rec[1:]
+
+        found = False
+        for idx, item in enumerate(rec):
+            if item.startswith('@'):
+                found = True
+                break
+
+        if found:
+            action, rec = rec[:idx], rec[idx:]
+        else:
+            action, rec = rec, None
+
+        if mt == 'MS':      # Max Strength
+            action = process_MS(dt, action)
+        elif mt == 'SE':    # Strength Endurance
+            action = process_SE(dt, action)
+        elif mt == 'SS':    # Super Sets
+            action = process_SS(dt, action)
+        else:
+            raise Exception('FBT Unknown Action: ', mt)
+        actions.append(action)
+
+        if rec is None: break
+    
+    block = {
+        'type': 'FBT',
+        'key': key,
+        'wt': 0.0,
+        'unit': 'BW',
+        'style': 'MS',
+        'actions': actions
+    }
+
+    return block
+
+
 def process_OFF(dt, mvmts):
     if len(mvmts):
         return {'type': 'OFF', 'notes': mvmts[0]}
@@ -635,16 +677,19 @@ def process_record(dt, rec, unprocessed):
             block = process_GC(dt, block)
         elif key == 'E':     # Endurance
             block = process_E(dt, block)
-        elif key == 'OFF':   # Off
-            block = process_OFF(dt, block)
+        elif key == 'FBT':   # Fobbit
+            block = process_FBT(dt, block)
+            block['work'] = 'PT' + time.strip().upper()
         elif key == 'HGC':   # High Intensity General Conditioning
             block = process_HIC_GC(dt, block)
         elif key == 'HIC':   # High Intensity Conditioning
             block = process_HIC(dt, block)
+        elif key == 'OFF':   # Off
+            block = process_OFF(dt, block)
         else:
             unprocessed.add(key)
 
-        if time and 'time' not in block: block['time'] = time
+        if time and 'time' not in block: block['time'] = 'PT' + time.strip().upper()
         block['id'] = hash(dt + '/' + key + '/' + str(block_num))
         workout.append(block)
         if len(rec) == 0 or rec[0] == '':
@@ -674,12 +719,14 @@ def process_file(fname, workouts, cycles, unprocessed):
                         'start': dateobj,
                     })
 
-                blocks = process_record(datestr, rec[2:], unprocessed)
+                record = rec[2:]
+                blocks = process_record(datestr, record, unprocessed)
                 if datestr in workouts:
                     workouts[datestr]['blocks'].append({'type': 'BR'})
                     workouts[datestr]['blocks'] += blocks
                 else:
                     workouts[datestr] = {
+                        'csv'   : ','.join(record).rstrip(','),
                         'date'  : dateobj,
                         'type'  : blocks[0]['type'],
                         'blocks': blocks

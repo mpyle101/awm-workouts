@@ -113,6 +113,21 @@ export function* get_set_groups(block_id: number, block) {
         }
       }
       break
+    case 'FBT':
+      for (const work of block.actions) {
+        switch(work.type) {
+          case 'SE':
+            yield from_se_block(seqno, block_id, work)
+            break
+          case 'SS':
+            yield from_ss_block(seqno, block_id, work)
+            break
+          default:
+            yield from_ms_block(seqno, block_id, work)
+            break
+        }
+      }
+      break
     case 'OFF':
       return []
       break

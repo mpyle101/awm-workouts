@@ -51,7 +51,7 @@ const main = async () => {
     try {
       await db.tx(async trx => {
         count += 1
-        let workout_id = await insert_workout(trx, user_id, order, date)
+        let workout_id = await insert_workout(trx, user_id, order, date, rec.csv)
         let seqno = 0
         for (const block of rec.blocks) {
           seqno += 1
@@ -61,7 +61,7 @@ const main = async () => {
             seqno -= 1
             order += 1
             count += 1
-            workout_id = await insert_workout(trx, user_id, order, date)
+            workout_id = await insert_workout(trx, user_id, order, date, rec.csv)
             continue
           } else {
             const block_id = await insert_block(trx, user_id, workout_id, seqno, block_type, block.time, notes)

@@ -1,0 +1,157 @@
+{
+    "row": "#FBT (70m),TRNR,@SS,BBC: 4x25x10,TRE: 4x45x10,@MS,DBC/A: 4x30x12,TPD: 4x40x8",
+    "date": {
+        "$date": "2022-09-14T18:00:00.000Z"
+    },
+    "type": "FBT",
+    "blocks": [
+        {
+            "type": "FBT",
+            "work": "PT70M",
+            "wt": 0.0,
+            "unit": "BW",
+            "style": "TRNR",
+            "actions": [
+                {
+                    "type": "SS",
+                    "sets": [
+                        [
+                            {
+                                "key": "BBC",
+                                "reps": 10,
+                                "wt": 25.0,
+                                "unit": "KG",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TRE",
+                                "reps": 10,
+                                "wt": 45.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "BBC",
+                                "reps": 10,
+                                "wt": 25.0,
+                                "unit": "KG",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TRE",
+                                "reps": 10,
+                                "wt": 45.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "BBC",
+                                "reps": 10,
+                                "wt": 25.0,
+                                "unit": "KG",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TRE",
+                                "reps": 10,
+                                "wt": 45.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "BBC",
+                                "reps": 10,
+                                "wt": 25.0,
+                                "unit": "KG",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TRE",
+                                "reps": 10,
+                                "wt": 45.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "SS",
+                    "sets": [
+                        [
+                            {
+                                "key": "DBC/A",
+                                "reps": 12,
+                                "wt": 30.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TPD",
+                                "reps": 8,
+                                "wt": 40.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "DBC/A",
+                                "reps": 12,
+                                "wt": 30.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TPD",
+                                "reps": 8,
+                                "wt": 40.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "DBC/A",
+                                "reps": 12,
+                                "wt": 30.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TPD",
+                                "reps": 8,
+                                "wt": 40.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ],
+                        [
+                            {
+                                "key": "DBC/A",
+                                "reps": 12,
+                                "wt": 30.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            },
+                            {
+                                "key": "TPD",
+                                "reps": 8,
+                                "wt": 40.0,
+                                "unit": "LB",
+                                "style": "STD"
+                            }
+                        ]
+                    ]
+                }
+            ],
+            "id": "483af2cc30e84315f4a8665437c5faa5"
+        }
+    ]
+}
