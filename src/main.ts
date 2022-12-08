@@ -98,4 +98,3 @@ const main = () => {
 }
 
 main()
-console.log('done')
