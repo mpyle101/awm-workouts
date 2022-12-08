@@ -7,7 +7,7 @@
   "main": "build/loaddb.js",
   "scripts": {
     "build"    : "tsc",
-    "clean"    : "rm -r .tsbuildinfo build/*",
+    "clean"    : "rm -rf .tsbuildinfo build/*",
     "crypto"   : "npm run build && node build/crypto.js",
     "lint"     : "tslint",
     "loaddb"   : "node build/main.js",
