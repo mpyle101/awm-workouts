@@ -132,6 +132,11 @@ export function* get_set_groups(block_id: number, block) {
         }
       }
       break
+    case 'HYP':
+      for (const work of block.work) {
+        yield from_ms_block(seqno, block_id, work)
+      }
+      break
     case 'OFF':
       return []
       break

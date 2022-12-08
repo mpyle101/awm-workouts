@@ -161,6 +161,13 @@ def process_MS(dt, mvmts):
     return {'type': 'MS', 'work': work}
 
 
+def process_HYP(dt, mvmts):
+    block = process_MS(dt, mvmts)
+    block['type'] = 'HYP'
+
+    return block
+
+
 def process_SE(dt, mvmts):
     block = mvmts
 
@@ -691,6 +698,8 @@ def process_record(dt, rec, unprocessed):
             block = process_HIC_GC(dt, block)
         elif key == 'HIC':   # High Intensity Conditioning
             block = process_HIC(dt, block)
+        elif key == 'HYP':   # Hypertropy
+            block = process_HYP(dt, block)
         elif key == 'OFF':   # Off
             block = process_OFF(dt, block)
         else:
