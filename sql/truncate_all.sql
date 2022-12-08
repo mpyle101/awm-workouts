@@ -1,11 +1,10 @@
-TRUNCATE
-    awm.set,
-    awm.set_group,
-    awm.fbt_block,
-    awm.hic_block,
-    awm.se_block,
-    awm.block,
-    awm.workout,
-    awm.cycle,
-    awm.exercise,
-    awm.user
+DELETE FROM workout_set;
+DELETE FROM set_group;
+DELETE FROM fbt_block;
+DELETE FROM hic_block;
+DELETE FROM se_block;
+DELETE FROM block;
+DELETE FROM workout;
+DELETE FROM cycle;
+DELETE FROM exercise;
+DELETE FROM user;

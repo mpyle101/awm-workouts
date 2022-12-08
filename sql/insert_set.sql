@@ -1,10 +1,10 @@
-INSERT INTO awm.set (
+INSERT INTO workout_set (
     user_id,
     block_id,
     group_id,
     set_type,
     exercise,
-    unit,
+    weight_unit,
     weight,
     reps,
     duration,
@@ -12,16 +12,16 @@ INSERT INTO awm.set (
     setno
 )
 VALUES (
-    ${user_id},
-    ${block_id},
-    ${group_id},
-    ${set_type},
-    ${exercise},
-    ${unit},
-    ${weight},
-    ${reps},
-    ${duration},
-    ${notes},
-    ${setno}
+    :user_id,
+    :block_id,
+    :group_id,
+    :set_type,
+    :exercise,
+    :unit,
+    :weight,
+    :reps,
+    :duration,
+    :notes,
+    :setno
 )
 RETURNING id
