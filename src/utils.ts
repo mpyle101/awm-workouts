@@ -22,6 +22,8 @@ import {
   insert_user,
 } from './db-utils'
 
+import { CYCLES, EXERCISES } from './consts'
+
 export const range = (size: number) => [...Array(size).keys()]
 
 export const get_block_type = block => {
@@ -44,7 +46,7 @@ export const insert_mpyle = (db: Database) =>
   })
 
 export const load_exercises = (db: Database) => {
-  const exercises = read_json('./exercises.json')
+  const exercises = read_json(EXERCISES)
   const values = exercises.map(
     ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit })
   )
@@ -52,7 +54,7 @@ export const load_exercises = (db: Database) => {
 }
 
 export const load_cycles = async (db: Database, user_id: number) => {
-  const cycles = await read_json('./cycles.json')
+  const cycles = await read_json(CYCLES)
   const values = cycles.map(({ name, start, end }) => ({
     name,
     user_id,

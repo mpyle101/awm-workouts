@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-sqlite awm.db ".read ./sql/schema-sqlite.sql"
+sqlite /space/awm-data/awm.db ".read ./sql/schema-sqlite.sql"
 
 #dropdb -h localhost -U jester awm
 #createdb -h localhost -U jester awm

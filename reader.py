@@ -739,7 +739,7 @@ def process_file(fname, workouts, cycles, unprocessed):
 
 
 legend = {}
-with open('Legend.csv', newline='') as fp:
+with open('/space/awm-data/legend.csv', newline='') as fp:
     reader = csv.reader(fp)
     for rec in reader:
         legend[rec[0]] = {'key': rec[0], 'name': rec[1], 'unit': rec[2], 'func': process_std}
@@ -758,22 +758,22 @@ legend['SU']['func']     = process_bodyweight
 cycles = []
 workouts = OrderedDict()
 unprocessed = set()
-process_file('Workouts.csv', workouts, cycles, unprocessed)
+process_file('/space/awm-data/workouts.csv', workouts, cycles, unprocessed)
 
 last_cycle = cycles[-1]
 cycle_end  = {'$date': date.today().isoformat() + 'T18:00:00.000Z'}
 last_cycle['end'] = cycle_end
 
-with open('workouts.json', 'w') as fp:
+with open('/space/awm-data/workouts.json', 'w') as fp:
     json.dump(list(workouts.values()), fp, indent=4)
 
-with open('exercises.json', 'w') as fp:
+with open('/space/awm-data/exercises.json', 'w') as fp:
     values = list(legend.values())
     for el in values:
         del el['func']
     json.dump(values, fp, indent=4)
 
-with open('cycles.json', 'w') as fp:
+with open('/space/awm-data/cycles.json', 'w') as fp:
     json.dump(cycles, fp, indent=4)
 
 if len(unprocessed) > 0:

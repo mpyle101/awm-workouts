@@ -21,8 +21,10 @@ import {
     read_json
 } from './utils'
 
+import { DATABASE, WORKOUTS } from './consts'
+
 const main = () => {
-    const db = open_db('./awm.db')
+    const db = open_db(DATABASE)
     try {
         truncate_all(db)
     } catch (e) {
@@ -43,7 +45,7 @@ const main = () => {
     let order = 1
     let count = 0
     let last_workout = null
-    for (const rec of read_json('./workouts.json')) {
+    for (const rec of read_json(WORKOUTS)) {
         const date = rec.date.$date.split('T')[0]
         order = date === last_workout ? order + 1 : 1
         last_workout = date
