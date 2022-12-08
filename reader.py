@@ -700,6 +700,7 @@ def process_record(dt, rec, unprocessed):
 
 def process_file(fname, workouts, cycles, unprocessed):
     with open(fname, newline='') as fp:
+        count = 0
         reader = csv.reader(fp)
         for rec in reader:
             try:
@@ -721,12 +722,17 @@ def process_file(fname, workouts, cycles, unprocessed):
 
                 record = rec[2:]
                 blocks = process_record(datestr, record, unprocessed)
+                count += 1
+                rec_csv = ','.join(record).rstrip(',')
                 if datestr in workouts:
+                    workouts[datestr]['row'].append(count)
+                    workouts[datestr]['csv'] += f'\n{rec_csv}'
                     workouts[datestr]['blocks'].append({'type': 'BR'})
                     workouts[datestr]['blocks'] += blocks
                 else:
                     workouts[datestr] = {
-                        'csv'   : ','.join(record).rstrip(','),
+                        'row'   : [count],
+                        'csv'   : rec_csv,
                         'date'  : dateobj,
                         'type'  : blocks[0]['type'],
                         'blocks': blocks
