@@ -12,11 +12,11 @@ build:
     echo 'Loading workouts into database'
     npm run loaddb
 
-@read:
+@convert:
     echo 'Converting to JSON'
     python3 ./reader.py
 
-reload: export read load
+reload: export convert load
 
 setup:
     echo 'Creating database schema'

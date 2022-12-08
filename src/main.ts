@@ -96,7 +96,7 @@ const main = () => {
             break
         }
     }
-    console.log(`${count} workouts inserted`)
+    console.log(`${count} workouts loaded`)
 }
 
 main()
