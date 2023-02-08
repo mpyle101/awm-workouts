@@ -8,13 +8,13 @@ build:
     echo 'Exporting to CSV'
     osascript ./export.scpt
 
-@load:
-    echo 'Loading workouts into database'
-    node build/main.js
-
 @convert:
     echo 'Converting to JSON'
     python3 ./reader.py
+
+@load:
+    echo 'Loading into database'
+    node build/main.js
 
 doit: export convert load
 
