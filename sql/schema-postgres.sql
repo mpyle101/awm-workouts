@@ -9,6 +9,7 @@ CREATE TYPE awm.group_style_t AS ENUM (
     'CLUS',     -- Cluster sets
     'EMOM',     -- Every Minute On the Minute
     'MYO',      -- Myorep sets
+    'MYOM',     -- Myorep Match
     'SS',       -- Super sets
     'GS',       -- Giant sets
     'STD',      -- Standard sets

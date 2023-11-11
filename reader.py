@@ -115,11 +115,8 @@ def process_sets(details, func, unit, meta):
             style = 'EMOM'
         else:
             count, reps, wt, style = func(parts)
-
-        if meta == 'WAVE':
-            style = 'WAVE'
-        elif meta == 'MYO':
-            style = 'MYO'
+            if meta in ['WAVE', 'MYO', 'MYOM']:
+                style = meta
 
         if last:
             if wt == last['wt'] and reps == last['reps']:
@@ -129,7 +126,7 @@ def process_sets(details, func, unit, meta):
                 last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
         else:
             last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-        if meta and meta not in ['EMOM', 'WAVE']:
+        if meta and meta not in ['EMOM', 'WAVE', 'MYO', 'MYOM']:
             last['meta'] = meta
 
     sets.append(last)

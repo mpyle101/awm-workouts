@@ -13,6 +13,7 @@ INSERT INTO group_style_t VALUES
     ('CLUS'),   -- Cluster sets
     ('EMOM'),   -- Every Minute On the Minute
     ('MYO'),    -- Myorep Sets
+    ('MYOM'),   -- Myorep Match
     ('SS'),     -- Super sets
     ('GS'),     -- Giant sets
     ('STD'),    -- Standard sets
