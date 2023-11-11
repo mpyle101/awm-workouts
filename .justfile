@@ -4,6 +4,9 @@ default:
 build:
     @npm run build
 
+@date:
+    echo $(date +%m/%d/%y)
+
 @export:
     echo 'Exporting to CSV'
     osascript ./export.scpt
@@ -16,7 +19,7 @@ build:
     echo 'Loading into database'
     node build/main.js
 
-doit: export convert load
+doit: date export convert load
 
 setup:
     echo 'Creating database schema'

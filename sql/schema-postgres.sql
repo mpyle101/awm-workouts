@@ -8,7 +8,9 @@ CREATE TYPE awm.group_style_t AS ENUM (
     'AS',       -- Alternating sets
     'CLUS',     -- Cluster sets
     'EMOM',     -- Every Minute On the Minute
+    'MYO',      -- Myorep sets
     'SS',       -- Super sets
+    'GS',       -- Giant sets
     'STD',      -- Standard sets
     'WAVE'      -- Contrast Wave
 );

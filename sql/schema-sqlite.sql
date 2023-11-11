@@ -12,6 +12,7 @@ INSERT INTO group_style_t VALUES
     ('AS'),     -- Alternating sets
     ('CLUS'),   -- Cluster sets
     ('EMOM'),   -- Every Minute On the Minute
+    ('MYO'),    -- Myorep Sets
     ('SS'),     -- Super sets
     ('GS'),     -- Giant sets
     ('STD'),    -- Standard sets

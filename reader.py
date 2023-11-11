@@ -118,6 +118,8 @@ def process_sets(details, func, unit, meta):
 
         if meta == 'WAVE':
             style = 'WAVE'
+        elif meta == 'MYO':
+            style = 'MYO'
 
         if last:
             if wt == last['wt'] and reps == last['reps']:
