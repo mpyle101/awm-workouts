@@ -11,9 +11,11 @@ CREATE TABLE group_style_t (key TEXT PRIMARY KEY);
 INSERT INTO group_style_t VALUES
     ('AS'),     -- Alternating sets
     ('CLUS'),   -- Cluster sets
+    ('DROP'),   -- Drop sets
     ('EMOM'),   -- Every Minute On the Minute
     ('MYO'),    -- Myorep Sets
     ('MYOM'),   -- Myorep Match
+    ('RP'),     -- Rest/Pause sets
     ('SS'),     -- Super sets
     ('GS'),     -- Giant sets
     ('STD'),    -- Standard sets

@@ -7,9 +7,11 @@ CREATE TYPE awm.fbt_style_t AS ENUM ('MS', 'SE', 'SS');
 CREATE TYPE awm.group_style_t AS ENUM (
     'AS',       -- Alternating sets
     'CLUS',     -- Cluster sets
+    'DROP',     -- Drop sets
     'EMOM',     -- Every Minute On the Minute
     'MYO',      -- Myorep sets
     'MYOM',     -- Myorep Match
+    'RP',       -- Rest/Pause sets
     'SS',       -- Super sets
     'GS',       -- Giant sets
     'STD',      -- Standard sets

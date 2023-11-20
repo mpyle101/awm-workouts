@@ -104,6 +104,7 @@ def process_timed(parts):
     return count, reps, wt, 'TIMED'
 
 
+SET_STYLES = ['EMOM', 'DROP', 'MYO', 'MYOM', 'RP', 'WAVE']
 def process_sets(details, func, unit, meta):
     sets = []
     last = None
@@ -115,7 +116,7 @@ def process_sets(details, func, unit, meta):
             style = 'EMOM'
         else:
             count, reps, wt, style = func(parts)
-            if meta in ['WAVE', 'MYO', 'MYOM']:
+            if meta in SET_STYLES:
                 style = meta
 
         if last:
@@ -126,7 +127,8 @@ def process_sets(details, func, unit, meta):
                 last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
         else:
             last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-        if meta and meta not in ['EMOM', 'WAVE', 'MYO', 'MYOM']:
+        
+        if meta and meta not in SET_STYLES:
             last['meta'] = meta
 
     sets.append(last)
