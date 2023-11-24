@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS fbt_style_t;
 CREATE TABLE fbt_style_t (key TEXT PRIMARY KEY);
 INSERT INTO fbt_style_t VALUES
-    ('HP'),     -- Hypertrophy
     ('MS'),     -- Max Strength
     ('SE'),     -- Strength Endurance
     ('SS');     -- Super sets
@@ -46,7 +45,6 @@ INSERT INTO block_type_t VALUES
     ('FBT'),    -- Fobbit
     ('HIC'),    -- Hign Intensity Conditioning
     ('HGC'),    -- High Intensity General Conditioning
-    ('HYP'),    -- Hypertrophy
     ('OFF');    -- No workout
 
 DROP TABLE IF EXISTS weight_unit_t;
@@ -55,7 +53,6 @@ INSERT INTO weight_unit_t VALUES
     ('KG'),     -- Kilograms
     ('LB'),     -- Pounds
     ('BW');     -- Body weight
-
 
 DROP TABLE IF EXISTS user;
 CREATE TABLE user (

@@ -44,58 +44,39 @@ export const get_group_style = style =>
   style === 'TIMED' ? 'STD' : style as string
 
 
-export const from_ms_block = (seqno, block_id, work) => {
-  seqno.value += 1
-  const style = get_group_style(work.style)
-  const group = create_set_group(block_id, style, seqno.value)
-  const set_type = get_set_type(work.style)
+export const from_ms_block = (seqno, block_id, block) => {
+  const style = get_group_style(block.sets[0].style)
+  if (style == 'CLUS') {
+    return from_ms_clus(seqno, block_id, block)
+  }
 
-  let setno = 0
-  const sets = work.sets.reduce((acc, set) => {
-    const rec = create_set_record(block_id, set_type, work.key, set)
-    return acc.concat(range(set.count).map(() => {
-      setno += 1
-      return { ...rec, setno }
-    }))
-  }, [])
+  seqno.value += 1
+  const group = create_set_group(block_id, style, seqno.value)
+
+  let setno = 0;
+  const sets = block.sets.map(set => {
+    setno += 1
+    return create_set_record(block_id, get_set_type(set.style), set.key, set, setno)
+  })
 
   return [{ group, sets }]
 }
 
+export const from_ms_clus = (seqno, block_id, block) =>
+  block.sets.reduce((acc, set) => {
+    seqno.value += 1
 
-export const from_ms_clus = (seqno, block_id, work) =>
-  work.sets.reduce((acc, set) => {
     let setno = 0
     const sets = set.reps.map(reps => {
       setno += 1
-      const rec = create_set_record(block_id, 'STD', work.key, set, setno)
+      const rec = create_set_record(block_id, 'STD', set.key, set, setno)
       return { ...rec, reps }
     })
 
-    return acc.concat(range(set.count).map(() => {
-      seqno.value += 1
-      const group = create_set_group(block_id, 'CLUS', seqno.value)
-      return { group, sets }
-    }))
+    const group = create_set_group(block_id, 'CLUS', seqno.value)
+    acc.push({ group, sets })
+    return acc
   }, [])
-
-
-export const from_ms_emom = (seqno, block_id, work) => {
-  seqno.value += 1
-  const group = create_set_group(block_id, 'EMOM', seqno.value)
-  const set_type = get_set_type(work.style)
-
-  let setno = 0
-  const sets = work.sets.reduce((acc, set) => {
-    const rec = create_set_record(block_id, set_type, work.key, set)
-    return acc.concat(range(set.count).map(() => {
-      setno += 1
-      return { ...rec, setno }
-    }))
-  }, [])
-
-  return [{ group, sets }]
-}
 
 
 export const from_as_block = (seqno, block_id, block) => {

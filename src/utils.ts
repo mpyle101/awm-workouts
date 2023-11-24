@@ -7,8 +7,6 @@ import {
   from_gc_block,
   from_hgc_block,
   from_hic_block,
-  from_ms_clus,
-  from_ms_emom,
   from_ms_block,
   from_se_block,
   from_ss_block,
@@ -72,14 +70,8 @@ export const read_json = (path: string) => {
 export function* get_set_groups(block_id: number, block) {
   let seqno = { value: 0 }
   switch (block.type) {
-    case 'SS':
-      yield from_ss_block(seqno, block_id, block)
-      break
     case 'AS':
       yield from_as_block(seqno, block_id, block)
-      break
-    case 'SE':
-      yield from_se_block(seqno, block_id, block)
       break
     case 'GC':
       yield from_gc_block(seqno, block_id, block)
@@ -90,6 +82,15 @@ export function* get_set_groups(block_id: number, block) {
     case 'HIC':
       yield from_hic_block(seqno, block_id, block)
       break
+    case 'MS':
+      yield from_ms_block(seqno, block_id, block)
+      break
+    case 'SE':
+      yield from_se_block(seqno, block_id, block)
+      break
+    case 'SS':
+      yield from_ss_block(seqno, block_id, block)
+      break
     case 'EN':
       if (block.key === 'FBT') {
         for (const work of block.actions) {
@@ -97,22 +98,6 @@ export function* get_set_groups(block_id: number, block) {
         }
       } else {
         yield from_en_block(seqno, block_id, block)
-      }
-      break
-    case 'MS':
-      for (const work of block.work) {
-        const style = get_group_style(work.style)
-        switch (style) {
-          case 'CLUS':
-            yield from_ms_clus(seqno, block_id, work)
-            break
-          case 'EMOM':
-            yield from_ms_emom(seqno, block_id, work)
-            break
-          default:
-            yield from_ms_block(seqno, block_id, work)
-            break
-        }
       }
       break
     case 'FBT':
@@ -125,16 +110,9 @@ export function* get_set_groups(block_id: number, block) {
             yield from_ss_block(seqno, block_id, action)
             break
           default:
-            for (const work of action.work) {
-              yield from_ms_block(seqno, block_id, work)
-            }
+            yield from_ms_block(seqno, block_id, action)
             break
         }
-      }
-      break
-    case 'HYP':
-      for (const work of block.work) {
-        yield from_ms_block(seqno, block_id, work)
       }
       break
     case 'OFF':

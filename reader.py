@@ -105,9 +105,8 @@ def process_timed(parts):
 
 
 SET_STYLES = ['EMOM', 'DROP', 'MYO', 'MYOM', 'RP', 'WAVE']
-def process_sets(details, func, unit, meta):
+def process_sets(key, details, func, unit, meta):
     sets = []
-    last = None
     for s in details.split(','):
         s = s.strip()
         parts = s.split('x')
@@ -119,24 +118,25 @@ def process_sets(details, func, unit, meta):
             if meta in SET_STYLES:
                 style = meta
 
-        if last:
-            if wt == last['wt'] and reps == last['reps']:
-                last['count'] += count
-            else:
-                sets.append(last)
-                last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-        else:
-            last = {'wt': wt, 'unit': unit, 'reps': reps, 'count': count}
-        
-        if meta and meta not in SET_STYLES:
-            last['meta'] = meta
+        while count:
+            set = {
+                'key': key,
+                'wt': wt,
+                'unit': unit,
+                'reps': reps,
+                'style': style
+            }
+            if meta and meta not in SET_STYLES:
+                set['meta'] = meta
 
-    sets.append(last)
-    return sets, style
+            sets.append(set)
+            count -= 1
+
+    return sets
 
 
 def process_MS(dt, mvmts):
-    work = []
+    blocks = []
     for mvmt in mvmts:
         try:
             mvmt = mvmt.split(':')
@@ -151,29 +151,23 @@ def process_MS(dt, mvmts):
             func = legend[key]['func']
             unit = legend[key]['unit']
                
-            sets, style = process_sets(details, func, unit, meta)
-            work.append({'key': key, 'style': style, 'sets': sets})
+            sets = process_sets(key, details, func, unit, meta)
+            blocks.append({'type': 'MS', 'sets': sets})
 
         except:
             ex = sys.exc_info()[0]
             print(dt, mvmt)
             traceback.print_exc()
 
-    return {'type': 'MS', 'work': work}
-
-
-def process_HYP(dt, mvmts):
-    block = process_MS(dt, mvmts)
-    block['type'] = 'HYP'
-
-    return block
+    return blocks
 
 
 def process_GS(dt, mvmts):
-    block = process_MS(dt, mvmts)
-    block['type'] = 'GS'
+    blocks = process_MS(dt, mvmts)
+    for block in blocks:
+        block['type'] = 'GS'
 
-    return block
+    return blocks
 
 
 def process_SE(dt, mvmts):
@@ -562,8 +556,8 @@ def process_E(dt, mvmts):
                 unit = legend[skey]['unit']
 
                 details = mvmt[1]
-                sets, set_style = process_sets(details, func, unit, 'STD')
-                actions.append({'key': skey, 'style': set_style, 'sets': sets})
+                sets = process_sets(skey, details, func, unit, 'STD')
+                actions.append({'sets': sets})
 
         elif key == 'RUCK':
             wt = int(mvmts[1][:-1])
@@ -647,7 +641,11 @@ def process_FBT(dt, mvmts):
             action = process_SS(dt, action)
         else:
             raise Exception('FBT Unknown Action: ', mt)
-        actions.append(action)
+        
+        if type(action) == list:
+            actions.extend(action)
+        else:
+            actions.append(action)
 
         if rec is None: break
     
@@ -708,22 +706,30 @@ def process_record(dt, rec, unprocessed):
             block = process_HIC_GC(dt, block)
         elif key == 'HIC':   # High Intensity Conditioning
             block = process_HIC(dt, block)
-        elif key == 'HYP':   # Hypertrophy
-            block = process_HYP(dt, block)
         elif key == 'OFF':   # Off
             block = process_OFF(dt, block)
         else:
             unprocessed.add(key)
 
-        if time and 'time' not in block: block['time'] = 'PT' + time.strip().upper()
-        block['id'] = hash(dt + '/' + key + '/' + str(block_num))
-        blocks.append(block)
+        if type(block) == list:
+            for bl in block:
+                if time and 'time' not in bl:
+                    bl['time'] = 'PT' + time.strip().upper()
+                bl['id'] = hash(dt + '/' + key + '/' + str(block_num))
+                blocks.append(bl)
+                block_num += 1
+        else:
+            if time and 'time' not in block:
+                block['time'] = 'PT' + time.strip().upper()
+            block['id'] = hash(dt + '/' + key + '/' + str(block_num))
+            blocks.append(block)
+
         if len(rec) == 0 or rec[0] == '':
             break
 
-    type = 'MS' if blocks[0]['type'] == 'AS' else blocks[0]['type']
+    block_type = 'MS' if blocks[0]['type'] == 'AS' else blocks[0]['type']
 
-    return type, blocks
+    return block_type, blocks
 
 
 def process_file(fname, workouts, cycles, unprocessed):
@@ -753,13 +759,11 @@ def process_file(fname, workouts, cycles, unprocessed):
                 count += 1
                 rec_csv = ','.join(record).rstrip(',')
                 if datestr in workouts:
-                    workouts[datestr]['row'].append(count)
                     workouts[datestr]['csv'] += f'\n{rec_csv}'
                     workouts[datestr]['blocks'].append({'type': 'BR'})
                     workouts[datestr]['blocks'] += blocks
                 else:
                     workouts[datestr] = {
-                        'row'   : [count],
                         'csv'   : rec_csv,
                         'date'  : dateobj,
                         'type'  : type,
