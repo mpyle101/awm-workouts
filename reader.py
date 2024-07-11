@@ -639,6 +639,8 @@ def process_FBT(dt, mvmts):
             action = process_SE(dt, action)
         elif mt == 'SS':    # Super Sets
             action = process_SS(dt, action)
+        elif mt == 'AS':    # Alternating Sets
+            action = process_AS(dt, action)
         else:
             raise Exception('FBT Unknown Action: ', mt)
         
