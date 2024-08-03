@@ -41,7 +41,7 @@ export const insert_mpyle = (db: Database) =>
     email: 'mpyle101@gmail.com',
     first_name: 'Michael',
     last_name: 'Pyle'
-  })
+  }) ?? (() => { throw new Error('mpyle insert failed')})()
 
 export const load_exercises = (db: Database) => {
   const exercises = read_json(EXERCISES)
