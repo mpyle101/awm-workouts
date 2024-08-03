@@ -51,6 +51,7 @@ export const truncate_all = (db: Database) =>
 
 export const insert_user = (db: Database, user) =>
     db.insert_user.get(user)?.id
+        ?? (() => { throw new Error('User insert failed')})()
 
 export const insert_workout = (
     db: Database,
