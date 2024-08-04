@@ -28,7 +28,7 @@ const load_sql = (fname: string) => {
 }
 
 export const open_db = (path: string) => {
-    const db = new DatabaseConstructor(path) as Database
+    const db = <Database> new DatabaseConstructor(path)
     db.pragma('journal_mode = WAL');
 
     db.truncate_all     = () => db.exec(load_sql('truncate_all.sql'))
