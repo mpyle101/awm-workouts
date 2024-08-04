@@ -1,5 +1,11 @@
 import { readFileSync } from 'fs'
-import { Database } from './db-utils'
+import type { Database } from './db-utils'
+import {
+  insert_block,
+  insert_cycles,
+  insert_exercises,
+  insert_user,
+} from './db-utils'
 import {
   create_set_record,
   from_as_block,
@@ -12,13 +18,6 @@ import {
   from_ss_block,
   get_group_style
 } from './factories'
-
-import {
-  insert_block,
-  insert_cycles,
-  insert_exercises,
-  insert_user,
-} from './db-utils'
 
 import { CYCLES, EXERCISES } from './consts'
 
@@ -43,28 +42,28 @@ export const insert_mpyle = (db: Database) =>
     last_name: 'Pyle'
   })
   
+export const read_json = (path: string) => {
+  const data = readFileSync(path)
+  return JSON.parse(data.toString())
+}
+
 export const load_exercises = (db: Database) => {
   const exercises = read_json(EXERCISES)
   const values = exercises.map(
     ({ key, name, unit: weight_unit }) => ({ key, name, weight_unit })
   )
-  return insert_exercises(db, values)
+  insert_exercises(db, values)
 }
 
-export const load_cycles = async (db: Database, user_id: number) => {
-  const cycles = await read_json(CYCLES)
+export const load_cycles = (db: Database, user_id: number) => {
+  const cycles = read_json(CYCLES)
   const values = cycles.map(({ name, start, end }) => ({
     name,
     user_id,
     start_date: start.$date.split('T')[0],
     end_date:   end.$date.split('T')[0]
   }))
-  return insert_cycles(db, values)
-}
-
-export const read_json = (path: string) => {
-  const data = readFileSync(path)
-  return JSON.parse(data.toString())
+  insert_cycles(db, values)
 }
 
 export function* get_set_groups(block_id: number, block) {

@@ -167,6 +167,7 @@ export const insert_exercises = (db: Database, values: Array<IExercise>) => {
     trx(values)
 }
 
+
 interface ICycle {
     user_id: number
     name: string
